@@ -1,0 +1,9 @@
+# use glob syntax.
+syntax: glob
+*.pyc
+*.pyo
+*~
+*.orig
+*.DS_Store
+*personal/
+museum.py
