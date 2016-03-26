@@ -12,9 +12,10 @@
 Description
 ===========
 
-`beansoup` offers a collection of plugins and tools that extend the
-functionality of `beancount <http://furius.ca/beancount>`_ to facilitate
-my accounting and investment tracking activities.
+`beansoup <https://bitbucket.org/fxt/beansoup>`_ offers a collection of plugins
+and tools that extend the functionality of
+`beancount <http://furius.ca/beancount>`_ to facilitate my accounting and
+investment tracking activities.
 
 
 Copyright and License
@@ -22,8 +23,8 @@ Copyright and License
 
 Copyright (C) 2016  Filippo Tampieri.  All Rights Reserved.
 
-This code is distributed under the `GNU General Public License <LICENSE>`_, the
-same license used by `beancount`.
+*beansoup* is distributed under the `GNU General Public License <LICENSE>`_, the
+same license used by *beancount*.
 
 
 Author
