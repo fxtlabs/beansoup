@@ -5,5 +5,6 @@ syntax: glob
 *~
 *.orig
 *.DS_Store
-*personal/
-museum.py
+build/
+dist/
+beansoup.egg-info/
