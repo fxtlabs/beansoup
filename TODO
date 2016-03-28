@@ -4,6 +4,3 @@ TODO
 
 * Complete documentation of beansoup.transactions.TransactionCompleter.
 
-* Write mixin class to use TransactionCompleter with importers.
-
-* Write banking OFX importer using above mixin.

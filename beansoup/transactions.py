@@ -15,7 +15,7 @@ class TransactionCompleter(object):
                     len(entry.postings) == 2 and
                     any(posting.account == account for posting in entry.postings))
 
-        entries = reversed(entries)
+        entries = reversed(entries or [])
         if max_age:
             min_date = date.today() - max_age
             entries = takewhile(lambda entry: entry.date >= min_date, entries)
@@ -59,8 +59,8 @@ class TransactionCompleter(object):
                     if posting.account != self.account:
                         create_simple_posting(entry,
                                               posting.account,
-                                              -posting.units.number,
-                                              posting.units.currency)
+                                              -entry.postings[0].units.number,
+                                              entry.postings[0].units.currency)
                 return True
         return False
     
