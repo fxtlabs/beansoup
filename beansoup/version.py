@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-
+"""Project version."""
 # Versions should comply with PEP440
 # http://packaging.python.org/en/latest/tutorial.html#version
 # http://pythonhosted.org/setuptools/setuptools.html#specifying-your-project-s-version
