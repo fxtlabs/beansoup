@@ -26,7 +26,8 @@ class TransactionCompleter:
     scores are broken by selecting the most recent transaction.
     """
 
-    def __init__(self, existing_entries, account, min_score=0.5, max_age=None):
+    def __init__(self, existing_entries, account, min_score=0.5, max_age=None,
+                 interpolated=False):
         """Initialization.
 
         Args:
@@ -39,6 +40,8 @@ class TransactionCompleter:
             (measure from datetime.date.today()) a transaction can
             have in order to be used as a model to fill in an incomplete
             transaction.
+          interpolated: If True, the missing posting will include an
+            interpolated amount; otherwise, the amount will be left blank.
         """
         def is_model(entry):
             """A predicate asking whether an entry can be used as a model.
@@ -60,6 +63,7 @@ class TransactionCompleter:
         self.model_txns = [entry for entry in entries if is_model(entry)]
         self.account = account
         self.min_score = min_score
+        self.interpolated = interpolated
 
     def complete_entries(self, entries):
         """Complete the given entries.
@@ -95,10 +99,15 @@ class TransactionCompleter:
                 # Add the missing posting to balance the transaction
                 for posting in model_txn.postings:
                     if posting.account != self.account:
+                        if self.interpolated:
+                            units_number = -entry.postings[0].units.number
+                            units_currency = entry.postings[0].units.currency
+                        else:
+                            units_number, units_currency = (None, None)
                         create_simple_posting(entry,
                                               posting.account,
-                                              -entry.postings[0].units.number,
-                                              entry.postings[0].units.currency)
+                                              units_number,
+                                              units_currency)
                 return True
         return False
 
