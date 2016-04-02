@@ -4,7 +4,7 @@ import datetime
 import itertools
 from os import path
 
-from beancount.core import data, number
+from beancount.core import data, flags, number
 
 
 class TransactionCompleter:
@@ -90,28 +90,29 @@ class TransactionCompleter:
         with a single posting to the account bound to the completer.
         The entry will be completed only if a suitable model transaction can
         be found.
+        If multiple model transactions are found that balance the transaction
+        against different account, the missing posting will be flagged for
+        review.
 
         Args:
           entry: The entry to be completed.
         Returns: True is the entry was completed; False, otherwise.
         """
-        if (isinstance(entry, Transaction) and
+        if (isinstance(entry, data.Transaction) and
                 len(entry.postings) == 1 and
                 entry.postings[0].account == self.account):
-            model_txn = self.find_best_model(entry)
+            model_txn, model_accounts = self.find_best_model(entry)
             if model_txn:
+                # If past transactions similar to this one were posted against
+                # different accounts, flag the posting in the new entry.
+                flag = flags.FLAG_WARNING if len(model_accounts) > 1 else None
                 # Add the missing posting to balance the transaction
                 for posting in model_txn.postings:
                     if posting.account != self.account:
-                        if self.interpolated:
-                            units_number = -entry.postings[0].units.number
-                            units_currency = entry.postings[0].units.currency
-                        else:
-                            units_number, units_currency = (None, None)
-                        data.create_simple_posting(entry,
-                                                   posting.account,
-                                                   units_number,
-                                                   units_currency)
+                        units = -entry.postings[0].units if self.interpolated else None
+                        missing_posting = data.Posting(
+                            posting.account, units, None, None, flag, None)
+                        entry.postings.append(missing_posting)
                 return True
         return False
 
@@ -122,16 +123,31 @@ class TransactionCompleter:
           txn: A beancount.core.data.Transaction object;
             an incomplete transaction with a single posting.
         Returns:
-          A beancount.core.data.Transaction object to be used as a model or
-          None, if no suitable model could be found.
+          A pair of a beancount.core.data.Transaction object and a set of
+          account strings; the first part is the model transaction or
+          None, if no suitable model could be found; the second part is a
+          set of the different accounts used by top-scoring transaction to
+          balance the posting to the target account.
         """
         scored_model_txns = [(self.score_model(model_txn, txn), model_txn)
                              for model_txn in self.model_txns]
+        # Discard low-score transactions
+        scored_model_txns = [(score, model_txn) for score, model_txn in scored_model_txns if score >= self.min_score]
         if scored_model_txns:
-            # Given the same score, the most recent transaction wins
-            score, model_txn = max(scored_model_txns, key=lambda p: (p[0], p[1].date))
-            if score >= self.min_score:
-                return model_txn
+            # Sort the scored transaction by descending score and date.
+            # The first transaction in the sorted list is the best model.
+            scored_model_txns = sorted(scored_model_txns,
+                                       key=lambda p: (p[0], p[1].date),
+                                       reverse=True)
+            # Look at the other top-scoring transaction and count how many
+            # different accounts they post to; if they post to more than one
+            # account (other than the target account), the model is ambiguous.
+            best_score, best_model_txn = scored_model_txns[0]
+            top_model_txns = itertools.takewhile(lambda p: p[0] == best_score,
+                                                 scored_model_txns)
+            accounts = set([posting.account for _, txn in top_model_txns for posting in txn.postings if posting.account != self.account])
+            return (best_model_txn, accounts)
+        return (None, set())
 
     def score_model(self, model_txn, txn):
         """Score an existing transaction for its ability to provide a model
