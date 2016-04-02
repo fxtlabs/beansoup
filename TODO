@@ -2,4 +2,18 @@
 TODO
 ====
 
+* ImportChain class
+
+* Wrap TransactionCompleter in an ImportFilter class
+
+* Write import filter to help balance clearing accounts
+
 * Add ! flag to completed posting if there are multiple accounts to choose from
+
+* Add option to SimpleOFXImporter to name files according to the billing period
+
+* Add plugin like pending_plugin, but restricted to common accounts with
+  Clearing component
+
+* TD importers should be able to generate tags for transactions involving a
+  clearing account
