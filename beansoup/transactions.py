@@ -1,11 +1,10 @@
 """Utilities to work with beancount.core.data.Transaction objects."""
 
-from datetime import date
-from itertools import takewhile
-from os.path import commonprefix
+import datetime
+import itertools
+from os import path
 
-from beancount.core.data import Transaction, create_simple_posting
-from beancount.core.number import same_sign
+from beancount.core import data, number
 
 
 class TransactionCompleter:
@@ -50,14 +49,14 @@ class TransactionCompleter:
             if it is a transaction with exactly two postings and it
             involves the main account.
             """
-            return (isinstance(entry, Transaction) and
+            return (isinstance(entry, data.Transaction) and
                     len(entry.postings) == 2 and
                     any(posting.account == account for posting in entry.postings))
 
         if max_age:
-            min_date = date.today() - max_age
-            entries = takewhile(lambda entry: entry.date >= min_date,
-                                reversed(existing_entries or []))
+            min_date = datetime.date.today() - max_age
+            entries = itertools.takewhile(lambda entry: entry.date >= min_date,
+                                          reversed(existing_entries or []))
         else:
             entries = existing_entries or []
         self.model_txns = [entry for entry in entries if is_model(entry)]
@@ -109,10 +108,10 @@ class TransactionCompleter:
                             units_currency = entry.postings[0].units.currency
                         else:
                             units_number, units_currency = (None, None)
-                        create_simple_posting(entry,
-                                              posting.account,
-                                              units_number,
-                                              units_currency)
+                        data.create_simple_posting(entry,
+                                                   posting.account,
+                                                   units_number,
+                                                   units_currency)
                 return True
         return False
 
@@ -151,13 +150,15 @@ class TransactionCompleter:
             # Only consider model transactions whose posting to the target
             # account has the same sign as the transaction to be completed
             posting = [p for p in model_txn.postings if p.account == self.account][0]
-            if same_sign(posting.units.number, txn.postings[0].units.number):
+            if number.same_sign(posting.units.number, txn.postings[0].units.number):
                 if model_txn.payee:
-                    n_payee = len(commonprefix([model_txn.payee, txn.narration]))
+                    n_payee = len(path.commonprefix(
+                        [model_txn.payee, txn.narration]))
                 else:
                     n_payee = 0
                 if model_txn.narration:
-                    n_narration = len(commonprefix([model_txn.narration, txn.narration]))
+                    n_narration = len(path.commonprefix(
+                        [model_txn.narration, txn.narration]))
                 else:
                     n_narration = 0
                 score = max(n_payee, n_narration) / float(n_max)

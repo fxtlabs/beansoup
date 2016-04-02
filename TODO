@@ -13,4 +13,4 @@ TODO
   Clearing component
 
 * TD importers should be able to generate tags for transactions involving a
-  clearing account
+  clearing account (I can now use an import filter for that)
