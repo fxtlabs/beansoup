@@ -65,6 +65,10 @@ class TransactionCompleter:
         self.min_score = min_score
         self.interpolated = interpolated
 
+    def __call__(self, entries):
+        """Same as `complete_entries` method."""
+        return self.complete_entries(entries)
+
     def complete_entries(self, entries):
         """Complete the given entries.
 
@@ -74,10 +78,11 @@ class TransactionCompleter:
         Args:
           entries: The entries to be completed.
         Returns:
-          None
+          A list of completed entries
         """
         for entry in entries:
             self.complete_entry(entry)
+        return entries
 
     def complete_entry(self, entry):
         """Complete the given entry.
