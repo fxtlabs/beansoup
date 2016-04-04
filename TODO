@@ -9,6 +9,14 @@ TODO
 * Write OFX importer (banking only?) that can name files according to the
   billing period
 
+* Write tests for everything
+
+* Consider adding examples
+
+* Improve documentation
+
+* Upload to PyPi
+
 * Write import filter to help balance clearing accounts
 
 * Add plugin like pending_plugin, but restricted to common accounts with
