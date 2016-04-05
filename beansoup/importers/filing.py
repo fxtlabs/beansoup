@@ -20,7 +20,7 @@ class Importer(importer.ImporterProtocol):
     a date (interpreted as the last day of a billing period).
     """
     def __init__(self, account, basename=None,
-                 first_day=1, closed=True, filename_regexp=None):
+                 first_day=1, filename_regexp=None):
         """Create a new filing importer for the given account.
 
         Args:
@@ -34,15 +34,11 @@ class Importer(importer.ImporterProtocol):
             end date.
             Example: '^Statement_(?P<month>\w{3}) (?P<year>\d{4}).pdf$'
           first_day: An int in [1,28]; the first day of the billing period.
-          closed: A Boolean; if True, the new files will start with
-            the date of the last day of the billing period; otherwise, they
-            will start with the date of the following day.
         """
         self.filename_re = re.compile(filename_regexp or self.filename_regexp)
         self.account = account
         self.basename = basename
         self.first_day = first_day
-        self.closed = closed
 
     def name(self):
         """Include the filing account in the name."""
@@ -83,9 +79,6 @@ class Importer(importer.ImporterProtocol):
                 else:
                     _, month_last_day = calendar.monthrange(year, month)
                     date = datetime.date(year, month, day)
-
-            if not self.closed:
-                date += datetime.timedelta(days=1)
             return date
 
     def extract(self, file):
