@@ -2,10 +2,6 @@
 TODO
 ====
 
-* Write a plugin to move document directive up one day so they appear after
-  their transactions.
-  Perhaps limit it to a set of given accounts
-
 * Write OFX importer (banking only?) that can name files according to the
   billing period
 
