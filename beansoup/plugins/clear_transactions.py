@@ -6,7 +6,7 @@ import collections
 import datetime
 import itertools
 
-from beancount.core import data
+from beancount.core import data, flags
 
 __plugins__ = ('clear_transactions',)
 
@@ -20,6 +20,7 @@ def clear_transactions(entries, unused_options_map, config):
     # Manually cleared transactions would use #CLEARED; easier to enter by
     # hand
     processor = Processor(
+        flag_pending=config_obj.get('flag_pending', False),
         cleared_tag_name=config_obj.get('cleared_tag_name', 'CLEARED'),
         pending_tag_name=config_obj.get('pending_tag_name', 'PENDING'),
         ignored_tag_name=config_obj.get('ignored_tag_name', 'PRE_CLEARED'),
@@ -35,8 +36,10 @@ def clear_transactions(entries, unused_options_map, config):
 
 
 class Processor:
-    def __init__(self, cleared_tag_name, pending_tag_name, ignored_tag_name,
-                 cleared_link_prefix, max_time_gap, clearing_account_pairs):
+    def __init__(self, flag_pending, cleared_tag_name, pending_tag_name,
+                 ignored_tag_name, cleared_link_prefix, max_time_gap,
+                 clearing_account_pairs):
+        self.flag_pending = flag_pending
         self.cleared_tag_name = cleared_tag_name
         self.pending_tag_name = pending_tag_name
         self.ignored_tag_name = ignored_tag_name
@@ -104,6 +107,7 @@ class Processor:
                 # No match; mark the transaction as pending
                 txn = txn_posting.txn
                 self.modified_entries[id(txn)] = txn._replace(
+                    flag=flags.FLAG_WARNING if self.flag_pending else txn.flag,
                     tags=(txn.tags or set()) | set((self.pending_tag_name,)))
 
     def max_matching_date(self, txn):
