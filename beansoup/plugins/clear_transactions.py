@@ -1,4 +1,4 @@
-"""Work in progress. Do not try using it yet.
+"""Work in progress. It works, but needs documentation and some cleaning.
 """
 
 import ast
@@ -37,12 +37,6 @@ def clear_transactions(entries, unused_options_map, config):
 class Processor:
     def __init__(self, cleared_tag_name, pending_tag_name, ignored_tag_name,
                  cleared_link_prefix, max_time_gap, clearing_account_pairs):
-        print('cleared_tag_name', cleared_tag_name)
-        print('pending_tag_name', pending_tag_name)
-        print('ignored_tag_name', ignored_tag_name)
-        print('cleared_link_prefix', cleared_link_prefix)
-        print('max_time_gap', max_time_gap)
-        print('clearing_account_pairs', clearing_account_pairs)
         self.cleared_tag_name = cleared_tag_name
         self.pending_tag_name = pending_tag_name
         self.ignored_tag_name = ignored_tag_name
@@ -66,7 +60,6 @@ class Processor:
 
         for txn_postings in groups.values():
             self.clear_transaction_group(txn_postings)
-            print(txn_posting_pairs[0][1].account, len(txn_postings))
 
         return self.modified_entries
 
@@ -75,12 +68,12 @@ class Processor:
         # one posting to a clearing account
         for posting in txn.postings:
             if posting.account in self.clearing_accounts:
-                return posting.account
+                return posting
 
     def clear_transaction_group(self, txn_postings):
         # Make sure the transactions are sorted;
         # other plugins could have changed their order
-        txn_postings = collection.deque(
+        txn_postings = collections.deque(
             sorted(txn_postings, key=lambda x: data.entry_sortkey(x.txn)))
 
         while txn_postings:
@@ -91,10 +84,10 @@ class Processor:
             # Look for matching transactions within a maximum time delta
             max_date = self.max_matching_date(txn_posting.txn)
             for txn_posting2 in itertools.takewhile(lambda x: x.txn.date <= max_date, txn_postings):
-                if id(txn_posting2.txn) in new_entries:
+                if id(txn_posting2.txn) in self.modified_entries:
                     # This transaction has already been cleared
                     continue
-                if match_txn_postings(txn_posting, txn_posting2):
+                if self.match_txn_postings(txn_posting, txn_posting2):
                     # Found match; link the transactions and tag them as cleared
                     link_name = '{}-{}'.format(self.cleared_link_prefix,
                                                next(self.link_count))
@@ -109,14 +102,15 @@ class Processor:
                     break
             else:
                 # No match; mark the transaction as pending
+                txn = txn_posting.txn
                 self.modified_entries[id(txn)] = txn._replace(
                     tags=(txn.tags or set()) | set((self.pending_tag_name,)))
 
     def max_matching_date(self, txn):
         # FIXME: Make sure the timedelta skips weekends
-        return txn + self.max_time_gap
+        return txn.date + self.max_time_gap
 
-    def match_txn_postings(txn_posting, txn_posting2):
+    def match_txn_postings(self, txn_posting, txn_posting2):
         # We already know the two transactions are within the max time gap
         # share a clearing account
 
