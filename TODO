@@ -4,9 +4,6 @@ TODO
 
 * Finish clear_transactions plugin; add documentation and example
 
-* Improve clear_transactions plugin to jump over weekends when computing
-  time distance between transactions
-
 * Add type checking of config data passed to clear_transaction plugin and
   generally improve error handling and reporting
 

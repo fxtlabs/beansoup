@@ -8,6 +8,8 @@ import itertools
 
 from beancount.core import data, flags
 
+from beansoup.utils import dates
+
 __plugins__ = ('clear_transactions',)
 
 
@@ -16,35 +18,35 @@ def clear_transactions(entries, unused_options_map, config):
     if not isinstance(config_obj, dict):
         raise RuntimeError("Invalid plugin configuration: expecting a dict")
 
-    # FIXME: Should they be AUTO_CLEARED, PENDING, and CLEARED?
-    # Manually cleared transactions would use #CLEARED; easier to enter by
-    # hand
     processor = Processor(
         flag_pending=config_obj.get('flag_pending', False),
         cleared_tag_name=config_obj.get('cleared_tag_name', 'CLEARED'),
         pending_tag_name=config_obj.get('pending_tag_name', 'PENDING'),
         ignored_tag_name=config_obj.get('ignored_tag_name', 'PRE_CLEARED'),
         cleared_link_prefix=config_obj.get('cleared_link_prefix', 'clearing'),
-        max_time_gap=datetime.timedelta(days=config_obj.get('max_delta_days', 5)),
+        max_delta_days=config_obj.get('max_delta_days', 5),
+        skip_weekends=config_obj.get('skip_weekends', True),
         clearing_account_pairs=config_obj.get('account_pairs', []))
       
     modified_entries = processor.clear_transactions(entries)
 
-    # Consider printing the pending entries. Maybe return errors for them.
+    # FIXME: Consider printing the pending entries. Maybe return errors for them.
     
     return ([modified_entries.get(id(entry), entry) for entry in entries], [])
 
 
 class Processor:
     def __init__(self, flag_pending, cleared_tag_name, pending_tag_name,
-                 ignored_tag_name, cleared_link_prefix, max_time_gap,
+                 ignored_tag_name, cleared_link_prefix,
+                 max_delta_days, skip_weekends,
                  clearing_account_pairs):
         self.flag_pending = flag_pending
         self.cleared_tag_name = cleared_tag_name
         self.pending_tag_name = pending_tag_name
         self.ignored_tag_name = ignored_tag_name
         self.cleared_link_prefix = cleared_link_prefix
-        self.max_time_gap = max_time_gap
+        self.max_delta_days = max_delta_days
+        self.skip_weekends = skip_weekends
         self.clearing_accounts = dict(clearing_account_pairs)
         
         self.modified_entries = None
@@ -111,12 +113,13 @@ class Processor:
                     tags=(txn.tags or set()) | set((self.pending_tag_name,)))
 
     def max_matching_date(self, txn):
-        # FIXME: Make sure the timedelta skips weekends
-        return txn.date + self.max_time_gap
+        if self.skip_weekends:
+            return dates.add_biz_days(txn.date, self.max_delta_days)
+        return txn.date + datetime.timedelta(days=self.max_delta_days)
 
     def match_txn_postings(self, txn_posting, txn_posting2):
         # We already know the two transactions are within the max time gap
-        # share a clearing account
+        # and share a clearing account
 
         # We can have a match only if the postings to the clearing account
         # on the two transactions balance out to 0
