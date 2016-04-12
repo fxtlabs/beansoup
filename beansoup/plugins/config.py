@@ -1,0 +1,27 @@
+"""Utilities to help parse a plugin configuration string.
+"""
+
+import argparse
+
+from beancount.core import data
+
+
+class ParseError(Exception):
+    def __init__(self, source, message):
+        self.source = source
+        self.message = message
+        self.entry = None
+
+
+class ArgumentParser(argparse.ArgumentParser):
+    def __init__(self, *args, **kwargs):
+        entries_filename = kwargs.pop('entries_filename', '<config>')
+        self.source = data.new_metadata(entries_filename, 0)
+        super(ArgumentParser, self).__init__(*args, **kwargs)
+
+    def error(self, message):
+        full_message = '{}\n\n{}'.format(message, self.format_help())
+        raise ParseError(self.source, full_message)
+
+    def exit(self, status=0, message=None):
+        self.error(message)

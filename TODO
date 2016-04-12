@@ -2,10 +2,14 @@
 TODO
 ====
 
+* Maybe ignored_tag of clear_transactions plugin should be a regexp
+
 * Finish clear_transactions plugin; add documentation and example
 
-* Add type checking of config data passed to clear_transaction plugin and
-  generally improve error handling and reporting
+* Should clear_transactions plugin be able to print out pending transactions?
+
+* Should I turn sort_docs plugin into a general sort_order plugin?
+  Martin would not like that
 
 * Mark beansoup.plugins.sort_docs as deprecated or remove it altogether
 
@@ -16,14 +20,3 @@ TODO
 
 * Consider adding examples
 
-* Improve documentation
-
-* Upload to PyPi
-
-* Write import filter to help balance clearing accounts
-
-* Add plugin like pending_plugin, but restricted to common accounts with
-  Clearing component
-
-* TD importers should be able to generate tags for transactions involving a
-  clearing account (I can now use an import filter for that)

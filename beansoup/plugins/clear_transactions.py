@@ -1,58 +1,99 @@
 """Work in progress. It works, but needs documentation and some cleaning.
 """
 
-import ast
+import argparse
 import collections
 import datetime
 import itertools
 
-from beancount.core import data, flags
+from beancount.core import data, getters, flags
 
+from beansoup.plugins import config
 from beansoup.utils import dates
 
 __plugins__ = ('clear_transactions',)
 
 
-def clear_transactions(entries, unused_options_map, config):
-    config_obj = ast.literal_eval(config)
-    if not isinstance(config_obj, dict):
-        raise RuntimeError("Invalid plugin configuration: expecting a dict")
+class AccountPairType:
+    def __init__(self, entries):
+        self.existing_accounts = getters.get_accounts(entries)
 
-    processor = Processor(
-        flag_pending=config_obj.get('flag_pending', False),
-        cleared_tag_name=config_obj.get('cleared_tag_name', 'CLEARED'),
-        pending_tag_name=config_obj.get('pending_tag_name', 'PENDING'),
-        ignored_tag_name=config_obj.get('ignored_tag_name', 'PRE_CLEARED'),
-        cleared_link_prefix=config_obj.get('cleared_link_prefix', 'clearing'),
-        max_delta_days=config_obj.get('max_delta_days', 5),
-        skip_weekends=config_obj.get('skip_weekends', True),
-        clearing_account_pairs=config_obj.get('account_pairs', []))
+    def __call__(self, string):
+        accounts = string.split(',')
+        if len(accounts) != 2:
+            msg="invalid account pair: '{}'; expecting clearing and main account names separated by a comma (no spaces)".format(string)
+            raise argparse.ArgumentTypeError(msg)
+        for account in accounts:
+            if account not in self.existing_accounts:
+                msg="account '{}' does not exist".format(account)
+                raise argparse.ArgumentTypeError(msg)
+        return tuple(accounts)
+
+
+def clear_transactions(entries, options_map, config_string):
+    # Parse plugin config; report errors if any
+    parser = config.ArgumentParser(
+        prog='beansoup.plugins.clear_transactions',
+        description='A plugin that automatically tags cleared and pending transactions.',
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+        add_help=False,
+        entries_filename=options_map['filename'])
+    parser.add_argument(
+        '--flag_pending', action='store_true', default=False,
+        help='annotate pending transactions with a {} flag'.format(flags.FLAG_WARNING))
+    parser.add_argument(
+        '--cleared_tag', metavar='TAG', default='CLEARED',
+        help='tag cleared transactions with %(metavar)s')
+    parser.add_argument(
+        '--pending_tag', metavar='TAG', default='PENDING',
+        help='tag pending transactions with %(metavar)s')
+    parser.add_argument(
+        '--ignored_tag', metavar='TAG', default='PRE_CLEARED',
+        help='ignore transactions that have a %(metavar)s tag')
+    parser.add_argument(
+        '--link_prefix', metavar='PREFIX', default='cleared',
+        help='link pairs of cleared transactions with %(metavar)s string followed by increasing count')
+    parser.add_argument(
+        '--max_days', metavar='N', type=int, default=7,
+        help='only pair transactions if they occurred no more than %(metavar)s days apart')
+    parser.add_argument(
+        '--skip_weekends', action='store_true', default=False,
+        help='skip weekends when measuring the time gap between transactions')
+    parser.add_argument(
+        'account_pairs', metavar='CLEARING_ACCOUNT,MAIN_ACCOUNT', nargs='+',
+        type=AccountPairType(entries),
+        help='the names of a clearing account and its main account, separated by a comma (no space)')
+
+    try:
+        args = parser.parse_args((config_string or '').split())
+    except config.ParseError as error:
+        return entries, [error]
+
+    processor = Processor(args)
       
-    modified_entries = processor.clear_transactions(entries)
+    modified_entries, errors = processor.clear_transactions(entries)
 
     # FIXME: Consider printing the pending entries. Maybe return errors for them.
     
-    return ([modified_entries.get(id(entry), entry) for entry in entries], [])
+    return [modified_entries.get(id(entry), entry) for entry in entries], errors
 
 
 class Processor:
-    def __init__(self, flag_pending, cleared_tag_name, pending_tag_name,
-                 ignored_tag_name, cleared_link_prefix,
-                 max_delta_days, skip_weekends,
-                 clearing_account_pairs):
-        self.flag_pending = flag_pending
-        self.cleared_tag_name = cleared_tag_name
-        self.pending_tag_name = pending_tag_name
-        self.ignored_tag_name = ignored_tag_name
-        self.cleared_link_prefix = cleared_link_prefix
-        self.max_delta_days = max_delta_days
-        self.skip_weekends = skip_weekends
-        self.clearing_accounts = dict(clearing_account_pairs)
+    def __init__(self, args):
+        self.flag_pending = args.flag_pending
+        self.cleared_tag_name = args.cleared_tag
+        self.pending_tag_name = args.pending_tag
+        self.ignored_tag_name = args.ignored_tag
+        self.cleared_link_prefix = args.link_prefix
+        self.max_delta_days = args.max_days
+        self.skip_weekends = args.skip_weekends
+        self.clearing_accounts=dict(args.account_pairs)
         
         self.modified_entries = None
         self.link_count = itertools.count(start=1)
 
     def clear_transactions(self, entries):
+        errors = []
         self.modified_entries = {}
         groups = collections.defaultdict(list)
         for entry in entries:
@@ -66,7 +107,7 @@ class Processor:
         for txn_postings in groups.values():
             self.clear_transaction_group(txn_postings)
 
-        return self.modified_entries
+        return self.modified_entries, errors
 
     def get_txn_clearing_posting(self, txn):
         # This code implicitly assumes that a transaction can only have
