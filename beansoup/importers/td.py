@@ -7,10 +7,12 @@ import logging
 from os import path
 import re
 
+from beancount.core import account_types
 from beancount.core import amount
 from beancount.core import data
 from beancount.core.number import D
 from beancount.ingest import importer
+from beancount.parser import options
 
 from beansoup.utils import period
 
@@ -23,7 +25,7 @@ class Importer(importer.ImporterProtocol):
     of the file to associate it to a particular account.
     """
     def __init__(self, account, currency='CAD', basename=None,
-                 first_day=None, filename_regexp=None):
+                 first_day=None, filename_regexp=None, option_map=None):
         """Create a new importer for the given account.
 
         Args:
@@ -42,6 +44,7 @@ class Importer(importer.ImporterProtocol):
         self.currency = currency.upper()
         self.basename = basename
         self.first_day = first_day
+        self.account_types = options.get_account_types(option_map) if option_map else None
 
     def name(self):
         """Include the account in the name."""
@@ -98,7 +101,25 @@ class Importer(importer.ImporterProtocol):
             new_entries.append(entry)
         new_entries = data.sorted(new_entries)
 
-        # FIXME: try to extract the balance too
+        # Extract balance, but only if the account is in (assets, liabilities)
+        account_type = account_types.get_account_type(self.account)
+        if (records and
+            self.account_types and
+            account_type in (self.account_types.assets,
+                             self.account_types.liabilities)):
+            last_record = records[-1]
+            if account_type == self.account_types.assets:
+                balance = last_record.balance
+            else:
+                balance = -last_record.balance
+            # The Balance assertion occurs at the beginning of the date,
+            # so move it to the following day.
+            date = last_record.date + datetime.timedelta(days=1)
+            meta = data.new_metadata(file.name, last_record.lineno)
+            balance_entry = data.Balance(meta, date, self.account,
+                                         amount.Amount(balance, self.currency),
+                                         None, None)
+            new_entries.append(balance_entry)
 
         return new_entries
 
@@ -128,6 +149,23 @@ def parse(filename):
     with open(filename, newline='') as file:
         reader = csv.reader(file, 'td')
         try:
-            return [parse_record(record, reader.line_num) for record in reader]
+            records = [parse_record(record, reader.line_num) for record in reader]
         except (csv.Error, ValueError) as exc:
             logging.error('{}:{}: {}'.format(filename, reader.line_num, exc))
+            records = []
+
+    # We assume the records are in chronological order, but we do not know
+    # whether ascending or descending. We need them in ascending order.
+    if len(records) > 1:
+        first_date = records[0].date
+        last_date = records[-1].date
+        if first_date < last_date:
+            pass
+        elif last_date < first_date:
+            records.reverse()
+        else:
+            # This is the hard case
+            # FIXME: to be implemented
+            pass
+
+    return records

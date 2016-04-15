@@ -2,10 +2,10 @@
 TODO
 ====
 
-* Improve beansoup.importers.td.Importer to extract balance from TD files.
-  Have to be careful with the sign with Assets and Liabilities accounts.
-  Have to check a few records to figure out if the balance is in the first
-  or last record because the data can be downloaded in either order.
+* Make beansoup.importers.td.Importer extracted balance more robust.
+  When the CSV records all have the same date, it is not clear whether
+  they are in ascending or descending chronological order and therefore it
+  is not clear whether to use the first or last record for the balance amount.
 
 * Rename period.py to periods.py
 
