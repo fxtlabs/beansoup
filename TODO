@@ -2,6 +2,52 @@
 TODO
 ====
 
+* Improve beansoup.importers.td.Importer to extract balance from TD files.
+  Have to be careful with the sign with Assets and Liabilities accounts.
+  Have to check a few records to figure out if the balance is in the first
+  or last record because the data can be downloaded in either order.
+
+* Rename period.py to periods.py
+
+* Move transactions.py to importers/filters/completion.py
+
+* Should importers/filters/__init__.py import all filters to expose them
+  more conveniently (e.g.
+  from beansoup.importers import filters
+  then filters.Completion, filters.Whatever
+  instead of
+  from beansoup.importers.filters import completion, whatever
+  then completion.Completion, whatever.Whatever or
+  completion.Filter, whatever.Filter)
+
+* Consider adding an option to transaction completer to add posting for
+  all matching accounts even though they would not balance
+
+* Allow transaction completer to look at alternative accounts for matches
+  (e.g. completing a transaction from a Visa statement could also look at
+  transactions involving an Amex card since you may have charged for the
+  same payee on one card or the other)
+  Matches in alternative accounts would have a smaller score
+
+* Improve the narrative similarity algorithm used by transaction completer
+  Try something from difflib:
+  difflib.SequenceMatcher(lambda x: x == ' ', 'string1', 'string2').ratio()
+  Or try Levenshtein distance
+  https://pypi.python.org/pypi/python-Levenshtein/0.12.0
+  distance(), ratio(), and jaro_winkler() look interesting
+  Probably best to lowercase everything before
+  http://stackoverflow.com/questions/6690739/fuzzy-string-comparison-in-python-confused-with-which-library-to-use
+  http://chairnerd.seatgeek.com/fuzzywuzzy-fuzzy-string-matching-in-python/
+  https://github.com/seatgeek/fuzzywuzzy
+  https://marcobonzanini.com/2015/02/25/fuzzy-string-matching-in-python/
+  https://pypi.python.org/pypi/Distance/
+  
+* Add a customizable normalization step on the imported narration and
+  existing narrations to improve robustness of similarity measure.
+  For example, the zip-like electronic transfer code at the end of some TD
+  entries could be normalized to A1B2C3.
+  Maybe use a normalization dict to map accounts to normalization callables.
+
 * Maybe ignored_tag of clear_transactions plugin should be a regexp
 
 * Finish clear_transactions plugin; add documentation and example
