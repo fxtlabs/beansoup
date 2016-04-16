@@ -2,6 +2,24 @@
 TODO
 ====
 
+* Add function to build a period given the starting date
+
+* Add iterator over periods
+  def count(start=date):
+    while True:
+        yield n
+        n += ...
+
+* TD parse needs to be cachable, so it cannot use info from the beancount
+  account to figure out the sign of balance
+
+* Factor td.Importer into a csv.Importer and a specialization for TD.
+
+* beansoup.importers.td.Importer should output one balance directive per
+  month when a file spans several monthly periods.
+  I have yearly statement files for old data, but I would still like to
+  generate monthly balance directives.
+
 * Make beansoup.importers.td.Importer extracted balance more robust.
   When the CSV records all have the same date, it is not clear whether
   they are in ascending or descending chronological order and therefore it
