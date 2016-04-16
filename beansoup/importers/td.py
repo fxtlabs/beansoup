@@ -18,7 +18,7 @@ from beancount.parser import options
 from beansoup.utils import period
 
 
-class Importer(importer.ImporterProtocol):
+class CsvImporter(importer.ImporterProtocol):
     """An importer for TD Canada Trust CSV statements.
 
     Unfortunately, these CSV files do not contain any information to easily
@@ -122,6 +122,15 @@ class Importer(importer.ImporterProtocol):
         # all the work sort_rows() did to figure out the correct order!
 
         return new_entries
+
+
+class Importer(CsvImporter):
+    """An importer for TD Canada Trust CSV statements.
+
+    Unfortunately, these CSV files do not contain any information to easily
+    identify the account; for this reason, this importer relies on the name
+    of the file to associate it to a particular account.
+    """
 
     def parse(self, file):
         return file.convert(parse)
