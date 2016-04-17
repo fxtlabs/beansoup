@@ -2,14 +2,6 @@
 TODO
 ====
 
-* One thing still bug me about the CSV importer in beansoup.importers.csv:
-  I should be using the file lineno for the metadata of the extracted entries.
-  However, that would prevent data.sorted() from working correctly on those entries
-  since they are not necessarily in the correct chronological order in the original file.
-  I could avoid using data.sorted() to merge in the balance entries and write my own
-  merge function instead; however, I would still have to ensure (by code inspection)
-  that none of the bean-extract code downstream tries to sort those entries.
-  
 * Move transactions.py to importers/filters/completion.py
 
 * Should importers/filters/__init__.py import all filters to expose them

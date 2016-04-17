@@ -1,5 +1,6 @@
-"""CSV Importers."""
+"""Utilities to implement CSV importers."""
 
+import collections
 import csv
 import datetime
 import io
@@ -15,6 +16,20 @@ from beancount.ingest import importer
 from beancount.parser import options
 
 from beansoup.utils import periods
+
+
+# A row of the parsed CSV file.
+#
+# Attributes:
+#   lineno: An int identifying the line of the CSV file where this row is found.
+#   date: A datetime.date object; the date of the transaction.
+#   description: A string; a description of the transaction.
+#   amount: A beancount.core.number.Decimal object; the value of the transaction.
+#     The sign of its value should be the same as normally used by beancount entries.
+#   balance: A beancount.core.number.Decimal object; the balance of the account
+#     immediately following the transaction. The sign of its value should be the
+#     same as normally used by beancount entries.
+Row = collections.namedtuple('Row', 'lineno date description amount balance')
 
 
 class Importer(importer.ImporterProtocol):
@@ -99,8 +114,10 @@ class Importer(importer.ImporterProtocol):
                 self.account,
                 amount.Amount(row.amount, self.currency),
                 None, None, None, None)
-            # Use the final positional index rather than the lineno of the row so we can
-            # later sort the entries to merge them with the balance entries
+            # Use the final positional index rather than the lineno of the row because
+            # bean-extract will sort the entries returned by its importers; doing that
+            # using the original line number of the parsed CSV row would undo all the
+            # effort we did to find their correct chronological order.
             meta = data.new_metadata(file.name, index)
             payee = None
             narration = row.description
@@ -136,9 +153,11 @@ class Importer(importer.ImporterProtocol):
                         file.name, balance_date, row.balance))
                     balance_date = periods.prev(balance_date)
             
-        return data.sorted(new_entries)
+        return new_entries
 
     def create_balance_entry(self, filename, date, balance):
+        # Balance directives will be sorted in front of transactions, so there is no need
+        # to have a line number to break ties.
         meta = data.new_metadata(filename, 0)
         balance_entry = data.Balance(meta, date, self.account,
                                      amount.Amount(balance, self.currency),
@@ -156,16 +175,7 @@ class Importer(importer.ImporterProtocol):
         Args:
           file: A cache.FileMemo object.
         Returns:
-          A list of objects; one object per row; each object is expected to have the
-          following attributes:
-            lineno: An int, the line of the CSV file where this row is found.
-            date: A datetime.date object; the date of the transaction.
-            description: A string; a description of the transaction.
-            amount: A Decimal object; the value of the transaction; the sign of its
-              value should be the same as normally used by beancount entries.
-            balance: A Decimal object; the balance of the account immediately following
-              the transaction; the sign of its value should be the same as normally
-              used by beancount entries.
+          A list of Row objects; one object per row.
           The order of the parsed rows is irrelevant; they will be sorted in ascending
           chronological order in a way that agrees with the balance values associated to
           each row. It that is not possible, the balance values will be ignored and the
@@ -193,18 +203,9 @@ def parse(file, dialect, parse_row):
       file: A cache.FileMemo object; the CSV file to be parsed.
       dialect: The name of a registered CSV dialect to use for parsing.
       parse_row: A function taking a row (a list of values) and its line number in
-        the input file and returning an object with the following attributes:
-          lineno: An int, the line of the CSV file where this row is found.
-          date: A datetime.date object; the date of the transaction.
-          description: A string; a description of the transaction.
-          amount: A Decimal object; the value of the transaction; the sign of its value
-            should be the same as normally used by beancount entries.
-          balance: A Decimal object; the balance of the account immediately following
-            the transaction; the sign of its value should be the same as normally used
-            by beancount entries.
+        the input file and returning a Row object.
     Returns:
-      A list of objects with attributes as described for the return value of the
-      'parse_row' function above.
+      A list of Row objects in the same order as encountered in the CSV file.
     """
     with io.StringIO(file.contents()) as stream:
         reader = csv.reader(stream, dialect)

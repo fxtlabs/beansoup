@@ -1,20 +1,17 @@
 """Importers for TD Canada Trust."""
 
-import collections
-import csv
+import csv as csvlib
 import datetime
 
 from beancount.core.number import D
 
-from beansoup.importers import csv as csvimp
+from beansoup.importers import csv
 
 
-csv.register_dialect('tdcanadatrust', delimiter=',', quoting=csv.QUOTE_MINIMAL)
-
-Row = collections.namedtuple('Row', 'lineno date description amount balance')
+csvlib.register_dialect('tdcanadatrust', delimiter=',', quoting=csvlib.QUOTE_MINIMAL)
 
 
-class Importer(csvimp.Importer):
+class Importer(csv.Importer):
     """An importer for TD Canada Trust CSV statements."""
     def parse(self, file):
         """Parse a TD Canada Trust CSV file.
@@ -24,7 +21,7 @@ class Importer(csvimp.Importer):
         Returns:
           A list of Row objects.
         """
-        return csvimp.parse(file, 'tdcanadatrust', self.parse_row)
+        return csv.parse(file, 'tdcanadatrust', self.parse_row)
 
     def parse_row(self, row, lineno):
         """Parse a row of a TD Canada Trust CSV file.
@@ -33,12 +30,10 @@ class Importer(csvimp.Importer):
           row: A list of field values for the row.
           lineno: The line number where the row appears in the CSV file
         Returns:
-          A Row object with lineno (an int, the line of the CSV file where this row is found),
-          date (a datetime.date object), description (a string), amount (a Decimal object),
-          and balance (another Decimal object).
+          A beansoup.importers.csv.Row object.
         """
         date = datetime.datetime.strptime(row[0], '%m/%d/%Y').date()
         description = row[1]
         amount = -D(row[2]) if row[2] else D(row[3])
         balance = self.account_sign * D(row[4])
-        return Row(lineno, date, description, amount, balance)
+        return csv.Row(lineno, date, description, amount, balance)
