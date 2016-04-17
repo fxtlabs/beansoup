@@ -4,6 +4,11 @@ TODO
 
 * Rename period.py to periods.py
 
+* beansoup.importers.csv.Importer should output one balance directive per
+  month when a file spans several monthly periods.
+  I have yearly statement files for old data, but I would still like to
+  generate monthly balance directives.
+
 * Add function to build a period given the starting date
 
 * Add iterator over periods
@@ -11,11 +16,6 @@ TODO
     while True:
         yield n
         n += ...
-
-* beansoup.importers.csv.Importer should output one balance directive per
-  month when a file spans several monthly periods.
-  I have yearly statement files for old data, but I would still like to
-  generate monthly balance directives.
 
 * Move transactions.py to importers/filters/completion.py
 

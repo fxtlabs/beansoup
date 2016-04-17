@@ -24,6 +24,9 @@ class Importer(importer.ImporterProtocol):
     of the file to associate it to a particular account.
 
     Derived classes need to implement the 'parse' method.
+
+    See beansoup.importers.td.Importer for a full example of how to derive a
+    concrete importer from this class.
     """
     def __init__(self, account, currency='CAD', basename=None,
                  first_day=None, filename_regexp=None, account_types=None):
@@ -142,16 +145,16 @@ class Importer(importer.ImporterProtocol):
         your custom CSV parser.
 
         Args:
-          file: a cache.FileMemo object.
+          file: A cache.FileMemo object.
         Returns:
-          a list of object; on object per row; each object is expected to have the
+          A list of object; on object per row; each object is expected to have the
           following attributes:
-            lineno: an int, the line of the CSV file where this row is found.
-            date: a datetime.date object; the date of the transaction.
-            description: a string; a description of the transaction.
-            amount: a Decimal object; the value of the transaction; the sign of its value
+            lineno: An int, the line of the CSV file where this row is found.
+            date: A datetime.date object; the date of the transaction.
+            description: A string; a description of the transaction.
+            amount: A Decimal object; the value of the transaction; the sign of its value
               should be the same as normally used by beancount entries.
-            balance: a Decimal object; the balance of the account immediately following
+            balance: A Decimal object; the balance of the account immediately following
               the transaction; the natural sign of its value is expected to be positive;
               the importer will adjust it as necessary for liabilities accounts.
           The order of the parsed rows is irrelevant; they will be sorted in ascending
@@ -168,15 +171,15 @@ def parse(filename, dialect, parse_row):
 
     Args:
       filename: The name of the CSV file to be parsed.
-      dialect: the name of a registered CSV dialect to use for parsing.
-      parse_row: a function taking a row (a list of values) and its line number in
+      dialect: The name of a registered CSV dialect to use for parsing.
+      parse_row: A function taking a row (a list of values) and its line number in
         the input file and returning an object with the following attributes:
-          lineno: an int, the line of the CSV file where this row is found.
-          date: a datetime.date object; the date of the transaction.
-          description: a string; a description of the transaction.
-          amount: a Decimal object; the value of the transaction; the sign of its value
+          lineno: An int, the line of the CSV file where this row is found.
+          date: A datetime.date object; the date of the transaction.
+          description: A string; a description of the transaction.
+          amount: A Decimal object; the value of the transaction; the sign of its value
             should be the same as normally used by beancount entries.
-          balance: a Decimal object; the balance of the account immediately following
+          balance: A Decimal object; the balance of the account immediately following
             the transaction; the natural sign of its value is expected to be positive;
             the importer will adjust it as necessary for liabilities accounts.
     Returns:
@@ -193,33 +196,21 @@ def parse(filename, dialect, parse_row):
     return rows
 
 
-# NOTE: experimental stuff to be documented
-
-def sort_rows_guess_sign(rows, filename):
-    if len(rows) <= 1:
-        return rows, 0
-
-    # Sort the rows by their date; this is only a partial chronological order.
-    # We do not know yet whether rows that share the same date are in an order that is
-    # consistent with the balance amount they show
-    rows.sort(key=lambda x: x.date)
-
-    balanced_rows, error_lineno = sort_rows(rows, +1)
-    if error_lineno is None:
-        print("IT IS ASSET")
-        return balanced_rows, +1
-    
-    balanced_rows, error_lineno = sort_rows(rows, -1)
-    if error_lineno is None:
-        print("IT IS LIABILITY")
-        return balanced_rows, -1
-
-    logging.warning('{}:{}: cannot reorder rows to agree with balance values'.format(filename, error_lineno))
-
-    return rows, 0
-
-
 def sort_rows(rows, account_sign):
+    """Sort the rows of a CSV file.
+
+    This function can sort the rows of a CSV file in ascending chronological order
+    such that the balance values of each row match the sequence of transactions.
+
+    Args:
+      rows: A list of objects with a lineno, date, amount, and balance attributes.
+      account_sign: The sign of the account the CSV rows belong to.
+    Returns
+      A pair with a sorted list of rows and an error. The error is None if the function
+      could find an ordering agreeing with the balance values of its rows; otherwise,
+      it is the line number in the CSV file corresponding to the first row not agreeing
+      with its balance value.
+    """
     if len(rows) <= 1:
         return rows, None
 
@@ -263,94 +254,3 @@ def sort_rows(rows, account_sign):
 
     # The rows could not be ordered in any way that would agree with the balance values
     return rows, error_lineno
-
-
-def sort_rows_orig(rows):
-    if len(rows) <= 1:
-        return rows
-
-    stack = sorted(rows, key=lambda x: x.date, reverse=True)
-    # Assume the first row is really the first transaction
-
-    prev_row = stack.pop()
-    unmatched = []
-    outrows = [prev_row]
-    while stack:
-        row = stack.pop()
-        # Check if the current row balances with the previous one
-        if prev_row.balance + row.amount == row.balance:
-            # The current row is in the correct chronological order
-            outrows.append(row)
-            prev_row = row
-            if unmatched:
-                # Put unmatched rows back on the stack so they get another chance
-                stack.extend(unmatched)
-                unmatched.clear()
-        else:
-            # The current row is out of chronological order
-            if unmatched and unmatched[0].date != row.date:
-                # No ordering can be found that agrees with the balance amount of the rows
-                break
-            # Skip the current row for the time being
-            unmatched.append(row)
-    if unmatched:
-        # The rows could not be ordered in any way that would agree with the balance values
-        logging.warning('NO SORT: {} rows unmatched'.format(len(unmatched)))
-    return outrows
-
-
-def adjust(rows):
-    # FIXME: factor out the following code so other parsers can use it.
-    # It should probably be located in the importers package.
-
-    # We assume the rows are in chronological order, but we do not know
-    # whether ascending or descending.
-    # Try to put them in ascending order and determine the account sign.
-    if len(rows) <= 1:
-        account_sign = 0
-    else:
-        account_sign = +1
-        first_date = rows[0].date
-        last_date = rows[-1].date
-        if first_date != last_date:
-            # Sort rows in ascending chronological order
-            if last_date < first_date:
-                rows.reverse()
-            # Determine whether the sign of the balance entries should be
-            # reversed; if so, it must be a liabilities account.
-            if not check_balance(rows, +1):
-                account_sign = -1 if check_balance(rows, -1) else 0
-        else:
-            # This is the hard case; all rows share the same date
-            if not check_balance(rows, +1):
-                # Either the rows are in reverse order, or this is a
-                # liabilities account or both; let's try reversing the order.
-                rows.reverse()
-                if not check_balance(rows, +1):
-                    # This must be a liabilities account; let's reverse the
-                    # sign of the balance
-                    account_sign = -1
-                    if not check_balance(rows, -1):
-                        # The rows must be in reverse order
-                        rows.reverse()
-                        if not check_balance(rows, -1):
-                            # We cannot determine the account sign and
-                            # cannot trust the balance values
-                            account_sign = 0
-
-    if account_sign == 0:
-        logging.error('{}:0: Cannot determine account sign'.format(filename))
-
-    return rows, account_sign
-
-
-def check_balance(rows, account_sign):
-    rows_iter = iter(rows)
-    prev_balance = account_sign * next(rows_iter).balance
-    import pdb; pdb.set_trace()
-    for row in rows_iter:
-        balance = account_sign * row.balance
-        if (prev_balance + row.amount) != balance:
-            return False
-        prev_balance = balance
-    return True
