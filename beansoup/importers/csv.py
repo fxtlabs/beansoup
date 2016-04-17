@@ -13,7 +13,7 @@ from beancount.core import data
 from beancount.ingest import importer
 from beancount.parser import options
 
-from beansoup.utils import period
+from beansoup.utils import periods
 
 
 class Importer(importer.ImporterProtocol):
@@ -82,7 +82,7 @@ class Importer(importer.ImporterProtocol):
         rows, _ = self.parse(file)
         date = max(row.date for row in rows)
         if self.first_day is not None:
-            _, date = period.enclose_date(date, first_day=self.first_day)
+            _, date = periods.enclose_date(date, first_day=self.first_day)
         return date
 
     def extract(self, file):

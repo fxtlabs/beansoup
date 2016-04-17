@@ -2,8 +2,6 @@
 TODO
 ====
 
-* Rename period.py to periods.py
-
 * beansoup.importers.csv.Importer should output one balance directive per
   month when a file spans several monthly periods.
   I have yearly statement files for old data, but I would still like to
