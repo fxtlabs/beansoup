@@ -2,6 +2,7 @@
 
 import csv
 import datetime
+import io
 import itertools
 import logging
 from os import path
@@ -88,7 +89,7 @@ class Importer(importer.ImporterProtocol):
     def extract(self, file):
         """Return extracted entries and errors."""
         rows = self.parse(file)
-        rows, error_lineno = sort_rows(rows, self.account_sign)
+        rows, error_lineno = sort_rows(rows)
         new_entries = []
         if len(rows) == 0:
             return new_entries
@@ -123,7 +124,7 @@ class Importer(importer.ImporterProtocol):
             last_row = rows[-1]
             date = last_row.date + datetime.timedelta(days=1)
             balance_entry = self.create_balance_entry(
-                file.name, last_row.lineno, date, last_row.balance)
+                file.name, date, last_row.balance)
             new_entries.append(balance_entry)
         else:
             # Create monthly balance entries starting from the most recent one
@@ -137,8 +138,7 @@ class Importer(importer.ImporterProtocol):
             
         return data.sorted(new_entries)
 
-    def create_balance_entry(self, filename, date, balance_number):
-        balance = self.account_sign * balance_number
+    def create_balance_entry(self, filename, date, balance):
         meta = data.new_metadata(filename, 0)
         balance_entry = data.Balance(meta, date, self.account,
                                      amount.Amount(balance, self.currency),
@@ -149,12 +149,6 @@ class Importer(importer.ImporterProtocol):
         """Parse the CSV file.
 
         Derived classes must implement this method to parse their CSV files.
-        A typical implementation will be:
-          return file.convert(parse)
-        where 'parse' will be a function doing the actual parsing. This allows the result
-        of the parser to be reused by multiple importers (those sharing the 'parse'
-        function); in order for the caching to work correctly, the 'parse' function must
-        not depend on any information other than the name of the file to be parsed.
 
         Consider using the helper function 'beansoup.importers.csv.parse' to implement
         your custom CSV parser.
@@ -162,16 +156,16 @@ class Importer(importer.ImporterProtocol):
         Args:
           file: A cache.FileMemo object.
         Returns:
-          A list of object; on object per row; each object is expected to have the
+          A list of objects; one object per row; each object is expected to have the
           following attributes:
             lineno: An int, the line of the CSV file where this row is found.
             date: A datetime.date object; the date of the transaction.
             description: A string; a description of the transaction.
-            amount: A Decimal object; the value of the transaction; the sign of its value
-              should be the same as normally used by beancount entries.
+            amount: A Decimal object; the value of the transaction; the sign of its
+              value should be the same as normally used by beancount entries.
             balance: A Decimal object; the balance of the account immediately following
-              the transaction; the natural sign of its value is expected to be positive;
-              the importer will adjust it as necessary for liabilities accounts.
+              the transaction; the sign of its value should be the same as normally
+              used by beancount entries.
           The order of the parsed rows is irrelevant; they will be sorted in ascending
           chronological order in a way that agrees with the balance values associated to
           each row. It that is not possible, the balance values will be ignored and the
@@ -181,11 +175,22 @@ class Importer(importer.ImporterProtocol):
         raise NotImplementedError('Derived classes must implement this method.')
 
 
-def parse(filename, dialect, parse_row):
+def parse(file, dialect, parse_row):
     """Parse a CSV file.
 
+    This utility function makes it easy to parse a CSV file format for
+    bank or credit card accounts.
+
+    It takes advantage of the ability to cache the file contents, but it
+    does not attempt to cache the parsed result. Be careful when you consider
+    caching the result of your parser in a cache.FileMemo object; often your
+    row parser will adjust the sign of the row balance according to the sign
+    of the account associated with the importer using the parser; this means
+    that CSV importers for accounts of opposite signs should not share the
+    parsed results!
+
     Args:
-      filename: The name of the CSV file to be parsed.
+      file: A cache.FileMemo object; the CSV file to be parsed.
       dialect: The name of a registered CSV dialect to use for parsing.
       parse_row: A function taking a row (a list of values) and its line number in
         the input file and returning an object with the following attributes:
@@ -195,23 +200,23 @@ def parse(filename, dialect, parse_row):
           amount: A Decimal object; the value of the transaction; the sign of its value
             should be the same as normally used by beancount entries.
           balance: A Decimal object; the balance of the account immediately following
-            the transaction; the natural sign of its value is expected to be positive;
-            the importer will adjust it as necessary for liabilities accounts.
+            the transaction; the sign of its value should be the same as normally used
+            by beancount entries.
     Returns:
       A list of objects with attributes as described for the return value of the
       'parse_row' function above.
     """
-    with open(filename, newline='') as file:
-        reader = csv.reader(file, dialect)
+    with io.StringIO(file.contents()) as stream:
+        reader = csv.reader(stream, dialect)
         try:
             rows = [parse_row(row, reader.line_num) for row in reader]
         except (csv.Error, ValueError) as exc:
-            logging.error('{}:{}: {}'.format(filename, reader.line_num, exc))
+            logging.error('{}:{}: {}'.format(file.name, reader.line_num, exc))
             rows = []
     return rows
 
 
-def sort_rows(rows, account_sign):
+def sort_rows(rows):
     """Sort the rows of a CSV file.
 
     This function can sort the rows of a CSV file in ascending chronological order
@@ -219,7 +224,6 @@ def sort_rows(rows, account_sign):
 
     Args:
       rows: A list of objects with a lineno, date, amount, and balance attributes.
-      account_sign: The sign of the account the CSV rows belong to.
     Returns
       A pair with a sorted list of rows and an error. The error is None if the function
       could find an ordering agreeing with the balance values of its rows; otherwise,
@@ -233,7 +237,7 @@ def sort_rows(rows, account_sign):
     # know for sure which one came first, so we have a number of opening balances and we
     # have to find out which one is the right one.
     first_date = rows[0].date
-    opening_balances = [account_sign * row.balance - row.amount for row in itertools.takewhile(
+    opening_balances = [row.balance - row.amount for row in itertools.takewhile(
         lambda r: r.date == first_date, rows)]
 
     error_lineno = 0
@@ -247,11 +251,10 @@ def sort_rows(rows, account_sign):
         while stack:
             row = stack.pop()
             # Check if the current row balances with the previous one
-            balance = account_sign * row.balance
-            if prev_balance + row.amount == balance:
+            if prev_balance + row.amount == row.balance:
                 # The current row is in the correct chronological order
                 balanced_rows.append(row)
-                prev_balance = balance
+                prev_balance = row.balance
                 if unbalanced_rows:
                     # Put unbalanced rows back on the stack so they get another chance
                     stack.extend(unbalanced_rows)
