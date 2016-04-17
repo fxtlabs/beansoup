@@ -79,10 +79,10 @@ class Importer(importer.ImporterProtocol):
 
     def file_date(self, file):
         """Return the filing date for the file."""
-        rows, _ = self.parse(file)
+        rows = self.parse(file)
         date = max(row.date for row in rows)
         if self.first_day is not None:
-            _, date = periods.enclose_date(date, first_day=self.first_day)
+            date = periods.lowest_end(date, first_day=self.first_day)
         return date
 
     def extract(self, file):

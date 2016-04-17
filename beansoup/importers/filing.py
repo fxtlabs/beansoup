@@ -8,7 +8,7 @@ import re
 
 from beancount.ingest import importer
 
-from beansoup.utils import periods
+from beansoup.utils import dates
 
 
 class Importer(importer.ImporterProtocol):
@@ -65,7 +65,7 @@ class Importer(importer.ImporterProtocol):
             groups = matches.groupdict()
             today = datetime.date.today()
             year = int(groups['year']) if 'year' in groups else today.year
-            month = periods.month_number(groups.get('month')) or today.month
+            month = dates.month_number(groups.get('month')) or today.month
             if 'day' in groups:
                 # The filename fully specifies the document date
                 day = int(groups['day'])
