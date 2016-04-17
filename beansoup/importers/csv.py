@@ -90,12 +90,17 @@ class Importer(importer.ImporterProtocol):
         rows = self.parse(file)
         rows, error_lineno = sort_rows(rows, self.account_sign)
         new_entries = []
-        for row in rows:
+        if len(rows) == 0:
+            return new_entries
+
+        for index, row in enumerate(rows):
             posting = data.Posting(
                 self.account,
                 amount.Amount(row.amount, self.currency),
                 None, None, None, None)
-            meta = data.new_metadata(file.name, row.lineno)
+            # Use the final positional index rather than the lineno of the row so we can
+            # later sort the entries to merge them with the balance entries
+            meta = data.new_metadata(file.name, index)
             payee = None
             narration = row.description
             entry = data.Transaction(
@@ -110,25 +115,35 @@ class Importer(importer.ImporterProtocol):
             new_entries.append(entry)
 
         # Extract balance, but only if we can trust it
-        if rows and error_lineno is None:
-            last_row = rows[-1]
-            balance = self.account_sign * last_row.balance
-            # The Balance assertion occurs at the beginning of the date,
-            # so move it to the following day.
-            date = last_row.date + datetime.timedelta(days=1)
-            meta = data.new_metadata(file.name, last_row.lineno)
-            balance_entry = data.Balance(meta, date, self.account,
-                                         amount.Amount(balance, self.currency),
-                                         None, None)
-            new_entries.append(balance_entry)
-        elif rows:
+        if error_lineno is not None:
             logging.warning('{}:{}: cannot reorder rows to agree with balance values'.format(
                 file.name, error_lineno))
+        elif self.first_day is None:
+            # Create one single balance entry on the day following the last transaction
+            last_row = rows[-1]
+            date = last_row.date + datetime.timedelta(days=1)
+            balance_entry = self.create_balance_entry(
+                file.name, last_row.lineno, date, last_row.balance)
+            new_entries.append(balance_entry)
+        else:
+            # Create monthly balance entries starting from the most recent one
+            balance_date = periods.next(periods.greatest_start(rows[-1].date,
+                                                               first_day=self.first_day))
+            for row in reversed(rows):
+                if row.date < balance_date:
+                    new_entries.append(self.create_balance_entry(
+                        file.name, balance_date, row.balance))
+                    balance_date = periods.prev(balance_date)
+            
+        return data.sorted(new_entries)
 
-        # Do not sort the entries before returning them; their lineno might lead to reverting
-        # all the work sort_rows() did to figure out the correct order!
-
-        return new_entries
+    def create_balance_entry(self, filename, date, balance_number):
+        balance = self.account_sign * balance_number
+        meta = data.new_metadata(filename, 0)
+        balance_entry = data.Balance(meta, date, self.account,
+                                     amount.Amount(balance, self.currency),
+                                     None, None)
+        return balance_entry
 
     def parse(self, file):
         """Parse the CSV file.
