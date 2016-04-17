@@ -160,6 +160,7 @@ class Importer(importer.ImporterProtocol):
           importer will be unable to extract balance directive, but will otherwise work
           as expected.
         """
+        raise NotImplementedError('Derived classes must implement this method.')
 
 
 def parse(filename, dialect, parse_row):
