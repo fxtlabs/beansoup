@@ -210,7 +210,7 @@ def parse(file, dialect, parse_row):
     with io.StringIO(file.contents()) as stream:
         reader = csv.reader(stream, dialect)
         try:
-            rows = [parse_row(row, reader.line_num) for row in reader]
+            rows = [parse_row(row, reader.line_num) for row in reader if row]
         except (csv.Error, ValueError) as exc:
             logging.error('{}:{}: {}'.format(file.name, reader.line_num, exc))
             rows = []

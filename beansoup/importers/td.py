@@ -32,6 +32,8 @@ class Importer(csv.Importer):
         Returns:
           A beansoup.importers.csv.Row object.
         """
+        if len(row) != 5:
+            raise csvlib.Error('Invalid row; expecting 5 values: {}'.format(row))
         date = datetime.datetime.strptime(row[0], '%m/%d/%Y').date()
         description = row[1]
         amount = -D(row[2]) if row[2] else D(row[3])
