@@ -54,4 +54,6 @@ setup(
     packages=['beansoup'],
 
     install_requires=['beancount'],
+    setup_requires=['pytest-runner'],
+    tests_require=['pytest'],
 )

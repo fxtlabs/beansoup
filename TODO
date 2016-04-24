@@ -2,6 +2,10 @@
 TODO
 ====
 
+* Sort rows by date at the beginning of sort_rows().
+  May add option to disable the fancy sorting and only decide whether to
+  reverse the list of not (still checking the balance values)
+
 * Move transactions.py to importers/filters/completion.py
 
 * Should importers/filters/__init__.py import all filters to expose them
