@@ -55,5 +55,5 @@ setup(
 
     install_requires=['beancount'],
     setup_requires=['pytest-runner'],
-    tests_require=['pytest', 'pytest-cov', 'coverage'],
+    tests_require=['pytest', 'pytest-cov', 'coverage', 'python-dateutil'],
 )
