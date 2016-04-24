@@ -47,7 +47,7 @@ def add_biz_days(date, num_biz_days):
     num_days = num_weeks * 7 + num_biz_days_left
     weekday = date.weekday()    # Monday is weekday 0
     # If the starting date falls on a weekend, move it to the next business day
-    if weekday >=5:
+    if weekday >= 5:
         num_days += 7 - weekday
         weekday = 0
     # If the number of business days left in the delta spans a weekend, add

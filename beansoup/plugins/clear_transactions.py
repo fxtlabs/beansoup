@@ -21,11 +21,11 @@ class AccountPairType:
     def __call__(self, string):
         accounts = string.split(',')
         if len(accounts) != 2:
-            msg="invalid account pair: '{}'; expecting clearing and main account names separated by a comma (no spaces)".format(string)
+            msg = "invalid account pair: '{}'; expecting clearing and main account names separated by a comma (no spaces)".format(string)
             raise argparse.ArgumentTypeError(msg)
         for account in accounts:
             if account not in self.existing_accounts:
-                msg="account '{}' does not exist".format(account)
+                msg = "account '{}' does not exist".format(account)
                 raise argparse.ArgumentTypeError(msg)
         return tuple(accounts)
 
@@ -70,11 +70,11 @@ def clear_transactions(entries, options_map, config_string):
         return entries, [error]
 
     processor = Processor(args)
-      
+
     modified_entries, errors = processor.clear_transactions(entries)
 
     # FIXME: Consider printing the pending entries. Maybe return errors for them.
-    
+
     return [modified_entries.get(id(entry), entry) for entry in entries], errors
 
 
@@ -87,8 +87,8 @@ class Processor:
         self.cleared_link_prefix = args.link_prefix
         self.max_delta_days = args.max_days
         self.skip_weekends = args.skip_weekends
-        self.clearing_accounts=dict(args.account_pairs)
-        
+        self.clearing_accounts = dict(args.account_pairs)
+
         self.modified_entries = None
         self.link_count = itertools.count(start=1)
 

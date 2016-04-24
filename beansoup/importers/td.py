@@ -25,7 +25,7 @@ class Importer(csv.Importer):
 
     def parse_row(self, row, lineno):
         """Parse a row of a TD Canada Trust CSV file.
-    
+
         Args:
           row: A list of field values for the row.
           lineno: The line number where the row appears in the CSV file

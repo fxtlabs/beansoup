@@ -44,7 +44,7 @@ def greatest_start(date, first_day=1):
         year, month = date.year - 1, 12
     return datetime.date(year, month, first_day)
 
-    
+
 def lowest_end(date, first_day=1):
     """Compute the ending date of the monthly period containing the given date.
 
@@ -63,7 +63,7 @@ def lowest_end(date, first_day=1):
     _, length = calendar.monthrange(start.year, start.month)
     return start + datetime.timedelta(days=length-1)
 
-    
+
 def next(date):
     """Add one month to the given date.
 

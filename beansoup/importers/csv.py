@@ -13,7 +13,6 @@ from beancount.core import account_types as atypes
 from beancount.core import amount
 from beancount.core import data
 from beancount.ingest import importer
-from beancount.parser import options
 
 from beansoup.utils import periods
 
@@ -152,7 +151,7 @@ class Importer(importer.ImporterProtocol):
                     new_entries.append(self.create_balance_entry(
                         file.name, balance_date, row.balance))
                     balance_date = periods.prev(balance_date)
-            
+
         return new_entries
 
     def create_balance_entry(self, filename, date, balance):
@@ -263,7 +262,8 @@ def sort_rows(rows):
             else:
                 # The current row is out of chronological order
                 if unbalanced_rows and unbalanced_rows[0].date != row.date:
-                    # No ordering can be found that agrees with the balance values of the rows
+                    # No ordering can be found that agrees with the
+                    # balance values of the rows
                     break
                 # Skip the current row for the time being
                 unbalanced_rows.append(row)
