@@ -55,5 +55,5 @@ setup(
 
     install_requires=['beancount'],
     setup_requires=['pytest-runner'],
-    tests_require=['pytest'],
+    tests_require=['pytest', 'pytest-cov', 'coverage'],
 )
