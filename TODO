@@ -2,6 +2,16 @@
 TODO
 ====
 
+* Write auto_close plugin to close any account (still open) that has not seen
+  any activity in the past X days
+  Trivial using beancount.core.getters.get_accounts_use_map
+  (see auto_accounts plugin for an example)
+  Not sure how usuful this plugin would be; the reports already exclude
+  accounts that have no activity for the period covered.
+  Maybe the plugin could just warn the user that there are accounts that
+  could be closed and could show the last used dates.
+  (see nounused plugin for an example of error reporting)
+  
 * Sort rows by date at the beginning of sort_rows().
   May add option to disable the fancy sorting and only decide whether to
   reverse the list of not (still checking the balance values)
