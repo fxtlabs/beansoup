@@ -136,10 +136,48 @@ def process_pair(pair, cleared_tag, cleared_link):
                             -posting.units,
                             None, None, None, None)
 
-    meta = data.new_metadata(__name__, 0)
+    # The first in the pair should be the sender; the second, the receiver.
+    if pair[0].posting.units < pair[1].posting.units:
+        pair = (pair[1], pair[0])
+
     date = max(pair[0].txn.date, pair[1].txn.date)
-    payee = None
-    narration = '{} / {}'.format(pair[0].txn.narration, pair[1].txn.narration)
+    if pair[0].txn.narration == pair[1].txn.narration:
+        narration = pair[0].txn.narration
+    else:
+        narration = '{} / {}'.format(pair[0].txn.narration, pair[1].txn.narration)
+    if pair[0].txn.payee is None:
+        payee = pair[1].txn.payee
+    elif pair[1].txn.payee is None:
+        payee = pair[0].txn.payee
+    elif pair[0].txn.payee == pair[1].txn.payee:
+        payee = pair[0].txn.payee
+    else:
+        payee = '{} / {}'.format(pair[0].txn.payee, pair[1].txn.payee)
+
+    if is_pair_mergeable(pair):
+        # Merge the two transactions
+        meta = pair[0].txn.meta
+        flag = pair[0].txn.flag
+        tags = (pair[0].txn.tags or set()) | (pair[1].txn.tags or set()) | {cleared_tag}
+        links = (pair[0].txn.links or set()) | (pair[1].txn.links or set())
+        postings = ([posting for posting in pair[0].txn.postings if posting is not pair[0].posting] +
+                    [posting for posting in pair[1].txn.postings if posting is not pair[1].posting])
+        new_entry = data.Transaction(
+            meta,
+            date,
+            flag,
+            payee,
+            narration,
+            tags,
+            links,
+            postings)
+        return (new_entry, )
+
+    # Make sure the connecting entry will be shown between the two existing
+    # ones when looking at the list of entries for their common link
+    lineno = int((pair[0].txn.meta.get('lineno', 0) +
+                  pair[1].txn.meta.get('lineno', 0)) / 2)
+    meta = data.new_metadata(__name__, lineno)
     new_entry = data.Transaction(
         meta,
         date,
@@ -153,6 +191,20 @@ def process_pair(pair, cleared_tag, cleared_link):
     return (tag_and_link(pair[0].txn), tag_and_link(pair[1].txn), new_entry)
 
 
+def is_pair_mergeable(pair):
+    if pair[0].txn.flag != pair[1].txn.flag:
+        return False
+
+    if pair[0].txn.date != pair[1].txn.date:
+        return False
+
+    if (pair[0].posting.cost or pair[0].posting.price or
+        pair[1].posting.cost or pair[1].posting.price):
+        return False
+
+    return True
+
+    
 def process_singleton(singleton, flag_pending, pending_tag):
     entry = singleton.txn
     flag = flags.FLAG_WARNING if flag_pending else entry.flag

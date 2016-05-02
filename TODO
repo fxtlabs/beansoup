@@ -2,6 +2,15 @@
 TODO
 ====
 
+* Add same-day-merge option to deposit_in_transit plugin
+
+* Write utilities for merging tags and links (to avoid having to deal with
+  their None value)
+
+* Figure out a way to disable the deposit_in_transit plugin during import.
+  I do not want it to merge same-day cleared transactions; otherwise, the
+  transaction completer may fail to choose the proper accounts!
+
 * Write auto_close plugin to close any account (still open) that has not seen
   any activity in the past X days
   Trivial using beancount.core.getters.get_accounts_use_map
