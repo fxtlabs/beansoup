@@ -14,6 +14,9 @@ from beansoup.plugins import config
 __plugins__ = ('plugin',)
 
 
+DITError = collections.namedtuple('DITError', 'source message entry')
+
+
 def plugin(entries, options_map, config_string):
     # Parse plugin config; report errors if any
     parser = config.ArgumentParser(
@@ -93,6 +96,7 @@ def process_entries(entries, args):
 
     return unchanged_entries, new_entries, errors
 
+
 def split_entries(entries, dit_component, ignored_tag):
     dits, unchanged_entries, errors = [], [], []
     for entry in entries:
@@ -107,8 +111,12 @@ def split_entries(entries, dit_component, ignored_tag):
         else:
             dits.append(data.TxnPosting(entry, dit_postings[0]))
             if num_dit_postings > 1:
-                # FIXME: output error
-                pass
+                errors.append(DITError(
+                    entry.meta,
+                    "(deposit_in_transit) Found entry with multiple postings to DIT accounts; "
+                    "only processing posting to {} account".format(
+                        dit_postings[0].account),
+                    entry))
     return dits, unchanged_entries, errors
 
 
