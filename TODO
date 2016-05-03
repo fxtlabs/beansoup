@@ -6,13 +6,6 @@ TODO
   It could also auto close, but it should not close DIT accounts that have
   a balance (i.e. that have pending transactions)
 
-* Write utilities for merging tags and links (to avoid having to deal with
-  their None value)
-
-* Figure out a way to disable the deposit_in_transit plugin during import.
-  I do not want it to merge same-day cleared transactions; otherwise, the
-  transaction completer may fail to choose the proper accounts!
-
 * Write auto_close plugin to close any account (still open) that has not seen
   any activity in the past X days
   Trivial using beancount.core.getters.get_accounts_use_map
@@ -71,11 +64,6 @@ TODO
 * Finish clear_transactions plugin; add documentation and example
 
 * Should clear_transactions plugin be able to print out pending transactions?
-
-* Should I turn sort_docs plugin into a general sort_order plugin?
-  Martin would not like that
-
-* Mark beansoup.plugins.sort_docs as deprecated or remove it altogether
 
 * Write OFX importer (banking only?) that can name files according to the
   billing period
