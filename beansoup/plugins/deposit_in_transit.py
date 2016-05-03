@@ -1,4 +1,31 @@
 """Work in progress. It works, but needs documentation and some cleaning.
+
+A plugin that automatically ties split deposit-in-transit transactions.
+
+usage: beansoup.plugins.deposit_in_transit [--dit_component NAME]
+                                           [--same_day_merge] [--flag_pending]
+                                           [--cleared_tag TAG]
+                                           [--pending_tag TAG]
+                                           [--ignored_tag TAG]
+                                           [--link_prefix PREFIX]
+                                           [--skip_re REGEX]
+
+optional arguments:
+  --dit_component NAME  Use NAME as the component name distinguishing deposit-
+                        in-transit accounts (default: DIT)
+  --same_day_merge      merge same-day transactions with matching deposit-in-
+                        transit postings (default: False)
+  --flag_pending        annotate pending transactions with a ! flag (default:
+                        False)
+  --cleared_tag TAG     tag cleared transactions with TAG (default: DEPOSITED)
+  --pending_tag TAG     tag pending transactions with TAG (default: IN-
+                        TRANSIT)
+  --ignored_tag TAG     ignore transactions that have a TAG tag (default:
+                        IGNORED)
+  --link_prefix PREFIX  link pairs of cleared transactions with PREFIX string
+                        followed by increasing count (default: deposited)
+  --skip_re REGEX       disable plugin if REGEX matches any sys.argv (default:
+                        None)
 """
 
 import argparse
@@ -35,16 +62,16 @@ def plugin(entries, options_map, config_string):
         '--flag_pending', action='store_true', default=False,
         help='annotate pending transactions with a {} flag'.format(flags.FLAG_WARNING))
     parser.add_argument(
-        '--cleared_tag', metavar='TAG', default='CLEARED',
+        '--cleared_tag', metavar='TAG', default='DEPOSITED',
         help='tag cleared transactions with %(metavar)s')
     parser.add_argument(
-        '--pending_tag', metavar='TAG', default='PENDING',
+        '--pending_tag', metavar='TAG', default='IN-TRANSIT',
         help='tag pending transactions with %(metavar)s')
     parser.add_argument(
-        '--ignored_tag', metavar='TAG', default='PRE_CLEARED',
+        '--ignored_tag', metavar='TAG', default='IGNORED',
         help='ignore transactions that have a %(metavar)s tag')
     parser.add_argument(
-        '--link_prefix', metavar='PREFIX', default='cleared',
+        '--link_prefix', metavar='PREFIX', default='deposited',
         help='link pairs of cleared transactions with %(metavar)s string followed by increasing count')
     parser.add_argument(
         '--skip_re', metavar='REGEX', default=None, type=config.re_type,
