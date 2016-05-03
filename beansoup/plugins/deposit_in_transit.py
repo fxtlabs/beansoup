@@ -4,6 +4,7 @@
 import argparse
 import collections
 import itertools
+import sys
 
 from beancount.core import data, flags
 from beancount.core.account import has_component
@@ -42,11 +43,20 @@ def plugin(entries, options_map, config_string):
     parser.add_argument(
         '--link_prefix', metavar='PREFIX', default='cleared',
         help='link pairs of cleared transactions with %(metavar)s string followed by increasing count')
+    parser.add_argument(
+        '--skip_re', metavar='REGEX', default=None, type=config.re_type,
+        help='disable plugin if %(metavar)s matches any sys.argv')
 
     try:
         args = parser.parse_args((config_string or '').split())
     except config.ParseError as error:
         return entries, [error]
+
+    # If the plugin was called with the --skip_re option and the given
+    # regular expression matches any of the arguments in sys.argv,
+    # do not run the plugin and return the original entries instead.
+    if args.skip_re and any(args.skip_re.match(arg) for arg in sys.argv):
+        return entries, []
 
     unchanged_entries, new_entries, errors = process_entries(entries, args)
 

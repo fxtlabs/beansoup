@@ -2,6 +2,7 @@
 """
 
 import argparse
+import re
 
 from beancount.core import data
 
@@ -25,3 +26,19 @@ class ArgumentParser(argparse.ArgumentParser):
 
     def exit(self, status=0, message=None):
         self.error(message)
+
+
+def re_type(string):
+    """Argument type for regular expressions.
+
+    It returns a compiled regular expression if string is not empty;
+    None, otherwise.  It raises argparse.ArgumentTypeError if the
+    string is not a valid regular expression.
+    """
+    if string:
+        try:
+            string_re = re.compile(string)
+        except re.error:
+            msg = "invalid regular expression: '{}'".format(string)
+            raise argparse.ArgumentTypeError(msg)
+        return string_re
