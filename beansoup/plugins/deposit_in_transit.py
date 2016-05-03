@@ -3,6 +3,7 @@
 
 import argparse
 import collections
+import itertools
 
 from beancount.core import data, flags
 from beancount.core.account import has_component
@@ -23,6 +24,9 @@ def plugin(entries, options_map, config_string):
     parser.add_argument(
         '--dit_component', metavar='NAME', default='DIT',
         help='Use %(metavar)s as the component name distinguishing deposit-in-transit accounts')
+    parser.add_argument(
+        '--same_day_merge', action='store_true', default=False,
+        help='merge same-day transactions with matching deposit-in-transit postings')
     parser.add_argument(
         '--flag_pending', action='store_true', default=False,
         help='annotate pending transactions with a {} flag'.format(flags.FLAG_WARNING))
@@ -64,10 +68,13 @@ def process_entries(entries, args):
     errors.extend(pairing_errors)
 
     new_entries = []
-    for count, pair in enumerate(pairs, start=1):
-        cleared_link = '{}-{}'.format(args.link_prefix, count)
+    cleared_links = enumerate_links(args.link_prefix)
+    for pair in pairs:
         new_entries.extend(process_pair(
-            pair, cleared_tag=args.cleared_tag, cleared_link=cleared_link))
+            pair,
+            cleared_tag=args.cleared_tag,
+            cleared_links=cleared_links,
+            same_day_merge=args.same_day_merge))
 
     new_entries.extend(
         [process_singleton(singleton,
@@ -125,8 +132,8 @@ def match_dit(dit, candidate_dits, dit_component):
     return candidate_dits[0] if candidate_dits else None
 
 
-def process_pair(pair, cleared_tag, cleared_link):
-    def tag_and_link(entry):
+def process_pair(pair, cleared_tag, cleared_links, same_day_merge):
+    def tag_and_link(entry, cleared_link):
         tags = (entry.tags or set()) | {cleared_tag}
         links = (entry.links or set()) | {cleared_link}
         return entry._replace(tags=tags, links=links)
@@ -154,12 +161,15 @@ def process_pair(pair, cleared_tag, cleared_link):
     else:
         payee = '{} / {}'.format(pair[0].txn.payee, pair[1].txn.payee)
 
-    if is_pair_mergeable(pair):
+    if same_day_merge and is_pair_mergeable(pair):
         # Merge the two transactions
         meta = pair[0].txn.meta
         flag = pair[0].txn.flag
-        tags = (pair[0].txn.tags or set()) | (pair[1].txn.tags or set()) | {cleared_tag}
-        links = (pair[0].txn.links or set()) | (pair[1].txn.links or set())
+        tags = ((pair[0].txn.tags or set()) |
+                (pair[1].txn.tags or set()) |
+                {cleared_tag})
+        links = ((pair[0].txn.links or set()) |
+                 (pair[1].txn.links or set())) or None
         postings = ([posting for posting in pair[0].txn.postings if posting is not pair[0].posting] +
                     [posting for posting in pair[1].txn.postings if posting is not pair[1].posting])
         new_entry = data.Transaction(
@@ -178,6 +188,7 @@ def process_pair(pair, cleared_tag, cleared_link):
     lineno = int((pair[0].txn.meta.get('lineno', 0) +
                   pair[1].txn.meta.get('lineno', 0)) / 2)
     meta = data.new_metadata(__name__, lineno)
+    cleared_link = next(cleared_links)
     new_entry = data.Transaction(
         meta,
         date,
@@ -188,7 +199,9 @@ def process_pair(pair, cleared_tag, cleared_link):
         {cleared_link},        
         [xform_posting(pair[0].posting), xform_posting(pair[1].posting)])
 
-    return (tag_and_link(pair[0].txn), tag_and_link(pair[1].txn), new_entry)
+    return (tag_and_link(pair[0].txn, cleared_link),
+            tag_and_link(pair[1].txn, cleared_link),
+            new_entry)
 
 
 def is_pair_mergeable(pair):
@@ -210,3 +223,10 @@ def process_singleton(singleton, flag_pending, pending_tag):
     flag = flags.FLAG_WARNING if flag_pending else entry.flag
     tags = (entry.tags or set()) | {pending_tag}
     return entry._replace(flag=flag, tags=tags)
+
+
+def enumerate_links(link_prefix):
+    count = 1
+    while True:
+        yield '{}-{}'.format(link_prefix, count)
+        count += 1
