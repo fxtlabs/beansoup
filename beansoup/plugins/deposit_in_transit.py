@@ -3,7 +3,8 @@
 A plugin that automatically ties split deposit-in-transit transactions.
 
 usage: beansoup.plugins.deposit_in_transit [--dit_component NAME]
-                                           [--same_day_merge] [--flag_pending]
+                                           [--auto_open] [--same_day_merge]
+                                           [--flag_pending]
                                            [--cleared_tag TAG]
                                            [--pending_tag TAG]
                                            [--ignored_tag TAG]
@@ -14,6 +15,7 @@ optional arguments:
   --dit_component NAME  use NAME as the component name distinguishing deposit-
                         in-transit accounts (default: DIT)
   --auto_open           automatically open deposit-in-transit accounts
+                        (default: False)
   --same_day_merge      merge same-day transactions with matching deposit-in-
                         transit postings (default: False)
   --flag_pending        annotate pending transactions with a ! flag (default:
@@ -24,7 +26,8 @@ optional arguments:
   --ignored_tag TAG     ignore transactions that have a TAG tag (default:
                         IGNORED)
   --link_prefix PREFIX  link pairs of cleared transactions with PREFIX string
-                        followed by increasing count (default: deposited)
+                        followed by increasing count; otherwise it uses UUIDs
+                        (default: None)
   --skip_re REGEX       disable plugin if REGEX matches any sys.argv (default:
                         None)
 """
@@ -38,6 +41,7 @@ from beancount.core import data, flags, getters
 from beancount.core.account import has_component
 
 from beansoup.plugins import config
+from beansoup.utils import links
 
 __plugins__ = ('plugin',)
 
@@ -75,8 +79,8 @@ def plugin(entries, options_map, config_string):
         '--ignored_tag', metavar='TAG', default='IGNORED',
         help='ignore transactions that have a %(metavar)s tag')
     parser.add_argument(
-        '--link_prefix', metavar='PREFIX', default='deposited',
-        help='link pairs of cleared transactions with %(metavar)s string followed by increasing count')
+        '--link_prefix', metavar='PREFIX', default=None,
+        help='link pairs of cleared transactions with %(metavar)s string followed by increasing count; otherwise it uses UUIDs')
     parser.add_argument(
         '--skip_re', metavar='REGEX', default=None, type=config.re_type,
         help='disable plugin if %(metavar)s matches any sys.argv')
@@ -116,7 +120,7 @@ def process_entries(entries, args):
         dits, dit_component=args.dit_component)
     errors.extend(pairing_errors)
 
-    cleared_links = enumerate_links(args.link_prefix)
+    cleared_links = links.count(args.link_prefix)
     for pair in pairs:
         new_entries.extend(process_pair(
             pair,
@@ -296,10 +300,3 @@ def process_singleton(singleton, flag_pending, pending_tag):
     flag = flags.FLAG_WARNING if flag_pending else entry.flag
     tags = (entry.tags or set()) | {pending_tag}
     return entry._replace(flag=flag, tags=tags)
-
-
-def enumerate_links(link_prefix):
-    count = 1
-    while True:
-        yield '{}-{}'.format(link_prefix, count)
-        count += 1

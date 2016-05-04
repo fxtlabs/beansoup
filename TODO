@@ -2,6 +2,16 @@
 TODO
 ====
 
+* Write beansoup.scripts.beansoup script (installed in bin/beansoup)
+  to run various commands (in a way, an extension of bean-doctor).
+  First command is to detect inactive accounts (no activity in the past X days)
+  Print account name, open date, last transaction date, days since last
+  transaction, and balance
+  It could even have an option to print close directives
+  It should also have an option to limit it to a certain type of directives
+  (i.e. only balance sheet accounts)
+  Maybe it should be a script on its own; call it bean-inactive
+
 * Write auto_close plugin to close any account (still open) that has not seen
   any activity in the past X days
   Trivial using beancount.core.getters.get_accounts_use_map
