@@ -2,10 +2,6 @@
 TODO
 ====
 
-* Add auto open option to deposit_in_transit plugin.
-  It could also auto close, but it should not close DIT accounts that have
-  a balance (i.e. that have pending transactions)
-
 * Write auto_close plugin to close any account (still open) that has not seen
   any activity in the past X days
   Trivial using beancount.core.getters.get_accounts_use_map

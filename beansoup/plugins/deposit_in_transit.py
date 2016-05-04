@@ -11,8 +11,9 @@ usage: beansoup.plugins.deposit_in_transit [--dit_component NAME]
                                            [--skip_re REGEX]
 
 optional arguments:
-  --dit_component NAME  Use NAME as the component name distinguishing deposit-
+  --dit_component NAME  use NAME as the component name distinguishing deposit-
                         in-transit accounts (default: DIT)
+  --auto_open           automatically open deposit-in-transit accounts
   --same_day_merge      merge same-day transactions with matching deposit-in-
                         transit postings (default: False)
   --flag_pending        annotate pending transactions with a ! flag (default:
@@ -33,7 +34,7 @@ import collections
 import itertools
 import sys
 
-from beancount.core import data, flags
+from beancount.core import data, flags, getters
 from beancount.core.account import has_component
 
 from beansoup.plugins import config
@@ -54,7 +55,10 @@ def plugin(entries, options_map, config_string):
         entries_filename=options_map['filename'])
     parser.add_argument(
         '--dit_component', metavar='NAME', default='DIT',
-        help='Use %(metavar)s as the component name distinguishing deposit-in-transit accounts')
+        help='use %(metavar)s as the component name distinguishing deposit-in-transit accounts')
+    parser.add_argument(
+        '--auto_open', action='store_true', default=False,
+        help='automatically open deposit-in-transit accounts')
     parser.add_argument(
         '--same_day_merge', action='store_true', default=False,
         help='merge same-day transactions with matching deposit-in-transit postings')
@@ -92,10 +96,15 @@ def plugin(entries, options_map, config_string):
 
     # FIXME: Consider printing the pending entries. Maybe return errors for them.
 
-    return unchanged_entries + new_entries, errors
+    return sorted(unchanged_entries + new_entries, key=data.entry_sortkey), errors
 
 
 def process_entries(entries, args):
+    new_entries = []
+
+    if args.auto_open:
+        new_entries.extend(open_dit_accounts(entries, args.dit_component))
+
     # Find all DIT transactions to be processed; their original entries
     # will be replaced by new ones
     dits, unchanged_entries, errors = split_entries(
@@ -107,7 +116,6 @@ def process_entries(entries, args):
         dits, dit_component=args.dit_component)
     errors.extend(pairing_errors)
 
-    new_entries = []
     cleared_links = enumerate_links(args.link_prefix)
     for pair in pairs:
         new_entries.extend(process_pair(
@@ -122,6 +130,26 @@ def process_entries(entries, args):
                            pending_tag=args.pending_tag) for singleton in singletons])
 
     return unchanged_entries, new_entries, errors
+
+
+def open_dit_accounts(entries, dit_component):
+    """
+    Minimally adapted from beancount.plugins.auto_accounts.
+    """
+    opened_accounts = {entry.account
+                       for entry in entries
+                       if isinstance(entry, data.Open)}
+
+    new_entries = []
+    accounts_first, _ = getters.get_accounts_use_map(entries)
+    for index, (account, date_first_used) in enumerate(sorted(accounts_first.items())):
+        if ((account not in opened_accounts) and
+                has_component(account, dit_component)):
+            meta = data.new_metadata(__name__, index)
+            new_entry = data.Open(meta, date_first_used, account, None, None)
+            new_entries.append(new_entry)
+
+    return new_entries
 
 
 def split_entries(entries, dit_component, ignored_tag):
