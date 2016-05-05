@@ -1,0 +1,3 @@
+beancount.egg == info
+ofxparse == 0.14
+beancount == 2.0b11

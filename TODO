@@ -2,6 +2,15 @@
 TODO
 ====
 
+* Set up beansoup project on readthedocs.org to use a custom install within a virtual
+  env so that I can share the package version with docs/conf.py
+  run pip freeze > requirements.txt in the virtual env after installing beansoup
+  and provide those requirements to readthedocs.org
+  Or:
+  pip install pipreqs
+  pipreqs ./beansoup
+  See https://github.com/bndr/pipreqs/blob/master/docs/conf.py
+  
 * Write beansoup.scripts.beansoup script (installed in bin/beansoup)
   to run various commands (in a way, an extension of bean-doctor).
   First command is to detect inactive accounts (no activity in the past X days)
