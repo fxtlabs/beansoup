@@ -21,7 +21,9 @@ import os
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 # sys.path.insert(0, os.path.abspath('.'))
 
-from unittest.mock import MagicMock
+# http://docs.readthedocs.io/en/latest/faq.html
+# from unittest.mock import MagicMock
+from mock import Mock as MagicMock
 
 class Mock(MagicMock):
     @classmethod
