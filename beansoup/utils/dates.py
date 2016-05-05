@@ -19,9 +19,10 @@ def month_number(month):
     (case insensitive) as well as month number with or without a leading 0.
 
     Args:
-      month: A string; the name of a month.
+      month (str): The name of a month or its three-letter abbreviation or
+        its numerical equivalent.
     Returns:
-      An int, the number in [1,12] corresponding to the given month name,
+      int or None: The number in [1,12] corresponding to the given month name,
       or None if it does not recognize the given name.
     """
     return MONTHS.get(month.lower()) if isinstance(month, str) else None

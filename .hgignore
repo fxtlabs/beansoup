@@ -8,6 +8,7 @@ syntax: glob
 .cache/
 .coverage
 .eggs/
+_build/
 build/
 dist/
 beansoup.egg-info/
