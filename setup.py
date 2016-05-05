@@ -1,7 +1,7 @@
 from beansoup import version
 
 from codecs import open
-from os import path
+from os import path, environ
 from setuptools import setup
 import sys
 
@@ -15,6 +15,11 @@ here = path.abspath(path.dirname(__file__))
 with open(path.join(here, 'README'), encoding='utf-8') as f:
     long_description = f.read()
 
+if environ.get('READTHEDOCS') == 'True':
+    install_requirements = []
+else:
+    install_requirements = ['beancount']
+    
 setup(
     name='beansoup',
 
@@ -54,7 +59,7 @@ setup(
 
     packages=['beansoup'],
 
-    install_requires=['beancount'],
+    install_requires=install_requirements,
     setup_requires=['pytest-runner'],
     tests_require=['pytest', 'pytest-cov', 'coverage', 'python-dateutil'],
 )
