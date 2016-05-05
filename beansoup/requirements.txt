@@ -1,0 +1,1 @@
+beancount --no-binary :all:
