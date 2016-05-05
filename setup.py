@@ -1,25 +1,19 @@
 from beansoup import version
 
 from codecs import open
-from os import path, environ
+from os import path
 from setuptools import setup
 import sys
 
 # Check if the version is sufficient.
-print ("Python version {}".format(sys.version_info))
-# if sys.version_info[:2] < (3,3):
-#     raise SystemExit("ERROR: Insufficient Python version; you need v3.3 or higher.")
+if sys.version_info[:2] < (3,3):
+    raise SystemExit("ERROR: Insufficient Python version; you need v3.3 or higher.")
 
 here = path.abspath(path.dirname(__file__))
 
 with open(path.join(here, 'README'), encoding='utf-8') as f:
     long_description = f.read()
 
-if environ.get('READTHEDOCS') == 'True':
-    install_requirements = []
-else:
-    install_requirements = ['beancount']
-    
 setup(
     name='beansoup',
 
@@ -59,7 +53,7 @@ setup(
 
     packages=['beansoup'],
 
-    install_requires=install_requirements,
+    install_requires=['beancount'],
     setup_requires=['pytest-runner'],
     tests_require=['pytest', 'pytest-cov', 'coverage', 'python-dateutil'],
 )

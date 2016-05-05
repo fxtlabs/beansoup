@@ -70,6 +70,7 @@ def next(date):
     Note that if the given date falls on a day of the month greater than the number of
     days in the following month, the result will not have the same day of the month as
     the input. For example:
+
       next(datetime.date(2015, 1, 30)) == datetime.date(2015, 3, 2)
 
     Args:
@@ -87,6 +88,7 @@ def prev(date):
     Note that if the given date falls on a day of the month greater than the number of
     days in the following month, the result will not have the same day of the month as
     the input. For example:
+
       prev(datetime.date(2015, 3, 30)) == datetime.date(2015, 3, 2)
 
     Args:

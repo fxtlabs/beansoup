@@ -20,14 +20,6 @@ beansoup.importers.csv module
     :undoc-members:
     :show-inheritance:
 
-beansoup.importers.csv_experimental module
-------------------------------------------
-
-.. automodule:: beansoup.importers.csv_experimental
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
 beansoup.importers.filing module
 --------------------------------
 
@@ -40,14 +32,6 @@ beansoup.importers.mixins module
 --------------------------------
 
 .. automodule:: beansoup.importers.mixins
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-beansoup.importers.ofx2 module
-------------------------------
-
-.. automodule:: beansoup.importers.ofx2
     :members:
     :undoc-members:
     :show-inheritance:
