@@ -2,6 +2,10 @@
    beansoup: A Companion to beancount
 ========================================
 
+.. image:: https://readthedocs.org/projects/beansoup/badge/?version=latest
+:target: http://beansoup.readthedocs.io/en/latest/?badge=latest
+:alt: Documentation Status
+
 .. contents::
 ..
     1  Description
