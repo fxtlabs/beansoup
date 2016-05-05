@@ -6,8 +6,9 @@ from setuptools import setup
 import sys
 
 # Check if the version is sufficient.
-if sys.version_info[:2] < (3,3):
-    raise SystemExit("ERROR: Insufficient Python version; you need v3.3 or higher.")
+print ("Python version {}".format('.'.join(sys.version_info))
+# if sys.version_info[:2] < (3,3):
+#     raise SystemExit("ERROR: Insufficient Python version; you need v3.3 or higher.")
 
 here = path.abspath(path.dirname(__file__))
 
