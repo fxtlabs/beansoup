@@ -1,7 +1,6 @@
-from beansoup import version
-
 from codecs import open
 from os import path
+import re
 from setuptools import setup
 import sys
 
@@ -11,13 +10,17 @@ if sys.version_info[:2] < (3,3):
 
 here = path.abspath(path.dirname(__file__))
 
+# Get the version string without importing the package
+with open(path.join(here, 'beansoup', 'version.py')) as f:
+    version = re.search(r"__version__ = '(.*?)'", f.read()).group(1)
+    
 with open(path.join(here, 'README'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
     name='beansoup',
 
-    version=version.__version__,
+    version=version,
 
     description='A companion to beancount, a command-line double-entry accounting tool',
     long_description=long_description,

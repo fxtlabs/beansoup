@@ -105,7 +105,7 @@ def prev(date):
 
 
 def count(date, reverse=False):
-    """Make and iterator that returns monthly-spaced dates.
+    """Make an iterator that returns monthly-spaced dates.
 
     Args:
       date: A datetime.date object; the starting date.
