@@ -11,10 +11,10 @@ if sys.version_info[:2] < (3,3):
 here = path.abspath(path.dirname(__file__))
 
 # Get the version string without importing the package
-with open(path.join(here, 'beansoup', 'version.py')) as f:
+with open(path.join(here, 'beansoup', 'version.py'), 'rt') as f:
     version = re.search(r"__version__ = '(.*?)'", f.read()).group(1)
     
-with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
+with open(path.join(here, 'README.rst'), 'rt', encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
