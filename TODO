@@ -51,6 +51,10 @@ TODO
   same payee on one card or the other)
   Matches in alternative accounts would have a smaller score
 
+* Consider using Baysian inference to improve the transaction completer
+  https://tomszilagyi.github.io/payment-matching/
+  Some of my accounts also use codes structured like Canadian postal codes
+
 * Improve the narrative similarity algorithm used by transaction completer
   Try something from difflib:
   difflib.SequenceMatcher(lambda x: x == ' ', 'string1', 'string2').ratio()
