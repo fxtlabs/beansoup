@@ -14,7 +14,7 @@ here = path.abspath(path.dirname(__file__))
 with open(path.join(here, 'beansoup', 'version.py')) as f:
     version = re.search(r"__version__ = '(.*?)'", f.read()).group(1)
     
-with open(path.join(here, 'README'), encoding='utf-8') as f:
+with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
@@ -26,7 +26,7 @@ setup(
     long_description=long_description,
 
     # Project homepage
-    url='https://bitbucket.org/fxt/beansoup',
+    url='https://github.com/fxtlabs/beansoup',
 
     # Author details
     author='Filippo Tampieri',
