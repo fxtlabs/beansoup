@@ -1,7 +1,6 @@
 # beansoup: A Companion to beancount
 
-[![PyPi Package](https://badge.fury.io/py/beansoup.svg)](https://badge.fury.io/py/beansoup) [![Documentation Status](https://readthedocs.org/projects/beansoup/badge/?version=latest)](
-http://beansoup.readthedocs.io/en/latest/?badge=latest)
+[![PyPi Package](https://badge.fury.io/py/beansoup.svg)](https://badge.fury.io/py/beansoup) [![Build Status](https://travis-ci.org/fxtlabs/beansoup.svg?branch=master)](https://travis-ci.org/fxtlabs/beansoup) [![Documentation Status](https://readthedocs.org/projects/beansoup/badge/?version=latest)](http://beansoup.readthedocs.io/en/latest/?badge=latest)
 
 
 ## Description

@@ -2,7 +2,7 @@
    beansoup: A Companion to beancount
 ========================================
 
-|PyPi Package|  |Documentation Status|
+|PyPi Package|  |Build Status|  |Documentation Status|
 
 
 .. contents::
@@ -38,6 +38,10 @@ Filippo Tampieri <fxt@fxtlabs.com>
 .. |PyPi Package| image:: https://badge.fury.io/py/beansoup.svg
    :target: https://badge.fury.io/py/beansoup
    :alt: PyPi Status
+
+.. |Build Status| image:: https://travis-ci.org/fxtlabs/beansoup.svg?branch=master
+   :target: https://travis-ci.org/fxtlabs/beansoup
+   :alt: Build Status
 
 .. |Documentation Status| image:: https://readthedocs.org/projects/beansoup/badge/?version=latest
    :target: http://beansoup.readthedocs.io/en/latest/?badge=latest
