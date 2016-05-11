@@ -33,7 +33,7 @@ class AccountPairType:
 def clear_transactions(entries, options_map, config_string):
     # Parse plugin config; report errors if any
     parser = config.ArgumentParser(
-        prog='beansoup.plugins.clear_transactions',
+        prog=__name__,
         description='A plugin that automatically tags cleared and pending transactions.',
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
         add_help=False,
@@ -104,7 +104,8 @@ class Processor:
             if posting:
                 groups[posting.account].append(data.TxnPosting(entry, posting))
 
-        for txn_postings in groups.values():
+        # NOTE: sorting is only needed to support testing
+        for _, txn_postings in sorted(groups.items(), key=lambda x: x[0]):
             self.clear_transaction_group(txn_postings)
 
         return self.modified_entries, errors
