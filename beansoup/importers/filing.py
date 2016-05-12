@@ -78,7 +78,7 @@ class Importer(importer.ImporterProtocol):
                             datetime.timedelta(days=1))
                 else:
                     _, month_last_day = calendar.monthrange(year, month)
-                    date = datetime.date(year, month, day)
+                    date = datetime.date(year, month, month_last_day)
             return date
 
     def extract(self, file):
