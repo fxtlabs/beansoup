@@ -160,7 +160,7 @@ class TransactionCompleter:
           A float number representing the score, normalized in [0,1].
         """
         def get_description(txn):
-            return '{} {}'.format(txn.payee or '', txn.narration or '')
+            return ('{} {}'.format(txn.payee or '', txn.narration or '')).strip()
 
         # If the target transaction does not have a description, there is
         # nothing we can do
