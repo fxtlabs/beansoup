@@ -5,7 +5,6 @@ import pytest
 from os import path
 
 from beancount.ingest import cache
-from beancount.utils import test_utils
 
 from beansoup.importers import filing
 

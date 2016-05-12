@@ -2,6 +2,8 @@
 TODO
 ====
 
+* Tests should use an os-independent test directory
+
 * Update readme to point to docs on
   https://pythonhosted.org/beansoup/ and
 
