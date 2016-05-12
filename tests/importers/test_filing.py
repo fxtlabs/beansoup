@@ -3,17 +3,21 @@
 import datetime
 import pytest
 from os import path
+import tempfile
 
 from beancount.ingest import cache
 
 from beansoup.importers import filing
 
 
+DATADIR = tempfile.gettempdir()
+
+
 def test_basics():
     account = 'Assets:Checking'
     importer = filing.Importer(
         account, basename=None, filename_regexp='test.pdf')
-    file = cache.get_file('/tmp/test.pdf')
+    file = cache.get_file(path.join(DATADIR, 'test.pdf'))
 
     assert importer.name() == 'beansoup.importers.filing.Importer: "{}"'.format(account)
     assert importer.file_account(file) == account
@@ -23,7 +27,7 @@ def test_basics():
     account = 'Liabilities:Visa'
     importer = filing.Importer(
         account, basename='filed', filename_regexp='test.pdf')
-    file = cache.get_file('/tmp/test.pdf')
+    file = cache.get_file(path.join(DATADIR, 'test.pdf'))
     assert importer.name() == 'beansoup.importers.filing.Importer: "{}"'.format(account)
     assert importer.file_account(file) == account
     assert importer.file_name(file) == 'filed.pdf'
@@ -31,17 +35,17 @@ def test_basics():
 
 
 identify_data = [
-    ('/tmp/test-01.pdf', True),
-    ('/usr/local/test-02.csv', True),
-    ('/etc/test-03.txt', False),
-    ('/var/test-ab.pdf', False),
+    ('test-01.pdf', True),
+    ('test-02.csv', True),
+    ('test-03.txt', False),
+    ('test-ab.pdf', False),
 ]
 
 @pytest.mark.parametrize('filename,expected', identify_data)
 def test_identify(filename, expected):
     importer = filing.Importer('Assets:Testing',
                                filename_regexp=r'test-\d{2}\.(pdf|csv)')
-    file = cache.get_file(filename)
+    file = cache.get_file(path.join(DATADIR, filename))
     if expected:
         assert importer.identify(file)
     else:
@@ -68,5 +72,5 @@ def test_file_date(first_day, filename_regexp, filename, expected):
     importer = filing.Importer('Assets:Testing',
                                first_day=first_day,
                                filename_regexp=filename_regexp)
-    file = cache.get_file(path.join('/tmp', filename))
+    file = cache.get_file(path.join(DATADIR, filename))
     assert importer.file_date(file) == expected

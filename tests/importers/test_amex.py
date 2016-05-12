@@ -3,10 +3,14 @@
 import datetime
 import pytest
 from os import path
+import tempfile
 
 from beancount.ingest import cache
 
 from beansoup.importers import amex
+
+
+DATADIR = tempfile.gettempdir()
 
 
 pdf_filing_importer_data = [
@@ -25,7 +29,7 @@ def test_pdf_filing_importer(first_day, filename, expected_date):
     importer = amex.PdfFilingImporter(account,
                                       basename='amex',
                                       first_day=first_day)
-    file = cache.get_file(path.join('/tmp', filename))
+    file = cache.get_file(path.join(DATADIR, filename))
 
     assert importer.name() == 'beansoup.importers.amex.PdfFilingImporter: "{}"'.format(account)
     assert importer.file_account(file) == account
