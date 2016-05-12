@@ -159,24 +159,21 @@ class TransactionCompleter:
         Returns:
           A float number representing the score, normalized in [0,1].
         """
-        # If the target transaction does not have a narration, there is
+        def get_description(txn):
+            return '{} {}'.format(txn.payee or '', txn.narration or '')
+
+        # If the target transaction does not have a description, there is
         # nothing we can do
-        n_max = len(txn.narration)
-        if n_max > 0:
+        txn_description = get_description(txn)
+        n_max = len(txn_description)
+        if n_max > 1:
             # Only consider model transactions whose posting to the target
             # account has the same sign as the transaction to be completed
             posting = [p for p in model_txn.postings if p.account == self.account][0]
             if number.same_sign(posting.units.number, txn.postings[0].units.number):
-                if model_txn.payee:
-                    n_payee = len(path.commonprefix(
-                        [model_txn.payee, txn.narration]))
-                else:
-                    n_payee = 0
-                if model_txn.narration:
-                    n_narration = len(path.commonprefix(
-                        [model_txn.narration, txn.narration]))
-                else:
-                    n_narration = 0
-                score = max(n_payee, n_narration) / float(n_max)
+                model_txn_description = get_description(model_txn)
+                n_match = len(path.commonprefix(
+                    [model_txn_description, txn_description]))
+                score = float(n_match) / float(n_max)
                 return score
         return 0
