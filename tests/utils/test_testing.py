@@ -1,24 +1,33 @@
-"""Unit tests for beansoup.importers.mixins module."""
+"""Unit tests for beansoup.utils.testing module."""
 
+import datetime
 from os import path
 import tempfile
+import unittest
 
 from beancount import loader
 from beancount.ingest import cache
 from beancount.parser import cmptest
 
-from beansoup.importers import mixins
 from beansoup.utils import testing
 
 
-class Importer(mixins.FilterChain, testing.ConstImporter):
-    pass
+class TestDocfileDecorator(unittest.TestCase):
+
+    @testing.docfile(mode='w', suffix='.txt')
+    def test_decorator(self, filename):
+        """25341344-AFEE-2CB4-C88B-72EEAFAD5ACA"""
+        with open(filename) as f:
+            content = f.read()
+            assert content == "25341344-AFEE-2CB4-C88B-72EEAFAD5ACA"
+        _, ext = path.splitext(filename)
+        assert ext == '.txt'
 
 
-class TestFilterChainMixin(cmptest.TestCase):
+class TestConstImporter(cmptest.TestCase):
 
     @loader.load_doc(expect_errors=True)
-    def test_mixin(self, entries, errors, _):
+    def test_importer(self, entries, errors, _):
         """
         2014-01-01 open Assets:US:BofA:Checking                   USD
 
@@ -37,18 +46,14 @@ class TestFilterChainMixin(cmptest.TestCase):
         2014-06-08 * "EDISON POWER" | ""
           Assets:US:BofA:Checking                          -65.00 USD
         """
-        def filter_last_two(entries):
-            return entries[-2:]
-
+        account = 'Assets:US:BofA:Checking'
         file = cache.get_file(path.join(tempfile.gettempdir(), 'test'))
+        importer = testing.ConstImporter(entries, account)
 
-        # Running with no filters should return the extracted entries unchanged
-        importer = Importer(entries, 'Assets:US:BofA:Checking', filters=[])
+        assert importer.file_account(file) == account
+        assert importer.file_name(file) == None
+        assert importer.identify(file)
+        assert importer.file_date(file) == datetime.date(2014, 6, 8)
+
         extracted_entries = importer.extract(file)
         self.assertEqualEntries(extracted_entries, entries)
-
-        # Run with a filter that should pass only the last two entries
-        importer = Importer(entries, 'Assets:US:BofA:Checking',
-                            filters=[filter_last_two])
-        extracted_entries = importer.extract(file)
-        self.assertEqualEntries(extracted_entries, entries[-2:])

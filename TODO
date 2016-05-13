@@ -2,6 +2,9 @@
 TODO
 ====
 
+* Consider rewriting tests as functions rather than classes using more
+  of pytest facilities
+
 * Write an import filter to pull the payee out of the narration based on
   past example; run it before the transaction completer!
 

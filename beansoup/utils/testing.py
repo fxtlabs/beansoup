@@ -48,7 +48,8 @@ class ConstImporter(importer.ImporterProtocol):
         return self.account
 
     def file_date(self, _):
-        return self.entries[-1].date
+        if self.entries:
+            return max([entry.date for entry in self.entries])
 
     def extract(self, _):
         return self.entries
