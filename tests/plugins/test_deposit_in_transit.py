@@ -1,4 +1,4 @@
-"""Tests for deposit_in_transit plugin."""
+"""Unit tests for deposit_in_transit plugin."""
 
 from beancount import loader
 from beancount.parser import cmptest

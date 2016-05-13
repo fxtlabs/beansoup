@@ -4,6 +4,8 @@ import functools
 import tempfile
 import textwrap
 
+from beancount.ingest import importer
+
 
 def docfile(*args, **kwargs):
     """A decorator that creates a temporary file from the function's docstring.
@@ -28,3 +30,25 @@ def docfile(*args, **kwargs):
         new_function.__doc__ = None
         return new_function
     return _docfile
+
+
+class ConstImporter(importer.ImporterProtocol):
+    """
+    A helper importer whose extract method simply returns the entries
+    passed to its constructor.
+    """
+    def __init__(self, entries, account):
+        self.entries = entries
+        self.account = account
+
+    def identify(self, _):
+        return True
+
+    def file_account(self, _):
+        return self.account
+
+    def file_date(self, _):
+        return self.entries[-1].date
+
+    def extract(self, _):
+        return self.entries

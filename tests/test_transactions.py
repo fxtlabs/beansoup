@@ -1,4 +1,4 @@
-"""Tests for beansoup.transactions module."""
+"""Unit tests for beansoup.transactions module."""
 
 from os import path
 
