@@ -2,6 +2,16 @@
 TODO
 ====
 
+* Write an import filter to pull the payee out of the narration based on
+  past example; run it before the transaction completer!
+
+* Make the transaction completer customizable
+  ** User can specify a separator string to ask to ignore the narration
+     starting from the separator pattern
+  ** User can specify pairs of a regex to match a token and a string to replace
+     the token with; use it to normalize dates (e.g. 2016-03-27 -> XXXX-XX-XX)
+     and confirmation codes (e.g. H3Z2J7 -> A1A1A1) to improve matches
+
 * Update readme to point to docs on
   https://pythonhosted.org/beansoup/ and
 
