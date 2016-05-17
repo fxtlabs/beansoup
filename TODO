@@ -2,6 +2,17 @@
 TODO
 ====
 
+* Reformat TODO as TODO.md or move items to Issues tracker on github
+
+* Create a DEVNOTES.md document with how-to pointers for coding style, documentation,
+  continous integration, test coverage, versioning, pylint, etc.
+
+* Should I have release notes?
+
+* Write package level docs
+
+* Improve docs with Google style docstrings, type hints, and examples
+
 * Consider rewriting tests as functions rather than classes using more
   of pytest facilities
 

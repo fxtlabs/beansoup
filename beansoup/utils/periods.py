@@ -82,7 +82,7 @@ def next(date):
     Example:
 
       >>> import datetime
-      >>> print(next(datetime.date(2016, 1, 31)))
+      >>> next(datetime.date(2016, 1, 31))
       datetime.date(2016, 2, 29)
 
     """
@@ -106,7 +106,7 @@ def prev(date):
     Example:
 
       >>> import datetime
-      >>> print(prev(datetime.date(2016, 3, 31)))
+      >>> prev(datetime.date(2016, 3, 31))
       datetime.date(2016, 2, 29)
 
     """
@@ -134,7 +134,7 @@ def count(date, reverse=False):
       >>> import datetime
       >>> import itertools
       >>> start = datetime.date(2016, 1, 31)
-      >>> print([date.isoformat() for date in itertools.islice(periods.count(start), 5)])
+      >>> [date.isoformat() for date in itertools.islice(count(start), 5)]
       ['2016-01-31', '2016-02-29', '2016-03-31', '2016-04-30', '2016-05-31']
 
     """
