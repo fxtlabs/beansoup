@@ -9,7 +9,12 @@ TODO
 
 * Should I have release notes?
 
+* Document exceptions
+
 * Write package level docs
+
+* Use doctest in .rst doc examples
+  https://pytest.org/latest/doctest.html
 
 * Improve docs with Google style docstrings, type hints, and examples
 
