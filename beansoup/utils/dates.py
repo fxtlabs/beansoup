@@ -1,4 +1,11 @@
-"""Utilities for working with dates."""
+"""Utilities for working with dates.
+
+Attributes:
+  MONTHS (Dict[str, int]): a map from month names to
+    their ordinal values, starting at 1. The names are lowercase and
+    can be full names, three-letter abbreviations, or one- or two-digit
+    representations.
+"""
 
 import calendar
 import datetime
@@ -21,8 +28,9 @@ def month_number(month):
     Args:
       month (str): The name of a month or its three-letter abbreviation or
         its numerical equivalent.
+
     Returns:
-      int or None: The number in [1,12] corresponding to the given month name,
+      Optional[int]: The number in [1,12] corresponding to the given month name,
       or None if it does not recognize the given name.
     """
     return MONTHS.get(month.lower()) if isinstance(month, str) else None
@@ -35,11 +43,12 @@ def add_biz_days(date, num_biz_days):
     day before adding the delta.
 
     Args:
-      date: The starting date; a datetime.date object.
-      num_biz_days: The number of business days to add to the starting date;
-        a non-negative int.
+      date (datetime.date): The starting date.
+      num_biz_days (int): The number of business days to add to the starting date;
+        it must be non-negative.
+
     Returns:
-      A datetime.date object.
+      datetime.date: the offset date.
     """
     assert num_biz_days >= 0, 'Invalid num_biz_days value ({}): must be non-negative'.format(num_biz_days)
 

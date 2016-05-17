@@ -8,11 +8,12 @@ def enclose_date(date, first_day=1):
     """Compute the monthly period containing the given date.
 
     Args:
-      date: A datetime.date object.
-      first_day: The first day of the monthly cycle. It must be an int
+      date (datetime.date): The date to be contained.
+      first_day (int): The first day of the monthly cycle. It must fall
         in the interval [1,28].
+
     Returns:
-      A pair of datetime.date objects; the start and end dates of the
+      Tuple[datetime.date, datetime.date]: The start and end dates (inclusives) of the
       monthly period containing the given date.
     """
     start = greatest_start(date, first_day=first_day)
@@ -23,16 +24,17 @@ def enclose_date(date, first_day=1):
 def greatest_start(date, first_day=1):
     """Compute the starting date of the monthly period containing the given date.
 
-    More formally, it computes the greatest start date of the monthly cycle based on
-    first_day that is less than or equal to the given date.
+    More formally, given a monthly cycle starting on `first_day` day of the month,
+    it computes the greatest starting date that is less than or equal to the given
+    `date`.
 
     Args:
-      date: A datetime.date object.
-      first_day: The first day of the monthly cycle. It must be an int
+      date (datetime.date): An arbitrary date.
+      first_day (int): The first day of the monthly cycle. It must fall
         in the interval [1,28].
+
     Returns:
-      The starting date of the monthly period containing the given date as
-      a datetime.date object.
+      datetime.date: The starting date of the monthly period containing the given date.
     """
     assert 0 < first_day < 29, "Invalid 'first_day' value {}: first day of monthly cycle must be in [1,28]".format(first_day)
 
@@ -48,16 +50,18 @@ def greatest_start(date, first_day=1):
 def lowest_end(date, first_day=1):
     """Compute the ending date of the monthly period containing the given date.
 
-    More formally, it computes the lowest end date of the monthly cycle based on
-    first_day that is greater than or equal to the given date.
+    More formally, given a monthly cycle starting on `first_day` day of the month,
+    it computes the lowest ending date that is greater than or equal to the given
+    `date`.  Note that the ending date is inclusive, i.e. it is included in the
+    monthly period.
 
     Args:
-      date: A datetime.date object.
-      first_day: The first day of the monthly cycle. It must be an int
+      date (datetime.date): An arbitrary date.
+      first_day (int): The first day of the monthly cycle. It must fall
         in the interval [1,28].
+
     Returns:
-      The ending date of the monthly period containing the given date as
-      a datetime.date object.
+      datetime.date: The ending date of the monthly period containing the given date.
     """
     start = greatest_start(date, first_day=first_day)
     _, length = calendar.monthrange(start.year, start.month)
@@ -67,52 +71,87 @@ def lowest_end(date, first_day=1):
 def next(date):
     """Add one month to the given date.
 
-    Note that if the given date falls on a day of the month greater than the number of
-    days in the following month, the result will not have the same day of the month as
-    the input. For example:
-
-      next(datetime.date(2015, 1, 30)) == datetime.date(2015, 3, 2)
-
     Args:
-      date: A datetime.date object.
+      date (datetime.date): The starting date.
+
     Returns:
-      A datetime.date object whose value is one month later than the given date.
+      datetime.date:  One month after the starting date unless the starting
+      date falls on a day that is not in the next month; in that case, it
+      returns the last day of the next month.
+
+    Example:
+
+      >>> import datetime
+      >>> print(next(datetime.date(2016, 1, 31)))
+      datetime.date(2016, 2, 29)
+
     """
-    _, length = calendar.monthrange(date.year, date.month)
-    return date + datetime.timedelta(days=length)
+    year, month = (date.year, date.month + 1) if date.month < 12 else (date.year + 1, 1)
+    _, length = calendar.monthrange(year, month)
+    day = min(length, date.day)
+    return datetime.date(year, month, day)
 
 
 def prev(date):
     """Subtract one month from the given date.
 
-    Note that if the given date falls on a day of the month greater than the number of
-    days in the following month, the result will not have the same day of the month as
-    the input. For example:
-
-      prev(datetime.date(2015, 3, 30)) == datetime.date(2015, 3, 2)
-
     Args:
-      date: A datetime.date object.
+      date (datetime.date): The starting date.
+
     Returns:
-      A datetime.date object whose value is one month earlier than the given date.
+      datetime.date:  One month before the starting date unless the starting
+      date falls on a day that is not in the previous month; in that case, it
+      returns the last day of the previous month.
+
+    Example:
+
+      >>> import datetime
+      >>> print(prev(datetime.date(2016, 3, 31)))
+      datetime.date(2016, 2, 29)
+
     """
-    if date.month > 1:
-        year, month = date.year, date.month - 1
-    else:
-        year, month = date.year - 1, 12
+    year, month = (date.year, date.month - 1) if date.month > 1 else (date.year - 1, 12)
     _, length = calendar.monthrange(year, month)
-    return date - datetime.timedelta(days=length)
+    day = min(length, date.day)
+    return datetime.date(year, month, day)
 
 
 def count(date, reverse=False):
-    """Make an iterator that returns monthly-spaced dates.
+    """A generator of monthly-spaced dates.
+
+    It enumerates monthly-spaced dates, starting at the given `date`.
+    If the starting date falls on a day that is not in a given month, the date for
+    that month will be the last day of that month.
 
     Args:
-      date: A datetime.date object; the starting date.
-      reverse: A boolean value; if True, the iterator will go back in time.
-    Returns:
-      An iterator.
+      date (datetime.date): The starting date.
+      reverse (bool): If True, it generates dates in reverse chronological order.
+
+    Yields:
+      datetime.date: the next date in the sequence.
+
+    Example:
+      >>> import datetime
+      >>> import itertools
+      >>> start = datetime.date(2016, 1, 31)
+      >>> print([date.isoformat() for date in itertools.islice(periods.count(start), 5)])
+      ['2016-01-31', '2016-02-29', '2016-03-31', '2016-04-30', '2016-05-31']
+
     """
-    while True:
-        yield date
-        date = prev(date) if reverse else next(date)
+    preferred_day = date.day
+    if reverse:
+        while True:
+            yield date
+            year, month = (date.year, date.month - 1) if date.month > 1 else \
+                          (date.year - 1, 12)
+            _, length = calendar.monthrange(year, month)
+            day = min(length, preferred_day)
+            date = datetime.date(year, month, day)
+    else:
+        while True:
+            yield date
+            year, month = (date.year, date.month + 1) if date.month < 12 else \
+                          (date.year + 1, 1)
+            _, length = calendar.monthrange(year, month)
+            day = min(length, preferred_day)
+            date = datetime.date(year, month, day)
