@@ -2,6 +2,8 @@
 TODO
 ====
 
+* DIT plugin should have option to skip zero-amount DIT transactions
+
 * Reformat TODO as TODO.md or move items to Issues tracker on github
 
 * Create a DEVNOTES.md document with how-to pointers for coding style, documentation,

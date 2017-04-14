@@ -246,7 +246,7 @@ def process_pair(pair, cleared_tag, cleared_links, same_day_merge):
                 (pair[1].txn.tags or set()) |
                 {cleared_tag})
         links = ((pair[0].txn.links or set()) |
-                 (pair[1].txn.links or set())) or None
+                 (pair[1].txn.links or set())) or data.EMPTY_SET
         postings = ([posting for posting in pair[0].txn.postings if posting is not pair[0].posting] +
                     [posting for posting in pair[1].txn.postings if posting is not pair[1].posting])
         new_entry = data.Transaction(

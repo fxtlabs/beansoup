@@ -84,195 +84,195 @@ option "operating_currency" "USD"
 
 2014-01-02 balance Assets:US:BofA:Checking        3403.60 USD
 
-2014-01-03 * "RiverBank Properties" | "Paying the rent"
+2014-01-03 * "RiverBank Properties" "Paying the rent"
   Assets:US:BofA:Checking                        -2400.00 USD
   Expenses:Home:Rent                              2400.00 USD
 
-2014-01-04 * "BANK FEES" | "Monthly bank fee"
+2014-01-04 * "BANK FEES" "Monthly bank fee"
   Assets:US:BofA:Checking                           -4.00 USD
   Expenses:Financial:Fees                            4.00 USD
 
-2014-01-08 * "EDISON POWER" | ""
+2014-01-08 * "EDISON POWER" ""
   Assets:US:BofA:Checking                          -65.00 USD
   Expenses:Home:Electricity                         65.00 USD
 
-2014-01-19 * "Verizon Wireless" | ""
+2014-01-19 * "Verizon Wireless" ""
   Assets:US:BofA:Checking                          -63.56 USD
   Expenses:Home:Phone                               63.56 USD
 
-2014-01-23 * "Wine-Tarner Cable" | ""
+2014-01-23 * "Wine-Tarner Cable" ""
   Assets:US:BofA:Checking                          -79.86 USD
   Expenses:Home:Internet                            79.86 USD
 
 2014-01-25 balance Assets:US:BofA:Checking        3385.73 USD
 
-2014-02-04 * "BANK FEES" | "Monthly bank fee"
+2014-02-04 * "BANK FEES" "Monthly bank fee"
   Assets:US:BofA:Checking                           -4.00 USD
   Expenses:Financial:Fees                            4.00 USD
 
-2014-02-06 * "RiverBank Properties" | "Paying the rent"
+2014-02-06 * "RiverBank Properties" "Paying the rent"
   Assets:US:BofA:Checking                        -2400.00 USD
   Expenses:Home:Rent                              2400.00 USD
 
-2014-02-08 * "EDISON POWER" | ""
+2014-02-08 * "EDISON POWER" ""
   Assets:US:BofA:Checking                          -65.00 USD
   Expenses:Home:Electricity                         65.00 USD
 
 2014-02-18 balance Assets:US:BofA:Checking        2885.66 USD
 
-2014-02-18 * "Verizon Wireless" | ""
+2014-02-18 * "Verizon Wireless" ""
   Assets:US:BofA:Checking                          -68.48 USD
   Expenses:Home:Phone                               68.48 USD
 
-2014-02-21 * "Wine-Tarner Cable" | ""
+2014-02-21 * "Wine-Tarner Cable" ""
   Assets:US:BofA:Checking                          -79.95 USD
   Expenses:Home:Internet                            79.95 USD
 
-2014-03-04 * "BANK FEES" | "Monthly bank fee"
+2014-03-04 * "BANK FEES" "Monthly bank fee"
   Assets:US:BofA:Checking                           -4.00 USD
   Expenses:Financial:Fees                            4.00 USD
 
-2014-03-06 * "RiverBank Properties" | "Paying the rent"
+2014-03-06 * "RiverBank Properties" "Paying the rent"
   Assets:US:BofA:Checking                        -2400.00 USD
   Expenses:Home:Rent                              2400.00 USD
 
-2014-03-08 * "EDISON POWER" | ""
+2014-03-08 * "EDISON POWER" ""
   Assets:US:BofA:Checking                          -65.00 USD
   Expenses:Home:Electricity                         65.00 USD
 
 2014-03-11 balance Assets:US:BofA:Checking         982.50 USD
 
-2014-03-20 * "Verizon Wireless" | ""
+2014-03-20 * "Verizon Wireless" ""
   Assets:US:BofA:Checking                          -63.51 USD
   Expenses:Home:Phone                               63.51 USD
 
-2014-03-21 * "Wine-Tarner Cable" | ""
+2014-03-21 * "Wine-Tarner Cable" ""
   Assets:US:BofA:Checking                          -80.11 USD
   Expenses:Home:Internet                            80.11 USD
 
 2014-04-01 balance Assets:US:BofA:Checking        3540.08 USD
 
-2014-04-04 * "BANK FEES" | "Monthly bank fee"
+2014-04-04 * "BANK FEES" "Monthly bank fee"
   Assets:US:BofA:Checking                           -4.00 USD
   Expenses:Financial:Fees                            4.00 USD
 
-2014-04-06 * "RiverBank Properties" | "Paying the rent"
+2014-04-06 * "RiverBank Properties" "Paying the rent"
   Assets:US:BofA:Checking                        -2400.00 USD
   Expenses:Home:Rent                              2400.00 USD
 
-2014-04-08 * "EDISON POWER" | ""
+2014-04-08 * "EDISON POWER" ""
   Assets:US:BofA:Checking                          -65.00 USD
   Expenses:Home:Electricity                         65.00 USD
 
-2014-04-19 * "Verizon Wireless" | ""
+2014-04-19 * "Verizon Wireless" ""
   Assets:US:BofA:Checking                          -67.34 USD
   Expenses:Home:Phone                               67.34 USD
 
-2014-04-21 * "Wine-Tarner Cable" | ""
+2014-04-21 * "Wine-Tarner Cable" ""
   Assets:US:BofA:Checking                          -80.07 USD
   Expenses:Home:Internet                            80.07 USD
 
 2014-04-25 balance Assets:US:BofA:Checking        2942.76 USD
 
-2014-05-03 * "RiverBank Properties" | "Paying the rent"
+2014-05-03 * "RiverBank Properties" "Paying the rent"
   Assets:US:BofA:Checking                        -2400.00 USD
   Expenses:Home:Rent                              2400.00 USD
 
-2014-05-04 * "BANK FEES" | "Monthly bank fee"
+2014-05-04 * "BANK FEES" "Monthly bank fee"
   Assets:US:BofA:Checking                           -4.00 USD
   Expenses:Financial:Fees                            4.00 USD
 
-2014-05-09 * "EDISON POWER" | ""
+2014-05-09 * "EDISON POWER" ""
   Assets:US:BofA:Checking                          -65.00 USD
   Expenses:Home:Electricity                         65.00 USD
 
 2014-05-15 balance Assets:US:BofA:Checking        1285.60 USD
 
-2014-05-19 * "Verizon Wireless" | ""
+2014-05-19 * "Verizon Wireless" ""
   Assets:US:BofA:Checking                          -44.34 USD
   Expenses:Home:Phone                               44.34 USD
 
-2014-05-23 * "Wine-Tarner Cable" | ""
+2014-05-23 * "Wine-Tarner Cable" ""
   Assets:US:BofA:Checking                          -80.17 USD
   Expenses:Home:Internet                            80.17 USD
 
-2014-06-04 * "BANK FEES" | "Monthly bank fee"
+2014-06-04 * "BANK FEES" "Monthly bank fee"
   Assets:US:BofA:Checking                           -4.00 USD
   Expenses:Financial:Fees                            4.00 USD
 
-2014-06-04 * "RiverBank Properties" | "Paying the rent"
+2014-06-04 * "RiverBank Properties" "Paying the rent"
   Assets:US:BofA:Checking                        -2400.00 USD
   Expenses:Home:Rent                              2400.00 USD
 
-2014-06-08 * "EDISON POWER" | ""
+2014-06-08 * "EDISON POWER" ""
   Assets:US:BofA:Checking                          -65.00 USD
   Expenses:Home:Electricity                         65.00 USD
 
 2014-06-11 balance Assets:US:BofA:Checking        1393.29 USD
 
-2014-06-19 * "Verizon Wireless" | ""
+2014-06-19 * "Verizon Wireless" ""
   Assets:US:BofA:Checking                          -82.53 USD
   Expenses:Home:Phone                               82.53 USD
 
-2014-06-22 * "Wine-Tarner Cable" | ""
+2014-06-22 * "Wine-Tarner Cable" ""
   Assets:US:BofA:Checking                          -80.18 USD
   Expenses:Home:Internet                            80.18 USD
 
 2014-07-01 balance Assets:US:BofA:Checking        1791.82 USD
 
-2014-07-04 * "BANK FEES" | "Monthly bank fee"
+2014-07-04 * "BANK FEES" "Monthly bank fee"
   Assets:US:BofA:Checking                           -4.00 USD
   Expenses:Financial:Fees                            4.00 USD
 
-2014-07-06 * "RiverBank Properties" | "Paying the rent"
+2014-07-06 * "RiverBank Properties" "Paying the rent"
   Assets:US:BofA:Checking                        -2400.00 USD
   Expenses:Home:Rent                              2400.00 USD
 
-2014-07-08 * "EDISON POWER" | ""
+2014-07-08 * "EDISON POWER" ""
   Assets:US:BofA:Checking                          -65.00 USD
   Expenses:Home:Electricity                         65.00 USD
 
-2014-07-18 * "Verizon Wireless" | ""
+2014-07-18 * "Verizon Wireless" ""
   Assets:US:BofA:Checking                          -44.47 USD
   Expenses:Home:Phone                               44.47 USD
 
-2014-07-23 * "Wine-Tarner Cable" | ""
+2014-07-23 * "Wine-Tarner Cable" ""
   Assets:US:BofA:Checking                          -79.90 USD
   Expenses:Home:Internet                            79.90 USD
 
 2014-07-29 balance Assets:US:BofA:Checking        1745.84 USD
 
-2014-08-03 * "RiverBank Properties" | "Paying the rent"
+2014-08-03 * "RiverBank Properties" "Paying the rent"
   Assets:US:BofA:Checking                        -2400.00 USD
   Expenses:Home:Rent                              2400.00 USD
 
-2014-08-04 * "BANK FEES" | "Monthly bank fee"
+2014-08-04 * "BANK FEES" "Monthly bank fee"
   Assets:US:BofA:Checking                           -4.00 USD
   Expenses:Financial:Fees                            4.00 USD
 
-2014-08-08 * "EDISON POWER" | ""
+2014-08-08 * "EDISON POWER" ""
   Assets:US:BofA:Checking                          -65.00 USD
   Expenses:Home:Electricity                         65.00 USD
 
-2014-08-18 * "Verizon Wireless" | ""
+2014-08-18 * "Verizon Wireless" ""
   Assets:US:BofA:Checking                          -73.03 USD
   Expenses:Home:Phone                               73.03 USD
 
 2014-08-21 balance Assets:US:BofA:Checking        3716.58 USD
 
-2014-08-21 * "Wine-Tarner Cable" | ""
+2014-08-21 * "Wine-Tarner Cable" ""
   Assets:US:BofA:Checking                          -79.96 USD
   Expenses:Home:Internet                            79.96 USD
 
-2014-09-04 * "BANK FEES" | "Monthly bank fee"
+2014-09-04 * "BANK FEES" "Monthly bank fee"
   Assets:US:BofA:Checking                           -4.00 USD
   Expenses:Financial:Fees                            4.00 USD
 
-2014-09-04 * "RiverBank Properties" | "Paying the rent"
+2014-09-04 * "RiverBank Properties" "Paying the rent"
   Assets:US:BofA:Checking                        -2400.00 USD
   Expenses:Home:Rent                              2400.00 USD
 
-2014-09-09 * "EDISON POWER" | ""
+2014-09-09 * "EDISON POWER" ""
   Assets:US:BofA:Checking                          -65.00 USD
   Expenses:Home:Electricity                         65.00 USD
 
@@ -282,41 +282,41 @@ option "operating_currency" "USD"
 
 2014-09-17 balance Assets:US:BofA:Checking         963.71 USD
 
-2014-09-18 * "Verizon Wireless" | ""
+2014-09-18 * "Verizon Wireless" ""
   Assets:US:BofA:Checking                          -56.26 USD
   Expenses:Home:Phone                               56.26 USD
 
-2014-09-22 * "Wine-Tarner Cable" | ""
+2014-09-22 * "Wine-Tarner Cable" ""
   Assets:US:BofA:Checking                          -79.99 USD
   Expenses:Home:Internet                            79.99 USD
 
-2014-10-03 * "RiverBank Properties" | "Paying the rent"
+2014-10-03 * "RiverBank Properties" "Paying the rent"
   Assets:US:BofA:Checking                        -2400.00 USD
   Expenses:Home:Rent                              2400.00 USD
 
-2014-10-04 * "BANK FEES" | "Monthly bank fee"
+2014-10-04 * "BANK FEES" "Monthly bank fee"
   Assets:US:BofA:Checking                           -4.00 USD
   Expenses:Financial:Fees                            4.00 USD
 
-2014-10-08 * "EDISON POWER" | ""
+2014-10-08 * "EDISON POWER" ""
   Assets:US:BofA:Checking                          -65.00 USD
   Expenses:Home:Electricity                         65.00 USD
 
 2014-10-15 balance Assets:US:BofA:Checking        2810.13 USD
 
-2014-10-19 * "Verizon Wireless" | ""
+2014-10-19 * "Verizon Wireless" ""
   Assets:US:BofA:Checking                          -75.17 USD
   Expenses:Home:Phone                               75.17 USD
 
-2014-10-23 * "Wine-Tarner Cable" | ""
+2014-10-23 * "Wine-Tarner Cable" ""
   Assets:US:BofA:Checking                          -80.01 USD
   Expenses:Home:Internet                            80.01 USD
 
-2014-11-04 * "BANK FEES" | "Monthly bank fee"
+2014-11-04 * "BANK FEES" "Monthly bank fee"
   Assets:US:BofA:Checking                           -4.00 USD
   Expenses:Financial:Fees                            4.00 USD
 
-2014-11-04 * "RiverBank Properties" | "Paying the rent"
+2014-11-04 * "RiverBank Properties" "Paying the rent"
   Assets:US:BofA:Checking                        -2400.00 USD
   Expenses:Home:Rent                              2400.00 USD
 
@@ -324,209 +324,209 @@ option "operating_currency" "USD"
   Assets:US:BofA:Checking                           -4000 USD
   Assets:US:ETrade:Cash                              4000 USD
 
-2014-11-08 * "EDISON POWER" | ""
+2014-11-08 * "EDISON POWER" ""
   Assets:US:BofA:Checking                          -65.00 USD
   Expenses:Home:Electricity                         65.00 USD
 
 2014-11-12 balance Assets:US:BofA:Checking         534.16 USD
 
-2014-11-20 * "Verizon Wireless" | ""
+2014-11-20 * "Verizon Wireless" ""
   Assets:US:BofA:Checking                          -54.82 USD
   Expenses:Home:Phone                               54.82 USD
 
-2014-11-23 * "Wine-Tarner Cable" | ""
+2014-11-23 * "Wine-Tarner Cable" ""
   Assets:US:BofA:Checking                          -80.25 USD
   Expenses:Home:Internet                            80.25 USD
 
 2014-12-02 balance Assets:US:BofA:Checking        2949.69 USD
 
-2014-12-04 * "BANK FEES" | "Monthly bank fee"
+2014-12-04 * "BANK FEES" "Monthly bank fee"
   Assets:US:BofA:Checking                           -4.00 USD
   Expenses:Financial:Fees                            4.00 USD
 
-2014-12-05 * "RiverBank Properties" | "Paying the rent"
+2014-12-05 * "RiverBank Properties" "Paying the rent"
   Assets:US:BofA:Checking                        -2400.00 USD
   Expenses:Home:Rent                              2400.00 USD
 
-2014-12-09 * "EDISON POWER" | ""
+2014-12-09 * "EDISON POWER" ""
   Assets:US:BofA:Checking                          -65.00 USD
   Expenses:Home:Electricity                         65.00 USD
 
-2014-12-20 * "Verizon Wireless" | ""
+2014-12-20 * "Verizon Wireless" ""
   Assets:US:BofA:Checking                          -59.68 USD
   Expenses:Home:Phone                               59.68 USD
 
-2014-12-22 * "Wine-Tarner Cable" | ""
+2014-12-22 * "Wine-Tarner Cable" ""
   Assets:US:BofA:Checking                          -80.12 USD
   Expenses:Home:Internet                            80.12 USD
 
 2014-12-23 balance Assets:US:BofA:Checking        5251.36 USD
 
-2015-01-04 * "BANK FEES" | "Monthly bank fee"
+2015-01-04 * "BANK FEES" "Monthly bank fee"
   Assets:US:BofA:Checking                           -4.00 USD
   Expenses:Financial:Fees                            4.00 USD
 
-2015-01-04 * "RiverBank Properties" | "Paying the rent"
+2015-01-04 * "RiverBank Properties" "Paying the rent"
   Assets:US:BofA:Checking                        -2400.00 USD
   Expenses:Home:Rent                              2400.00 USD
 
-2015-01-09 * "EDISON POWER" | ""
+2015-01-09 * "EDISON POWER" ""
   Assets:US:BofA:Checking                          -65.00 USD
   Expenses:Home:Electricity                         65.00 USD
 
-2015-01-20 * "Verizon Wireless" | ""
+2015-01-20 * "Verizon Wireless" ""
   Assets:US:BofA:Checking                          -49.28 USD
   Expenses:Home:Phone                               49.28 USD
 
 2015-01-22 balance Assets:US:BofA:Checking        4981.77 USD
 
-2015-01-23 * "Wine-Tarner Cable" | ""
+2015-01-23 * "Wine-Tarner Cable" ""
   Assets:US:BofA:Checking                          -79.80 USD
   Expenses:Home:Internet                            79.80 USD
 
-2015-02-03 * "RiverBank Properties" | "Paying the rent"
+2015-02-03 * "RiverBank Properties" "Paying the rent"
   Assets:US:BofA:Checking                        -2400.00 USD
   Expenses:Home:Rent                              2400.00 USD
 
-2015-02-04 * "BANK FEES" | "Monthly bank fee"
+2015-02-04 * "BANK FEES" "Monthly bank fee"
   Assets:US:BofA:Checking                           -4.00 USD
   Expenses:Financial:Fees                            4.00 USD
 
-2015-02-09 * "EDISON POWER" | ""
+2015-02-09 * "EDISON POWER" ""
   Assets:US:BofA:Checking                          -65.00 USD
   Expenses:Home:Electricity                         65.00 USD
 
-2015-02-18 * "Verizon Wireless" | ""
+2015-02-18 * "Verizon Wireless" ""
   Assets:US:BofA:Checking                          -66.82 USD
   Expenses:Home:Phone                               66.82 USD
 
 2015-02-21 balance Assets:US:BofA:Checking        4392.15 USD
 
-2015-02-21 * "Wine-Tarner Cable" | ""
+2015-02-21 * "Wine-Tarner Cable" ""
   Assets:US:BofA:Checking                          -80.15 USD
   Expenses:Home:Internet                            80.15 USD
 
-2015-03-04 * "BANK FEES" | "Monthly bank fee"
+2015-03-04 * "BANK FEES" "Monthly bank fee"
   Assets:US:BofA:Checking                           -4.00 USD
   Expenses:Financial:Fees                            4.00 USD
 
-2015-03-04 * "RiverBank Properties" | "Paying the rent"
+2015-03-04 * "RiverBank Properties" "Paying the rent"
   Assets:US:BofA:Checking                        -2400.00 USD
   Expenses:Home:Rent                              2400.00 USD
 
-2015-03-08 * "EDISON POWER" | ""
+2015-03-08 * "EDISON POWER" ""
   Assets:US:BofA:Checking                          -65.00 USD
   Expenses:Home:Electricity                         65.00 USD
 
 2015-03-13 balance Assets:US:BofA:Checking        3869.95 USD
 
-2015-03-20 * "Verizon Wireless" | ""
+2015-03-20 * "Verizon Wireless" ""
   Assets:US:BofA:Checking                          -60.82 USD
   Expenses:Home:Phone                               60.82 USD
 
-2015-03-21 * "Wine-Tarner Cable" | ""
+2015-03-21 * "Wine-Tarner Cable" ""
   Assets:US:BofA:Checking                          -80.05 USD
   Expenses:Home:Internet                            80.05 USD
 
 2015-04-02 balance Assets:US:BofA:Checking        4378.19 USD
 
-2015-04-04 * "BANK FEES" | "Monthly bank fee"
+2015-04-04 * "BANK FEES" "Monthly bank fee"
   Assets:US:BofA:Checking                           -4.00 USD
   Expenses:Financial:Fees                            4.00 USD
 
-2015-04-05 * "RiverBank Properties" | "Paying the rent"
+2015-04-05 * "RiverBank Properties" "Paying the rent"
   Assets:US:BofA:Checking                        -2400.00 USD
   Expenses:Home:Rent                              2400.00 USD
 
-2015-04-09 * "EDISON POWER" | ""
+2015-04-09 * "EDISON POWER" ""
   Assets:US:BofA:Checking                          -65.00 USD
   Expenses:Home:Electricity                         65.00 USD
 
-2015-04-20 * "Verizon Wireless" | ""
+2015-04-20 * "Verizon Wireless" ""
   Assets:US:BofA:Checking                          -45.02 USD
   Expenses:Home:Phone                               45.02 USD
 
-2015-04-21 * "Wine-Tarner Cable" | ""
+2015-04-21 * "Wine-Tarner Cable" ""
   Assets:US:BofA:Checking                          -80.08 USD
   Expenses:Home:Internet                            80.08 USD
 
 2015-04-30 balance Assets:US:BofA:Checking        3750.27 USD
 
-2015-05-04 * "BANK FEES" | "Monthly bank fee"
+2015-05-04 * "BANK FEES" "Monthly bank fee"
   Assets:US:BofA:Checking                           -4.00 USD
   Expenses:Financial:Fees                            4.00 USD
 
-2015-05-04 * "RiverBank Properties" | "Paying the rent"
+2015-05-04 * "RiverBank Properties" "Paying the rent"
   Assets:US:BofA:Checking                        -2400.00 USD
   Expenses:Home:Rent                              2400.00 USD
 
-2015-05-09 * "EDISON POWER" | ""
+2015-05-09 * "EDISON POWER" ""
   Assets:US:BofA:Checking                          -65.00 USD
   Expenses:Home:Electricity                         65.00 USD
 
-2015-05-19 * "Verizon Wireless" | ""
+2015-05-19 * "Verizon Wireless" ""
   Assets:US:BofA:Checking                          -76.40 USD
   Expenses:Home:Phone                               76.40 USD
 
-2015-05-22 * "Wine-Tarner Cable" | ""
+2015-05-22 * "Wine-Tarner Cable" ""
   Assets:US:BofA:Checking                          -80.07 USD
   Expenses:Home:Internet                            80.07 USD
 
 2015-05-30 balance Assets:US:BofA:Checking        3150.63 USD
 
-2015-06-04 * "BANK FEES" | "Monthly bank fee"
+2015-06-04 * "BANK FEES" "Monthly bank fee"
   Assets:US:BofA:Checking                           -4.00 USD
   Expenses:Financial:Fees                            4.00 USD
 
-2015-06-06 * "RiverBank Properties" | "Paying the rent"
+2015-06-06 * "RiverBank Properties" "Paying the rent"
   Assets:US:BofA:Checking                        -2400.00 USD
   Expenses:Home:Rent                              2400.00 USD
 
-2015-06-08 * "EDISON POWER" | ""
+2015-06-08 * "EDISON POWER" ""
   Assets:US:BofA:Checking                          -65.00 USD
   Expenses:Home:Electricity                         65.00 USD
 
 2015-06-20 balance Assets:US:BofA:Checking        2916.80 USD
 
-2015-06-20 * "Verizon Wireless" | ""
+2015-06-20 * "Verizon Wireless" ""
   Assets:US:BofA:Checking                          -89.17 USD
   Expenses:Home:Phone                               89.17 USD
 
-2015-06-22 * "Wine-Tarner Cable" | ""
+2015-06-22 * "Wine-Tarner Cable" ""
   Assets:US:BofA:Checking                          -79.98 USD
   Expenses:Home:Internet                            79.98 USD
 
-2015-07-04 * "BANK FEES" | "Monthly bank fee"
+2015-07-04 * "BANK FEES" "Monthly bank fee"
   Assets:US:BofA:Checking                           -4.00 USD
   Expenses:Financial:Fees                            4.00 USD
 
-2015-07-06 * "RiverBank Properties" | "Paying the rent"
+2015-07-06 * "RiverBank Properties" "Paying the rent"
   Assets:US:BofA:Checking                        -2400.00 USD
   Expenses:Home:Rent                              2400.00 USD
 
-2015-07-08 * "EDISON POWER" | ""
+2015-07-08 * "EDISON POWER" ""
   Assets:US:BofA:Checking                          -65.00 USD
   Expenses:Home:Electricity                         65.00 USD
 
 2015-07-20 balance Assets:US:BofA:Checking        2470.68 USD
 
-2015-07-20 * "Verizon Wireless" | ""
+2015-07-20 * "Verizon Wireless" ""
   Assets:US:BofA:Checking                          -67.09 USD
   Expenses:Home:Phone                               67.09 USD
 
-2015-07-23 * "Wine-Tarner Cable" | ""
+2015-07-23 * "Wine-Tarner Cable" ""
   Assets:US:BofA:Checking                          -80.24 USD
   Expenses:Home:Internet                            80.24 USD
 
-2015-08-04 * "BANK FEES" | "Monthly bank fee"
+2015-08-04 * "BANK FEES" "Monthly bank fee"
   Assets:US:BofA:Checking                           -4.00 USD
   Expenses:Financial:Fees                            4.00 USD
 
-2015-08-05 * "RiverBank Properties" | "Paying the rent"
+2015-08-05 * "RiverBank Properties" "Paying the rent"
   Assets:US:BofA:Checking                        -2400.00 USD
   Expenses:Home:Rent                              2400.00 USD
 
-2015-08-08 * "EDISON POWER" | ""
+2015-08-08 * "EDISON POWER" ""
   Assets:US:BofA:Checking                          -65.00 USD
   Expenses:Home:Electricity                         65.00 USD
 
@@ -536,47 +536,47 @@ option "operating_currency" "USD"
 
 2015-08-18 balance Assets:US:BofA:Checking         826.06 USD
 
-2015-08-20 * "Verizon Wireless" | ""
+2015-08-20 * "Verizon Wireless" ""
   Assets:US:BofA:Checking                          -53.34 USD
   Expenses:Home:Phone                               53.34 USD
 
-2015-08-23 * "Wine-Tarner Cable" | ""
+2015-08-23 * "Wine-Tarner Cable" ""
   Assets:US:BofA:Checking                          -80.14 USD
   Expenses:Home:Internet                            80.14 USD
 
-2015-09-04 * "BANK FEES" | "Monthly bank fee"
+2015-09-04 * "BANK FEES" "Monthly bank fee"
   Assets:US:BofA:Checking                           -4.00 USD
   Expenses:Financial:Fees                            4.00 USD
 
-2015-09-04 * "RiverBank Properties" | "Paying the rent"
+2015-09-04 * "RiverBank Properties" "Paying the rent"
   Assets:US:BofA:Checking                        -2400.00 USD
   Expenses:Home:Rent                              2400.00 USD
 
-2015-09-08 * "EDISON POWER" | ""
+2015-09-08 * "EDISON POWER" ""
   Assets:US:BofA:Checking                          -65.00 USD
   Expenses:Home:Electricity                         65.00 USD
 
 2015-09-11 balance Assets:US:BofA:Checking        2686.43 USD
 
-2015-09-18 * "Verizon Wireless" | ""
+2015-09-18 * "Verizon Wireless" ""
   Assets:US:BofA:Checking                          -59.22 USD
   Expenses:Home:Phone                               59.22 USD
 
-2015-09-23 * "Wine-Tarner Cable" | ""
+2015-09-23 * "Wine-Tarner Cable" ""
   Assets:US:BofA:Checking                          -79.83 USD
   Expenses:Home:Internet                            79.83 USD
 
 2015-10-04 balance Assets:US:BofA:Checking        5097.98 USD
 
-2015-10-04 * "BANK FEES" | "Monthly bank fee"
+2015-10-04 * "BANK FEES" "Monthly bank fee"
   Assets:US:BofA:Checking                           -4.00 USD
   Expenses:Financial:Fees                            4.00 USD
 
-2015-10-04 * "RiverBank Properties" | "Paying the rent"
+2015-10-04 * "RiverBank Properties" "Paying the rent"
   Assets:US:BofA:Checking                        -2400.00 USD
   Expenses:Home:Rent                              2400.00 USD
 
-2015-10-08 * "EDISON POWER" | ""
+2015-10-08 * "EDISON POWER" ""
   Assets:US:BofA:Checking                          -65.00 USD
   Expenses:Home:Electricity                         65.00 USD
 
@@ -584,29 +584,29 @@ option "operating_currency" "USD"
   Assets:US:BofA:Checking                           -4000 USD
   Assets:US:ETrade:Cash                              4000 USD
 
-2015-10-18 * "Verizon Wireless" | ""
+2015-10-18 * "Verizon Wireless" ""
   Assets:US:BofA:Checking                          -67.92 USD
   Expenses:Home:Phone                               67.92 USD
 
-2015-10-21 * "Wine-Tarner Cable" | ""
+2015-10-21 * "Wine-Tarner Cable" ""
   Assets:US:BofA:Checking                          -80.23 USD
   Expenses:Home:Internet                            80.23 USD
 
 2015-10-28 balance Assets:US:BofA:Checking        3058.36 USD
 
-2015-11-04 * "BANK FEES" | "Monthly bank fee"
+2015-11-04 * "BANK FEES" "Monthly bank fee"
   Assets:US:BofA:Checking                           -4.00 USD
   Expenses:Financial:Fees                            4.00 USD
 
-2015-11-06 * "RiverBank Properties" | "Paying the rent"
+2015-11-06 * "RiverBank Properties" "Paying the rent"
   Assets:US:BofA:Checking                        -2400.00 USD
   Expenses:Home:Rent                              2400.00 USD
 
-2015-11-09 * "EDISON POWER" | ""
+2015-11-09 * "EDISON POWER" ""
   Assets:US:BofA:Checking                          -65.00 USD
   Expenses:Home:Electricity                         65.00 USD
 
-2015-11-19 * "Verizon Wireless" | ""
+2015-11-19 * "Verizon Wireless" ""
   Assets:US:BofA:Checking                          -60.50 USD
   Expenses:Home:Phone                               60.50 USD
 
@@ -616,123 +616,123 @@ option "operating_currency" "USD"
 
 2015-11-21 balance Assets:US:BofA:Checking        1020.58 USD
 
-2015-11-23 * "Wine-Tarner Cable" | ""
+2015-11-23 * "Wine-Tarner Cable" ""
   Assets:US:BofA:Checking                          -80.01 USD
   Expenses:Home:Internet                            80.01 USD
 
-2015-12-04 * "BANK FEES" | "Monthly bank fee"
+2015-12-04 * "BANK FEES" "Monthly bank fee"
   Assets:US:BofA:Checking                           -4.00 USD
   Expenses:Financial:Fees                            4.00 USD
 
-2015-12-04 * "RiverBank Properties" | "Paying the rent"
+2015-12-04 * "RiverBank Properties" "Paying the rent"
   Assets:US:BofA:Checking                        -2400.00 USD
   Expenses:Home:Rent                              2400.00 USD
 
-2015-12-08 * "EDISON POWER" | ""
+2015-12-08 * "EDISON POWER" ""
   Assets:US:BofA:Checking                          -65.00 USD
   Expenses:Home:Electricity                         65.00 USD
 
 2015-12-18 balance Assets:US:BofA:Checking        3280.45 USD
 
-2015-12-18 * "Verizon Wireless" | ""
+2015-12-18 * "Verizon Wireless" ""
   Assets:US:BofA:Checking                          -45.79 USD
   Expenses:Home:Phone                               45.79 USD
 
-2015-12-23 * "Wine-Tarner Cable" | ""
+2015-12-23 * "Wine-Tarner Cable" ""
   Assets:US:BofA:Checking                          -79.88 USD
   Expenses:Home:Internet                            79.88 USD
 
-2016-01-04 * "BANK FEES" | "Monthly bank fee"
+2016-01-04 * "BANK FEES" "Monthly bank fee"
   Assets:US:BofA:Checking                           -4.00 USD
   Expenses:Financial:Fees                            4.00 USD
 
-2016-01-06 * "RiverBank Properties" | "Paying the rent"
+2016-01-06 * "RiverBank Properties" "Paying the rent"
   Assets:US:BofA:Checking                        -2400.00 USD
   Expenses:Home:Rent                              2400.00 USD
 
 2016-01-08 balance Assets:US:BofA:Checking        3582.92 USD
 
-2016-01-09 * "EDISON POWER" | ""
+2016-01-09 * "EDISON POWER" ""
   Assets:US:BofA:Checking                          -65.00 USD
   Expenses:Home:Electricity                         65.00 USD
 
-2016-01-18 * "Verizon Wireless" | ""
+2016-01-18 * "Verizon Wireless" ""
   Assets:US:BofA:Checking                          -55.44 USD
   Expenses:Home:Phone                               55.44 USD
 
-2016-01-22 * "Wine-Tarner Cable" | ""
+2016-01-22 * "Wine-Tarner Cable" ""
   Assets:US:BofA:Checking                          -80.05 USD
   Expenses:Home:Internet                            80.05 USD
 
-2016-02-04 * "BANK FEES" | "Monthly bank fee"
+2016-02-04 * "BANK FEES" "Monthly bank fee"
   Assets:US:BofA:Checking                           -4.00 USD
   Expenses:Financial:Fees                            4.00 USD
 
-2016-02-04 * "RiverBank Properties" | "Paying the rent"
+2016-02-04 * "RiverBank Properties" "Paying the rent"
   Assets:US:BofA:Checking                        -2400.00 USD
   Expenses:Home:Rent                              2400.00 USD
 
 2016-02-06 balance Assets:US:BofA:Checking        3030.42 USD
 
-2016-02-08 * "EDISON POWER" | ""
+2016-02-08 * "EDISON POWER" ""
   Assets:US:BofA:Checking                          -65.00 USD
   Expenses:Home:Electricity                         65.00 USD
 
-2016-02-19 * "Verizon Wireless" | ""
+2016-02-19 * "Verizon Wireless" ""
   Assets:US:BofA:Checking                          -58.81 USD
   Expenses:Home:Phone                               58.81 USD
 
-2016-02-21 * "Wine-Tarner Cable" | ""
+2016-02-21 * "Wine-Tarner Cable" ""
   Assets:US:BofA:Checking                          -79.97 USD
   Expenses:Home:Internet                            79.97 USD
 
 2016-03-04 balance Assets:US:BofA:Checking        5008.93 USD
 
-2016-03-04 * "BANK FEES" | "Monthly bank fee"
+2016-03-04 * "BANK FEES" "Monthly bank fee"
   Assets:US:BofA:Checking                           -4.00 USD
   Expenses:Financial:Fees                            4.00 USD
 
-2016-03-05 * "RiverBank Properties" | "Paying the rent"
+2016-03-05 * "RiverBank Properties" "Paying the rent"
   Assets:US:BofA:Checking                        -2400.00 USD
   Expenses:Home:Rent                              2400.00 USD
 
-2016-03-08 * "EDISON POWER" | ""
+2016-03-08 * "EDISON POWER" ""
   Assets:US:BofA:Checking                          -65.00 USD
   Expenses:Home:Electricity                         65.00 USD
 
-2016-03-20 * "Verizon Wireless" | ""
+2016-03-20 * "Verizon Wireless" ""
   Assets:US:BofA:Checking                          -57.64 USD
   Expenses:Home:Phone                               57.64 USD
 
-2016-03-23 * "Wine-Tarner Cable" | ""
+2016-03-23 * "Wine-Tarner Cable" ""
   Assets:US:BofA:Checking                          -80.11 USD
   Expenses:Home:Internet                            80.11 USD
 
 2016-04-02 balance Assets:US:BofA:Checking        3713.69 USD
 
-;; 2016-04-04 * "BANK FEES" | "Monthly bank fee"
+;; 2016-04-04 * "BANK FEES" "Monthly bank fee"
 ;;   Assets:US:BofA:Checking                           -4.00 USD
 ;;   Expenses:Financial:Fees                            4.00 USD
 ;; 
-;; 2016-04-05 * "RiverBank Properties" | "Paying the rent"
+;; 2016-04-05 * "RiverBank Properties" "Paying the rent"
 ;;   Assets:US:BofA:Checking                        -2400.00 USD
 ;;   Expenses:Home:Rent                              2400.00 USD
 ;; 
-;; 2016-04-08 * "EDISON POWER" | ""
+;; 2016-04-08 * "EDISON POWER" ""
 ;;   Assets:US:BofA:Checking                          -65.00 USD
 ;;   Expenses:Home:Electricity                         65.00 USD
 ;; 
-;; 2016-04-20 * "Verizon Wireless" | ""
+;; 2016-04-20 * "Verizon Wireless" ""
 ;;   Assets:US:BofA:Checking                          -72.02 USD
 ;;   Expenses:Home:Phone                               72.02 USD
 ;; 
-;; 2016-04-23 * "Wine-Tarner Cable" | ""
+;; 2016-04-23 * "Wine-Tarner Cable" ""
 ;;   Assets:US:BofA:Checking                          -79.90 USD
 ;;   Expenses:Home:Internet                            79.90 USD
 ;; 
 ;; 2016-04-26 balance Assets:US:BofA:Checking        3200.59 USD
 ;; 
-;; 2016-05-04 * "BANK FEES" | "Monthly bank fee"
+;; 2016-05-04 * "BANK FEES" "Monthly bank fee"
 ;;   Assets:US:BofA:Checking                           -4.00 USD
 ;;   Expenses:Financial:Fees                            4.00 USD
 ;; 
@@ -746,811 +746,811 @@ option "operating_currency" "USD"
 
 1980-05-12 open Liabilities:US:Chase:Slate                      USD
 
-2014-01-02 * "Chichipotle" | "Eating out with Natasha"
+2014-01-02 * "Chichipotle" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -63.53 USD
   Expenses:Food:Restaurant                          63.53 USD
 
-2014-01-05 * "Uncle Boons" | "Eating out with work buddies"
+2014-01-05 * "Uncle Boons" "Eating out with work buddies"
   Liabilities:US:Chase:Slate                       -21.40 USD
   Expenses:Food:Restaurant                          21.40 USD
 
-2014-01-07 * "Rose Flower" | "Eating out with Natasha"
+2014-01-07 * "Rose Flower" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -21.72 USD
   Expenses:Food:Restaurant                          21.72 USD
 
-2014-01-07 * "Chase:Slate" | "Paying off credit card"
+2014-01-07 * "Chase:Slate" "Paying off credit card"
   Liabilities:US:Chase:Slate                       106.65 USD
   Assets:US:BofA:Checking                         -106.65 USD
 
-2014-01-12 * "Goba Goba" | "Eating out alone"
+2014-01-12 * "Goba Goba" "Eating out alone"
   Liabilities:US:Chase:Slate                       -19.19 USD
   Expenses:Food:Restaurant                          19.19 USD
 
-2014-01-16 * "Chichipotle" | "Eating out "
+2014-01-16 * "Chichipotle" "Eating out "
   Liabilities:US:Chase:Slate                       -49.02 USD
   Expenses:Food:Restaurant                          49.02 USD
 
-2014-01-19 * "Cafe Modagor" | "Eating out with Julie"
+2014-01-19 * "Cafe Modagor" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -31.30 USD
   Expenses:Food:Restaurant                          31.30 USD
 
-2014-01-19 * "Good Moods Market" | "Buying groceries"
+2014-01-19 * "Good Moods Market" "Buying groceries"
   Liabilities:US:Chase:Slate                       -82.43 USD
   Expenses:Food:Groceries                           82.43 USD
 
-2014-01-23 * "Uncle Boons" | "Eating out with Julie"
+2014-01-23 * "Uncle Boons" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -34.38 USD
   Expenses:Food:Restaurant                          34.38 USD
 
-2014-01-24 * "Cafe Modagor" | "Eating out with Joe"
+2014-01-24 * "Cafe Modagor" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -54.97 USD
   Expenses:Food:Restaurant                          54.97 USD
 
 2014-01-25 balance Liabilities:US:Chase:Slate     -271.29 USD
 
-2014-01-26 * "Kin Soy" | "Eating out with Bill"
+2014-01-26 * "Kin Soy" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -22.76 USD
   Expenses:Food:Restaurant                          22.76 USD
 
-2014-01-27 * "Farmer Fresh" | "Buying groceries"
+2014-01-27 * "Farmer Fresh" "Buying groceries"
   Liabilities:US:Chase:Slate                       -53.77 USD
   Expenses:Food:Groceries                           53.77 USD
 
-2014-01-28 * "Goba Goba" | "Eating out with Bill"
+2014-01-28 * "Goba Goba" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -19.57 USD
   Expenses:Food:Restaurant                          19.57 USD
 
-2014-02-01 * "Onion Market" | "Buying groceries"
+2014-02-01 * "Onion Market" "Buying groceries"
   Liabilities:US:Chase:Slate                      -108.62 USD
   Expenses:Food:Groceries                          108.62 USD
 
-2014-02-02 * "Jewel of Morroco" | "Eating out with Natasha"
+2014-02-02 * "Jewel of Morroco" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -28.96 USD
   Expenses:Food:Restaurant                          28.96 USD
 
-2014-02-03 * "Chichipotle" | "Eating out with Bill"
+2014-02-03 * "Chichipotle" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -16.17 USD
   Expenses:Food:Restaurant                          16.17 USD
 
-2014-02-03 * "Metro Transport Authority" | "Tram tickets"
+2014-02-03 * "Metro Transport Authority" "Tram tickets"
   Liabilities:US:Chase:Slate                      -120.00 USD
   Expenses:Transport:Tram                          120.00 USD
 
-2014-02-07 * "Kin Soy" | "Eating out with work buddies"
+2014-02-07 * "Kin Soy" "Eating out with work buddies"
   Liabilities:US:Chase:Slate                       -45.24 USD
   Expenses:Food:Restaurant                          45.24 USD
 
-2014-02-09 * "Chichipotle" | "Eating out with Joe"
+2014-02-09 * "Chichipotle" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -25.08 USD
   Expenses:Food:Restaurant                          25.08 USD
 
-2014-02-10 * "Chase:Slate" | "Paying off credit card"
+2014-02-10 * "Chase:Slate" "Paying off credit card"
   Liabilities:US:Chase:Slate                       732.27 USD
   Assets:US:BofA:Checking                         -732.27 USD
 
-2014-02-12 * "Cafe Modagor" | "Eating out with Natasha"
+2014-02-12 * "Cafe Modagor" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -20.81 USD
   Expenses:Food:Restaurant                          20.81 USD
 
-2014-02-14 * "Chichipotle" | "Eating out after work"
+2014-02-14 * "Chichipotle" "Eating out after work"
   Liabilities:US:Chase:Slate                       -19.92 USD
   Expenses:Food:Restaurant                          19.92 USD
 
-2014-02-14 * "Onion Market" | "Buying groceries"
+2014-02-14 * "Onion Market" "Buying groceries"
   Liabilities:US:Chase:Slate                       -61.85 USD
   Expenses:Food:Groceries                           61.85 USD
 
 2014-02-16 balance Liabilities:US:Chase:Slate      -81.77 USD
 
-2014-02-17 * "Jewel of Morroco" | "Eating out after work"
+2014-02-17 * "Jewel of Morroco" "Eating out after work"
   Liabilities:US:Chase:Slate                       -47.11 USD
   Expenses:Food:Restaurant                          47.11 USD
 
-2014-02-19 * "Cafe Modagor" | "Eating out with Natasha"
+2014-02-19 * "Cafe Modagor" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -42.19 USD
   Expenses:Food:Restaurant                          42.19 USD
 
-2014-02-21 * "Farmer Fresh" | "Buying groceries"
+2014-02-21 * "Farmer Fresh" "Buying groceries"
   Liabilities:US:Chase:Slate                       -69.71 USD
   Expenses:Food:Groceries                           69.71 USD
 
-2014-02-23 * "Chichipotle" | "Eating out with Bill"
+2014-02-23 * "Chichipotle" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -20.19 USD
   Expenses:Food:Restaurant                          20.19 USD
 
-2014-02-24 * "China Garden" | "Eating out with Joe"
+2014-02-24 * "China Garden" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -32.08 USD
   Expenses:Food:Restaurant                          32.08 USD
 
-2014-02-26 * "Kin Soy" | "Eating out with Julie"
+2014-02-26 * "Kin Soy" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -22.88 USD
   Expenses:Food:Restaurant                          22.88 USD
 
-2014-03-03 * "Rose Flower" | "Eating out with work buddies"
+2014-03-03 * "Rose Flower" "Eating out with work buddies"
   Liabilities:US:Chase:Slate                       -55.31 USD
   Expenses:Food:Restaurant                          55.31 USD
 
-2014-03-03 * "Metro Transport Authority" | "Tram tickets"
+2014-03-03 * "Metro Transport Authority" "Tram tickets"
   Liabilities:US:Chase:Slate                      -120.00 USD
   Expenses:Transport:Tram                          120.00 USD
 
-2014-03-06 * "Jewel of Morroco" | "Eating out "
+2014-03-06 * "Jewel of Morroco" "Eating out "
   Liabilities:US:Chase:Slate                       -28.34 USD
   Expenses:Food:Restaurant                          28.34 USD
 
-2014-03-07 * "Good Moods Market" | "Buying groceries"
+2014-03-07 * "Good Moods Market" "Buying groceries"
   Liabilities:US:Chase:Slate                       -89.35 USD
   Expenses:Food:Groceries                           89.35 USD
 
 2014-03-08 balance Liabilities:US:Chase:Slate     -608.93 USD
 
-2014-03-08 * "Chase:Slate" | "Paying off credit card"
+2014-03-08 * "Chase:Slate" "Paying off credit card"
   Liabilities:US:Chase:Slate                       636.33 USD
   Assets:US:BofA:Checking                         -636.33 USD
 
-2014-03-10 * "Kin Soy" | "Eating out "
+2014-03-10 * "Kin Soy" "Eating out "
   Liabilities:US:Chase:Slate                       -27.40 USD
   Expenses:Food:Restaurant                          27.40 USD
 
-2014-03-12 * "Kin Soy" | "Eating out with Natasha"
+2014-03-12 * "Kin Soy" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -21.92 USD
   Expenses:Food:Restaurant                          21.92 USD
 
-2014-03-13 * "Kin Soy" | "Eating out after work"
+2014-03-13 * "Kin Soy" "Eating out after work"
   Liabilities:US:Chase:Slate                       -31.28 USD
   Expenses:Food:Restaurant                          31.28 USD
 
-2014-03-17 * "Onion Market" | "Buying groceries"
+2014-03-17 * "Onion Market" "Buying groceries"
   Liabilities:US:Chase:Slate                       -97.48 USD
   Expenses:Food:Groceries                           97.48 USD
 
-2014-03-18 * "Cafe Modagor" | "Eating out "
+2014-03-18 * "Cafe Modagor" "Eating out "
   Liabilities:US:Chase:Slate                       -20.41 USD
   Expenses:Food:Restaurant                          20.41 USD
 
-2014-03-19 * "Uncle Boons" | "Eating out with Julie"
+2014-03-19 * "Uncle Boons" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -52.17 USD
   Expenses:Food:Restaurant                          52.17 USD
 
-2014-03-22 * "Rose Flower" | "Eating out "
+2014-03-22 * "Rose Flower" "Eating out "
   Liabilities:US:Chase:Slate                       -40.93 USD
   Expenses:Food:Restaurant                          40.93 USD
 
-2014-03-23 * "Farmer Fresh" | "Buying groceries"
+2014-03-23 * "Farmer Fresh" "Buying groceries"
   Liabilities:US:Chase:Slate                       -84.28 USD
   Expenses:Food:Groceries                           84.28 USD
 
-2014-03-26 * "Rose Flower" | "Eating out "
+2014-03-26 * "Rose Flower" "Eating out "
   Liabilities:US:Chase:Slate                       -27.48 USD
   Expenses:Food:Restaurant                          27.48 USD
 
-2014-03-28 * "Rose Flower" | "Eating out with Natasha"
+2014-03-28 * "Rose Flower" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -49.81 USD
   Expenses:Food:Restaurant                          49.81 USD
 
-2014-03-31 * "China Garden" | "Eating out after work"
+2014-03-31 * "China Garden" "Eating out after work"
   Liabilities:US:Chase:Slate                       -18.26 USD
   Expenses:Food:Restaurant                          18.26 USD
 
-2014-04-05 * "Cafe Modagor" | "Eating out alone"
+2014-04-05 * "Cafe Modagor" "Eating out alone"
   Liabilities:US:Chase:Slate                       -66.57 USD
   Expenses:Food:Restaurant                          66.57 USD
 
-2014-04-05 * "Metro Transport Authority" | "Tram tickets"
+2014-04-05 * "Metro Transport Authority" "Tram tickets"
   Liabilities:US:Chase:Slate                      -120.00 USD
   Expenses:Transport:Tram                          120.00 USD
 
 2014-04-07 balance Liabilities:US:Chase:Slate     -630.59 USD
 
-2014-04-08 * "Jewel of Morroco" | "Eating out after work"
+2014-04-08 * "Jewel of Morroco" "Eating out after work"
   Liabilities:US:Chase:Slate                       -51.52 USD
   Expenses:Food:Restaurant                          51.52 USD
 
-2014-04-08 * "Chase:Slate" | "Paying off credit card"
+2014-04-08 * "Chase:Slate" "Paying off credit card"
   Liabilities:US:Chase:Slate                       682.11 USD
   Assets:US:BofA:Checking                         -682.11 USD
 
-2014-04-09 * "Onion Market" | "Buying groceries"
+2014-04-09 * "Onion Market" "Buying groceries"
   Liabilities:US:Chase:Slate                      -116.74 USD
   Expenses:Food:Groceries                          116.74 USD
 
-2014-04-13 * "China Garden" | "Eating out after work"
+2014-04-13 * "China Garden" "Eating out after work"
   Liabilities:US:Chase:Slate                       -25.93 USD
   Expenses:Food:Restaurant                          25.93 USD
 
-2014-04-18 * "Rose Flower" | "Eating out after work"
+2014-04-18 * "Rose Flower" "Eating out after work"
   Liabilities:US:Chase:Slate                       -23.65 USD
   Expenses:Food:Restaurant                          23.65 USD
 
-2014-04-23 * "Jewel of Morroco" | "Eating out with Joe"
+2014-04-23 * "Jewel of Morroco" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -33.12 USD
   Expenses:Food:Restaurant                          33.12 USD
 
-2014-04-26 * "Cafe Modagor" | "Eating out "
+2014-04-26 * "Cafe Modagor" "Eating out "
   Liabilities:US:Chase:Slate                       -26.13 USD
   Expenses:Food:Restaurant                          26.13 USD
 
-2014-04-29 * "Kin Soy" | "Eating out with Bill"
+2014-04-29 * "Kin Soy" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -27.14 USD
   Expenses:Food:Restaurant                          27.14 USD
 
-2014-04-29 * "Farmer Fresh" | "Buying groceries"
+2014-04-29 * "Farmer Fresh" "Buying groceries"
   Liabilities:US:Chase:Slate                       -77.08 USD
   Expenses:Food:Groceries                           77.08 USD
 
 2014-04-30 balance Liabilities:US:Chase:Slate     -329.79 USD
 
-2014-05-03 * "Cafe Modagor" | "Eating out with Bill"
+2014-05-03 * "Cafe Modagor" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -20.06 USD
   Expenses:Food:Restaurant                          20.06 USD
 
-2014-05-04 * "Metro Transport Authority" | "Tram tickets"
+2014-05-04 * "Metro Transport Authority" "Tram tickets"
   Liabilities:US:Chase:Slate                      -120.00 USD
   Expenses:Transport:Tram                          120.00 USD
 
-2014-05-06 * "Chichipotle" | "Eating out alone"
+2014-05-06 * "Chichipotle" "Eating out alone"
   Liabilities:US:Chase:Slate                       -32.73 USD
   Expenses:Food:Restaurant                          32.73 USD
 
-2014-05-07 * "Chase:Slate" | "Paying off credit card"
+2014-05-07 * "Chase:Slate" "Paying off credit card"
   Liabilities:US:Chase:Slate                       538.76 USD
   Assets:US:BofA:Checking                         -538.76 USD
 
-2014-05-10 * "Uncle Boons" | "Eating out after work"
+2014-05-10 * "Uncle Boons" "Eating out after work"
   Liabilities:US:Chase:Slate                       -36.18 USD
   Expenses:Food:Restaurant                          36.18 USD
 
-2014-05-11 * "Rose Flower" | "Eating out with work buddies"
+2014-05-11 * "Rose Flower" "Eating out with work buddies"
   Liabilities:US:Chase:Slate                       -19.63 USD
   Expenses:Food:Restaurant                          19.63 USD
 
-2014-05-14 * "China Garden" | "Eating out with Bill"
+2014-05-14 * "China Garden" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -27.81 USD
   Expenses:Food:Restaurant                          27.81 USD
 
-2014-05-16 * "Cafe Modagor" | "Eating out with Julie"
+2014-05-16 * "Cafe Modagor" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -29.91 USD
   Expenses:Food:Restaurant                          29.91 USD
 
-2014-05-17 * "Chichipotle" | "Eating out alone"
+2014-05-17 * "Chichipotle" "Eating out alone"
   Liabilities:US:Chase:Slate                       -55.03 USD
   Expenses:Food:Restaurant                          55.03 USD
 
-2014-05-18 * "Farmer Fresh" | "Buying groceries"
+2014-05-18 * "Farmer Fresh" "Buying groceries"
   Liabilities:US:Chase:Slate                       -68.45 USD
   Expenses:Food:Groceries                           68.45 USD
 
-2014-05-21 * "Uncle Boons" | "Eating out "
+2014-05-21 * "Uncle Boons" "Eating out "
   Liabilities:US:Chase:Slate                       -36.36 USD
   Expenses:Food:Restaurant                          36.36 USD
 
-2014-05-23 * "Rose Flower" | "Eating out with Bill"
+2014-05-23 * "Rose Flower" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -44.46 USD
   Expenses:Food:Restaurant                          44.46 USD
 
-2014-05-23 * "Corner Deli" | "Buying groceries"
+2014-05-23 * "Corner Deli" "Buying groceries"
   Liabilities:US:Chase:Slate                       -80.61 USD
   Expenses:Food:Groceries                           80.61 USD
 
-2014-05-27 * "Kin Soy" | "Eating out with Natasha"
+2014-05-27 * "Kin Soy" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -17.05 USD
   Expenses:Food:Restaurant                          17.05 USD
 
-2014-05-28 * "Farmer Fresh" | "Buying groceries"
+2014-05-28 * "Farmer Fresh" "Buying groceries"
   Liabilities:US:Chase:Slate                       -85.16 USD
   Expenses:Food:Groceries                           85.16 USD
 
 2014-05-29 balance Liabilities:US:Chase:Slate     -464.47 USD
 
-2014-05-31 * "Cafe Modagor" | "Eating out with Bill"
+2014-05-31 * "Cafe Modagor" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -27.78 USD
   Expenses:Food:Restaurant                          27.78 USD
 
-2014-06-01 * "China Garden" | "Eating out alone"
+2014-06-01 * "China Garden" "Eating out alone"
   Liabilities:US:Chase:Slate                       -27.24 USD
   Expenses:Food:Restaurant                          27.24 USD
 
-2014-06-01 * "Metro Transport Authority" | "Tram tickets"
+2014-06-01 * "Metro Transport Authority" "Tram tickets"
   Liabilities:US:Chase:Slate                      -120.00 USD
   Expenses:Transport:Tram                          120.00 USD
 
-2014-06-02 * "Jewel of Morroco" | "Eating out with Joe"
+2014-06-02 * "Jewel of Morroco" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -26.59 USD
   Expenses:Food:Restaurant                          26.59 USD
 
-2014-06-05 * "Rose Flower" | "Eating out with Bill"
+2014-06-05 * "Rose Flower" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -43.73 USD
   Expenses:Food:Restaurant                          43.73 USD
 
-2014-06-09 * "Jewel of Morroco" | "Eating out with Julie"
+2014-06-09 * "Jewel of Morroco" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -19.14 USD
   Expenses:Food:Restaurant                          19.14 USD
 
-2014-06-11 * "Chase:Slate" | "Paying off credit card"
+2014-06-11 * "Chase:Slate" "Paying off credit card"
   Liabilities:US:Chase:Slate                       789.36 USD
   Assets:US:BofA:Checking                         -789.36 USD
 
-2014-06-12 * "Good Moods Market" | "Buying groceries"
+2014-06-12 * "Good Moods Market" "Buying groceries"
   Liabilities:US:Chase:Slate                       -60.41 USD
   Expenses:Food:Groceries                           60.41 USD
 
-2014-06-14 * "Jewel of Morroco" | "Eating out with Natasha"
+2014-06-14 * "Jewel of Morroco" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -29.12 USD
   Expenses:Food:Restaurant                          29.12 USD
 
-2014-06-18 * "Cafe Modagor" | "Eating out with Julie"
+2014-06-18 * "Cafe Modagor" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -21.94 USD
   Expenses:Food:Restaurant                          21.94 USD
 
-2014-06-20 * "Rose Flower" | "Eating out with Julie"
+2014-06-20 * "Rose Flower" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -71.69 USD
   Expenses:Food:Restaurant                          71.69 USD
 
-2014-06-21 * "Goba Goba" | "Eating out with Julie"
+2014-06-21 * "Goba Goba" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -24.30 USD
   Expenses:Food:Restaurant                          24.30 USD
 
 2014-06-25 balance Liabilities:US:Chase:Slate     -147.05 USD
 
-2014-06-25 * "China Garden" | "Eating out "
+2014-06-25 * "China Garden" "Eating out "
   Liabilities:US:Chase:Slate                       -16.44 USD
   Expenses:Food:Restaurant                          16.44 USD
 
-2014-06-28 * "Metro Transport Authority" | "Tram tickets"
+2014-06-28 * "Metro Transport Authority" "Tram tickets"
   Liabilities:US:Chase:Slate                      -120.00 USD
   Expenses:Transport:Tram                          120.00 USD
 
-2014-06-30 * "Goba Goba" | "Eating out with Joe"
+2014-06-30 * "Goba Goba" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -18.36 USD
   Expenses:Food:Restaurant                          18.36 USD
 
-2014-07-01 * "Uncle Boons" | "Eating out with Joe"
+2014-07-01 * "Uncle Boons" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -29.12 USD
   Expenses:Food:Restaurant                          29.12 USD
 
-2014-07-01 * "Farmer Fresh" | "Buying groceries"
+2014-07-01 * "Farmer Fresh" "Buying groceries"
   Liabilities:US:Chase:Slate                       -82.16 USD
   Expenses:Food:Groceries                           82.16 USD
 
-2014-07-02 * "Rose Flower" | "Eating out with Joe"
+2014-07-02 * "Rose Flower" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -32.86 USD
   Expenses:Food:Restaurant                          32.86 USD
 
-2014-07-03 * "China Garden" | "Eating out with work buddies"
+2014-07-03 * "China Garden" "Eating out with work buddies"
   Liabilities:US:Chase:Slate                       -37.64 USD
   Expenses:Food:Restaurant                          37.64 USD
 
-2014-07-04 * "Cafe Modagor" | "Eating out with Joe"
+2014-07-04 * "Cafe Modagor" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -43.86 USD
   Expenses:Food:Restaurant                          43.86 USD
 
-2014-07-07 * "Cafe Modagor" | "Eating out alone"
+2014-07-07 * "Cafe Modagor" "Eating out alone"
   Liabilities:US:Chase:Slate                       -19.58 USD
   Expenses:Food:Restaurant                          19.58 USD
 
-2014-07-08 * "Chase:Slate" | "Paying off credit card"
+2014-07-08 * "Chase:Slate" "Paying off credit card"
   Liabilities:US:Chase:Slate                       653.81 USD
   Assets:US:BofA:Checking                         -653.81 USD
 
-2014-07-09 * "Farmer Fresh" | "Buying groceries"
+2014-07-09 * "Farmer Fresh" "Buying groceries"
   Liabilities:US:Chase:Slate                      -106.74 USD
   Expenses:Food:Groceries                          106.74 USD
 
-2014-07-10 * "China Garden" | "Eating out with Bill"
+2014-07-10 * "China Garden" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -51.24 USD
   Expenses:Food:Restaurant                          51.24 USD
 
-2014-07-13 * "Goba Goba" | "Eating out with Bill"
+2014-07-13 * "Goba Goba" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -22.53 USD
   Expenses:Food:Restaurant                          22.53 USD
 
-2014-07-14 * "Chichipotle" | "Eating out "
+2014-07-14 * "Chichipotle" "Eating out "
   Liabilities:US:Chase:Slate                       -21.56 USD
   Expenses:Food:Restaurant                          21.56 USD
 
-2014-07-15 * "Jewel of Morroco" | "Eating out with Natasha"
+2014-07-15 * "Jewel of Morroco" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -30.15 USD
   Expenses:Food:Restaurant                          30.15 USD
 
 2014-07-16 balance Liabilities:US:Chase:Slate     -125.48 USD
 
-2014-07-20 * "Kin Soy" | "Eating out with Julie"
+2014-07-20 * "Kin Soy" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -23.89 USD
   Expenses:Food:Restaurant                          23.89 USD
 
-2014-07-24 * "Onion Market" | "Buying groceries"
+2014-07-24 * "Onion Market" "Buying groceries"
   Liabilities:US:Chase:Slate                       -91.56 USD
   Expenses:Food:Groceries                           91.56 USD
 
-2014-07-25 * "China Garden" | "Eating out with Julie"
+2014-07-25 * "China Garden" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -20.63 USD
   Expenses:Food:Restaurant                          20.63 USD
 
-2014-07-27 * "Kin Soy" | "Eating out with Julie"
+2014-07-27 * "Kin Soy" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -19.37 USD
   Expenses:Food:Restaurant                          19.37 USD
 
-2014-07-29 * "Rose Flower" | "Eating out alone"
+2014-07-29 * "Rose Flower" "Eating out alone"
   Liabilities:US:Chase:Slate                       -19.84 USD
   Expenses:Food:Restaurant                          19.84 USD
 
-2014-07-30 * "Uncle Boons" | "Eating out after work"
+2014-07-30 * "Uncle Boons" "Eating out after work"
   Liabilities:US:Chase:Slate                       -23.43 USD
   Expenses:Food:Restaurant                          23.43 USD
 
-2014-07-30 * "Metro Transport Authority" | "Tram tickets"
+2014-07-30 * "Metro Transport Authority" "Tram tickets"
   Liabilities:US:Chase:Slate                      -120.00 USD
   Expenses:Transport:Tram                          120.00 USD
 
-2014-08-02 * "Goba Goba" | "Eating out after work"
+2014-08-02 * "Goba Goba" "Eating out after work"
   Liabilities:US:Chase:Slate                       -18.31 USD
   Expenses:Food:Restaurant                          18.31 USD
 
-2014-08-04 * "Goba Goba" | "Eating out alone"
+2014-08-04 * "Goba Goba" "Eating out alone"
   Liabilities:US:Chase:Slate                       -47.64 USD
   Expenses:Food:Restaurant                          47.64 USD
 
-2014-08-09 * "Goba Goba" | "Eating out with Natasha"
+2014-08-09 * "Goba Goba" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -33.03 USD
   Expenses:Food:Restaurant                          33.03 USD
 
-2014-08-10 * "China Garden" | "Eating out with Joe"
+2014-08-10 * "China Garden" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -19.94 USD
   Expenses:Food:Restaurant                          19.94 USD
 
 2014-08-11 balance Liabilities:US:Chase:Slate     -563.12 USD
 
-2014-08-11 * "Chase:Slate" | "Paying off credit card"
+2014-08-11 * "Chase:Slate" "Paying off credit card"
   Liabilities:US:Chase:Slate                       588.43 USD
   Assets:US:BofA:Checking                         -588.43 USD
 
-2014-08-12 * "Jewel of Morroco" | "Eating out with Joe"
+2014-08-12 * "Jewel of Morroco" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -25.31 USD
   Expenses:Food:Restaurant                          25.31 USD
 
-2014-08-12 * "Good Moods Market" | "Buying groceries"
+2014-08-12 * "Good Moods Market" "Buying groceries"
   Liabilities:US:Chase:Slate                       -61.35 USD
   Expenses:Food:Groceries                           61.35 USD
 
-2014-08-13 * "Jewel of Morroco" | "Eating out with Joe"
+2014-08-13 * "Jewel of Morroco" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -25.14 USD
   Expenses:Food:Restaurant                          25.14 USD
 
-2014-08-14 * "Chichipotle" | "Eating out with Natasha"
+2014-08-14 * "Chichipotle" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -19.25 USD
   Expenses:Food:Restaurant                          19.25 USD
 
-2014-08-15 * "Rose Flower" | "Eating out with Natasha"
+2014-08-15 * "Rose Flower" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -25.54 USD
   Expenses:Food:Restaurant                          25.54 USD
 
-2014-08-16 * "Rose Flower" | "Eating out "
+2014-08-16 * "Rose Flower" "Eating out "
   Liabilities:US:Chase:Slate                       -34.41 USD
   Expenses:Food:Restaurant                          34.41 USD
 
-2014-08-20 * "Onion Market" | "Buying groceries"
+2014-08-20 * "Onion Market" "Buying groceries"
   Liabilities:US:Chase:Slate                       -80.16 USD
   Expenses:Food:Groceries                           80.16 USD
 
-2014-08-21 * "China Garden" | "Eating out with work buddies"
+2014-08-21 * "China Garden" "Eating out with work buddies"
   Liabilities:US:Chase:Slate                       -36.62 USD
   Expenses:Food:Restaurant                          36.62 USD
 
-2014-08-25 * "Chichipotle" | "Eating out with Natasha"
+2014-08-25 * "Chichipotle" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -20.38 USD
   Expenses:Food:Restaurant                          20.38 USD
 
-2014-08-26 * "China Garden" | "Eating out "
+2014-08-26 * "China Garden" "Eating out "
   Liabilities:US:Chase:Slate                       -37.29 USD
   Expenses:Food:Restaurant                          37.29 USD
 
-2014-08-27 * "Metro Transport Authority" | "Tram tickets"
+2014-08-27 * "Metro Transport Authority" "Tram tickets"
   Liabilities:US:Chase:Slate                      -120.00 USD
   Expenses:Transport:Tram                          120.00 USD
 
-2014-08-29 * "Jewel of Morroco" | "Eating out with Joe"
+2014-08-29 * "Jewel of Morroco" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -24.52 USD
   Expenses:Food:Restaurant                          24.52 USD
 
-2014-08-30 * "Rose Flower" | "Eating out "
+2014-08-30 * "Rose Flower" "Eating out "
   Liabilities:US:Chase:Slate                       -28.09 USD
   Expenses:Food:Restaurant                          28.09 USD
 
-2014-08-31 * "Rose Flower" | "Eating out with Natasha"
+2014-08-31 * "Rose Flower" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -58.18 USD
   Expenses:Food:Restaurant                          58.18 USD
 
-2014-09-03 * "Chichipotle" | "Eating out with Julie"
+2014-09-03 * "Chichipotle" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -32.16 USD
   Expenses:Food:Restaurant                          32.16 USD
 
-2014-09-05 * "Chichipotle" | "Eating out with work buddies"
+2014-09-05 * "Chichipotle" "Eating out with work buddies"
   Liabilities:US:Chase:Slate                       -42.65 USD
   Expenses:Food:Restaurant                          42.65 USD
 
 2014-09-06 balance Liabilities:US:Chase:Slate     -645.74 USD
 
-2014-09-08 * "Rose Flower" | "Eating out alone"
+2014-09-08 * "Rose Flower" "Eating out alone"
   Liabilities:US:Chase:Slate                       -33.02 USD
   Expenses:Food:Restaurant                          33.02 USD
 
-2014-09-09 * "Good Moods Market" | "Buying groceries"
+2014-09-09 * "Good Moods Market" "Buying groceries"
   Liabilities:US:Chase:Slate                      -126.35 USD
   Expenses:Food:Groceries                          126.35 USD
 
-2014-09-09 * "Chase:Slate" | "Paying off credit card"
+2014-09-09 * "Chase:Slate" "Paying off credit card"
   Liabilities:US:Chase:Slate                       805.11 USD
   Assets:US:BofA:Checking                         -805.11 USD
 
-2014-09-13 * "Kin Soy" | "Eating out with Natasha"
+2014-09-13 * "Kin Soy" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -24.32 USD
   Expenses:Food:Restaurant                          24.32 USD
 
-2014-09-18 * "Chichipotle" | "Eating out with Joe"
+2014-09-18 * "Chichipotle" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -47.29 USD
   Expenses:Food:Restaurant                          47.29 USD
 
-2014-09-18 * "Good Moods Market" | "Buying groceries"
+2014-09-18 * "Good Moods Market" "Buying groceries"
   Liabilities:US:Chase:Slate                       -88.81 USD
   Expenses:Food:Groceries                           88.81 USD
 
-2014-09-22 * "China Garden" | "Eating out with Julie"
+2014-09-22 * "China Garden" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -40.07 USD
   Expenses:Food:Restaurant                          40.07 USD
 
-2014-09-27 * "Goba Goba" | "Eating out with Natasha"
+2014-09-27 * "Goba Goba" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -34.38 USD
   Expenses:Food:Restaurant                          34.38 USD
 
-2014-09-27 * "Good Moods Market" | "Buying groceries"
+2014-09-27 * "Good Moods Market" "Buying groceries"
   Liabilities:US:Chase:Slate                       -96.10 USD
   Expenses:Food:Groceries                           96.10 USD
 
-2014-09-28 * "Metro Transport Authority" | "Tram tickets"
+2014-09-28 * "Metro Transport Authority" "Tram tickets"
   Liabilities:US:Chase:Slate                      -120.00 USD
   Expenses:Transport:Tram                          120.00 USD
 
 2014-10-01 balance Liabilities:US:Chase:Slate     -450.97 USD
 
-2014-10-01 * "Uncle Boons" | "Eating out after work"
+2014-10-01 * "Uncle Boons" "Eating out after work"
   Liabilities:US:Chase:Slate                       -28.98 USD
   Expenses:Food:Restaurant                          28.98 USD
 
-2014-10-05 * "Rose Flower" | "Eating out with Julie"
+2014-10-05 * "Rose Flower" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -23.35 USD
   Expenses:Food:Restaurant                          23.35 USD
 
-2014-10-06 * "Jewel of Morroco" | "Eating out alone"
+2014-10-06 * "Jewel of Morroco" "Eating out alone"
   Liabilities:US:Chase:Slate                       -63.74 USD
   Expenses:Food:Restaurant                          63.74 USD
 
-2014-10-07 * "Chichipotle" | "Eating out with Natasha"
+2014-10-07 * "Chichipotle" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -28.38 USD
   Expenses:Food:Restaurant                          28.38 USD
 
-2014-10-08 * "Cafe Modagor" | "Eating out with Julie"
+2014-10-08 * "Cafe Modagor" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -54.11 USD
   Expenses:Food:Restaurant                          54.11 USD
 
-2014-10-08 * "Chase:Slate" | "Paying off credit card"
+2014-10-08 * "Chase:Slate" "Paying off credit card"
   Liabilities:US:Chase:Slate                       649.53 USD
   Assets:US:BofA:Checking                         -649.53 USD
 
-2014-10-09 * "Onion Market" | "Buying groceries"
+2014-10-09 * "Onion Market" "Buying groceries"
   Liabilities:US:Chase:Slate                       -98.82 USD
   Expenses:Food:Groceries                           98.82 USD
 
-2014-10-12 * "China Garden" | "Eating out alone"
+2014-10-12 * "China Garden" "Eating out alone"
   Liabilities:US:Chase:Slate                        -6.53 USD
   Expenses:Food:Restaurant                           6.53 USD
 
-2014-10-13 * "Jewel of Morroco" | "Eating out with Joe"
+2014-10-13 * "Jewel of Morroco" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -31.09 USD
   Expenses:Food:Restaurant                          31.09 USD
 
-2014-10-15 * "Cafe Modagor" | "Eating out with Julie"
+2014-10-15 * "Cafe Modagor" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -44.41 USD
   Expenses:Food:Restaurant                          44.41 USD
 
-2014-10-20 * "Cafe Modagor" | "Eating out "
+2014-10-20 * "Cafe Modagor" "Eating out "
   Liabilities:US:Chase:Slate                       -23.66 USD
   Expenses:Food:Restaurant                          23.66 USD
 
-2014-10-21 * "Rose Flower" | "Eating out alone"
+2014-10-21 * "Rose Flower" "Eating out alone"
   Liabilities:US:Chase:Slate                       -24.06 USD
   Expenses:Food:Restaurant                          24.06 USD
 
-2014-10-22 * "Kin Soy" | "Eating out with Natasha"
+2014-10-22 * "Kin Soy" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -40.87 USD
   Expenses:Food:Restaurant                          40.87 USD
 
-2014-10-23 * "Onion Market" | "Buying groceries"
+2014-10-23 * "Onion Market" "Buying groceries"
   Liabilities:US:Chase:Slate                       -73.65 USD
   Expenses:Food:Groceries                           73.65 USD
 
 2014-10-24 balance Liabilities:US:Chase:Slate     -343.09 USD
 
-2014-10-26 * "Chichipotle" | "Eating out "
+2014-10-26 * "Chichipotle" "Eating out "
   Liabilities:US:Chase:Slate                       -43.80 USD
   Expenses:Food:Restaurant                          43.80 USD
 
-2014-10-28 * "Metro Transport Authority" | "Tram tickets"
+2014-10-28 * "Metro Transport Authority" "Tram tickets"
   Liabilities:US:Chase:Slate                      -120.00 USD
   Expenses:Transport:Tram                          120.00 USD
 
-2014-10-29 * "Jewel of Morroco" | "Eating out with Joe"
+2014-10-29 * "Jewel of Morroco" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -55.75 USD
   Expenses:Food:Restaurant                          55.75 USD
 
-2014-10-30 * "Rose Flower" | "Eating out with Bill"
+2014-10-30 * "Rose Flower" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -23.89 USD
   Expenses:Food:Restaurant                          23.89 USD
 
-2014-11-02 * "Uncle Boons" | "Eating out with work buddies"
+2014-11-02 * "Uncle Boons" "Eating out with work buddies"
   Liabilities:US:Chase:Slate                       -28.63 USD
   Expenses:Food:Restaurant                          28.63 USD
 
-2014-11-05 * "Corner Deli" | "Buying groceries"
+2014-11-05 * "Corner Deli" "Buying groceries"
   Liabilities:US:Chase:Slate                       -69.03 USD
   Expenses:Food:Groceries                           69.03 USD
 
-2014-11-06 * "Rose Flower" | "Eating out after work"
+2014-11-06 * "Rose Flower" "Eating out after work"
   Liabilities:US:Chase:Slate                       -43.62 USD
   Expenses:Food:Restaurant                          43.62 USD
 
-2014-11-07 * "Chase:Slate" | "Paying off credit card"
+2014-11-07 * "Chase:Slate" "Paying off credit card"
   Liabilities:US:Chase:Slate                       752.99 USD
   Assets:US:BofA:Checking                         -752.99 USD
 
-2014-11-10 * "Chichipotle" | "Eating out with Joe"
+2014-11-10 * "Chichipotle" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -25.18 USD
   Expenses:Food:Restaurant                          25.18 USD
 
-2014-11-14 * "Chichipotle" | "Eating out "
+2014-11-14 * "Chichipotle" "Eating out "
   Liabilities:US:Chase:Slate                       -48.83 USD
   Expenses:Food:Restaurant                          48.83 USD
 
-2014-11-16 * "Corner Deli" | "Buying groceries"
+2014-11-16 * "Corner Deli" "Buying groceries"
   Liabilities:US:Chase:Slate                       -71.72 USD
   Expenses:Food:Groceries                           71.72 USD
 
 2014-11-18 balance Liabilities:US:Chase:Slate     -120.55 USD
 
-2014-11-19 * "Kin Soy" | "Eating out with Natasha"
+2014-11-19 * "Kin Soy" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -35.87 USD
   Expenses:Food:Restaurant                          35.87 USD
 
-2014-11-20 * "Jewel of Morroco" | "Eating out alone"
+2014-11-20 * "Jewel of Morroco" "Eating out alone"
   Liabilities:US:Chase:Slate                       -15.48 USD
   Expenses:Food:Restaurant                          15.48 USD
 
-2014-11-24 * "Chichipotle" | "Eating out with Julie"
+2014-11-24 * "Chichipotle" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -30.59 USD
   Expenses:Food:Restaurant                          30.59 USD
 
-2014-11-25 * "Metro Transport Authority" | "Tram tickets"
+2014-11-25 * "Metro Transport Authority" "Tram tickets"
   Liabilities:US:Chase:Slate                      -120.00 USD
   Expenses:Transport:Tram                          120.00 USD
 
-2014-11-29 * "Kin Soy" | "Eating out with Julie"
+2014-11-29 * "Kin Soy" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -28.27 USD
   Expenses:Food:Restaurant                          28.27 USD
 
-2014-11-30 * "Onion Market" | "Buying groceries"
+2014-11-30 * "Onion Market" "Buying groceries"
   Liabilities:US:Chase:Slate                       -61.51 USD
   Expenses:Food:Groceries                           61.51 USD
 
-2014-12-01 * "Kin Soy" | "Eating out with Julie"
+2014-12-01 * "Kin Soy" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -17.33 USD
   Expenses:Food:Restaurant                          17.33 USD
 
-2014-12-03 * "Jewel of Morroco" | "Eating out with Julie"
+2014-12-03 * "Jewel of Morroco" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -38.82 USD
   Expenses:Food:Restaurant                          38.82 USD
 
-2014-12-05 * "China Garden" | "Eating out with work buddies"
+2014-12-05 * "China Garden" "Eating out with work buddies"
   Liabilities:US:Chase:Slate                       -18.76 USD
   Expenses:Food:Restaurant                          18.76 USD
 
-2014-12-07 * "Chase:Slate" | "Paying off credit card"
+2014-12-07 * "Chase:Slate" "Paying off credit card"
   Liabilities:US:Chase:Slate                       510.73 USD
   Assets:US:BofA:Checking                         -510.73 USD
 
-2014-12-08 * "Rose Flower" | "Eating out alone"
+2014-12-08 * "Rose Flower" "Eating out alone"
   Liabilities:US:Chase:Slate                       -23.55 USD
   Expenses:Food:Restaurant                          23.55 USD
 
-2014-12-12 * "Rose Flower" | "Eating out with Bill"
+2014-12-12 * "Rose Flower" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -29.68 USD
   Expenses:Food:Restaurant                          29.68 USD
 
 2014-12-15 balance Liabilities:US:Chase:Slate      -29.68 USD
 
-2014-12-15 * "Goba Goba" | "Eating out with Joe"
+2014-12-15 * "Goba Goba" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -18.77 USD
   Expenses:Food:Restaurant                          18.77 USD
 
-2014-12-19 * "Good Moods Market" | "Buying groceries"
+2014-12-19 * "Good Moods Market" "Buying groceries"
   Liabilities:US:Chase:Slate                       -78.84 USD
   Expenses:Food:Groceries                           78.84 USD
 
-2014-12-20 * "Goba Goba" | "Eating out with Joe"
+2014-12-20 * "Goba Goba" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -42.45 USD
   Expenses:Food:Restaurant                          42.45 USD
 
-2014-12-21 * "Chichipotle" | "Eating out with Natasha"
+2014-12-21 * "Chichipotle" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -12.89 USD
   Expenses:Food:Restaurant                          12.89 USD
 
-2014-12-26 * "Goba Goba" | "Eating out with work buddies"
+2014-12-26 * "Goba Goba" "Eating out with work buddies"
   Liabilities:US:Chase:Slate                       -33.37 USD
   Expenses:Food:Restaurant                          33.37 USD
 
-2014-12-26 * "Metro Transport Authority" | "Tram tickets"
+2014-12-26 * "Metro Transport Authority" "Tram tickets"
   Liabilities:US:Chase:Slate                      -120.00 USD
   Expenses:Transport:Tram                          120.00 USD
 
-2014-12-27 * "Chichipotle" | "Eating out with Natasha"
+2014-12-27 * "Chichipotle" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -16.75 USD
   Expenses:Food:Restaurant                          16.75 USD
 
-2014-12-31 * "China Garden" | "Eating out with Bill"
+2014-12-31 * "China Garden" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -51.68 USD
   Expenses:Food:Restaurant                          51.68 USD
 
 2015-01-02 event "location" "Boston"
 
-2015-01-03 * "Starbucks" | "" #trip-boston-2015
+2015-01-03 * "Starbucks" "" #trip-boston-2015
   Liabilities:US:Chase:Slate                        -6.73 USD
   Expenses:Food:Coffee                               6.73 USD
 
-2015-01-06 * "Giacomo's Restaurant" | "" #trip-boston-2015
+2015-01-06 * "Giacomo's Restaurant" "" #trip-boston-2015
   Liabilities:US:Chase:Slate                       -44.59 USD
   Expenses:Food:Restaurant                          44.59 USD
 
-2015-01-06 * "Franklin Cafe" | "" #trip-boston-2015
+2015-01-06 * "Franklin Cafe" "" #trip-boston-2015
   Liabilities:US:Chase:Slate                       -27.91 USD
   Expenses:Food:Restaurant                          27.91 USD
 
-2015-01-07 * "Giacomo's Restaurant" | "" #trip-boston-2015
+2015-01-07 * "Giacomo's Restaurant" "" #trip-boston-2015
   Liabilities:US:Chase:Slate                       -42.02 USD
   Expenses:Food:Restaurant                          42.02 USD
 
-2015-01-07 * "Legal Seafood" | "" #trip-boston-2015
+2015-01-07 * "Legal Seafood" "" #trip-boston-2015
   Liabilities:US:Chase:Slate                       -38.00 USD
   Expenses:Food:Restaurant                          38.00 USD
 
-2015-01-07 * "Starbucks" | "" #trip-boston-2015
+2015-01-07 * "Starbucks" "" #trip-boston-2015
   Liabilities:US:Chase:Slate                        -5.64 USD
   Expenses:Food:Coffee                               5.64 USD
 
 2015-01-08 balance Liabilities:US:Chase:Slate     -569.32 USD
 
-2015-01-08 * "Franklin Cafe" | "" #trip-boston-2015
+2015-01-08 * "Franklin Cafe" "" #trip-boston-2015
   Liabilities:US:Chase:Slate                       -35.70 USD
   Expenses:Food:Restaurant                          35.70 USD
 
-2015-01-08 * "Chase:Slate" | "Paying off credit card"
+2015-01-08 * "Chase:Slate" "Paying off credit card"
   Liabilities:US:Chase:Slate                       452.51 USD
   Assets:US:BofA:Checking                         -452.51 USD
 
-2015-01-09 * "Giacomo's Restaurant" | "" #trip-boston-2015
+2015-01-09 * "Giacomo's Restaurant" "" #trip-boston-2015
   Liabilities:US:Chase:Slate                       -43.65 USD
   Expenses:Food:Restaurant                          43.65 USD
 
-2015-01-09 * "Franklin Cafe" | "" #trip-boston-2015
+2015-01-09 * "Franklin Cafe" "" #trip-boston-2015
   Liabilities:US:Chase:Slate                       -26.79 USD
   Expenses:Food:Restaurant                          26.79 USD
 
-2015-01-09 * "Starbucks" | "" #trip-boston-2015
+2015-01-09 * "Starbucks" "" #trip-boston-2015
   Liabilities:US:Chase:Slate                        -6.76 USD
   Expenses:Food:Coffee                               6.76 USD
 
-2015-01-11 * "Franklin Cafe" | "" #trip-boston-2015
+2015-01-11 * "Franklin Cafe" "" #trip-boston-2015
   Liabilities:US:Chase:Slate                       -25.45 USD
   Expenses:Food:Restaurant                          25.45 USD
 
-2015-01-12 * "Kin Soy" | "Eating out with work buddies"
+2015-01-12 * "Kin Soy" "Eating out with work buddies"
   Liabilities:US:Chase:Slate                       -48.08 USD
   Expenses:Food:Restaurant                          48.08 USD
 
@@ -1560,349 +1560,349 @@ option "operating_currency" "USD"
 
 2015-01-12 event "location" "New Metropolis"
 
-2015-01-13 * "Goba Goba" | "Eating out after work"
+2015-01-13 * "Goba Goba" "Eating out after work"
   Liabilities:US:Chase:Slate                       -75.78 USD
   Expenses:Food:Restaurant                          75.78 USD
 
-2015-01-17 * "Goba Goba" | "Eating out "
+2015-01-17 * "Goba Goba" "Eating out "
   Liabilities:US:Chase:Slate                       -28.32 USD
   Expenses:Food:Restaurant                          28.32 USD
 
-2015-01-19 * "Corner Deli" | "Buying groceries"
+2015-01-19 * "Corner Deli" "Buying groceries"
   Liabilities:US:Chase:Slate                      -128.68 USD
   Expenses:Food:Groceries                          128.68 USD
 
-2015-01-22 * "China Garden" | "Eating out with work buddies"
+2015-01-22 * "China Garden" "Eating out with work buddies"
   Liabilities:US:Chase:Slate                       -29.42 USD
   Expenses:Food:Restaurant                          29.42 USD
 
-2015-01-26 * "Uncle Boons" | "Eating out with Joe"
+2015-01-26 * "Uncle Boons" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -42.63 USD
   Expenses:Food:Restaurant                          42.63 USD
 
-2015-01-28 * "Metro Transport Authority" | "Tram tickets"
+2015-01-28 * "Metro Transport Authority" "Tram tickets"
   Liabilities:US:Chase:Slate                      -120.00 USD
   Expenses:Transport:Tram                          120.00 USD
 
 2015-01-29 balance Liabilities:US:Chase:Slate     -728.07 USD
 
-2015-01-29 * "Goba Goba" | "Eating out with Natasha"
+2015-01-29 * "Goba Goba" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -48.57 USD
   Expenses:Food:Restaurant                          48.57 USD
 
-2015-02-02 * "Uncle Boons" | "Eating out with Bill"
+2015-02-02 * "Uncle Boons" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -14.79 USD
   Expenses:Food:Restaurant                          14.79 USD
 
-2015-02-04 * "Cafe Modagor" | "Eating out with work buddies"
+2015-02-04 * "Cafe Modagor" "Eating out with work buddies"
   Liabilities:US:Chase:Slate                       -22.53 USD
   Expenses:Food:Restaurant                          22.53 USD
 
-2015-02-06 * "Farmer Fresh" | "Buying groceries"
+2015-02-06 * "Farmer Fresh" "Buying groceries"
   Liabilities:US:Chase:Slate                       -71.04 USD
   Expenses:Food:Groceries                           71.04 USD
 
-2015-02-07 * "Chichipotle" | "Eating out with Bill"
+2015-02-07 * "Chichipotle" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -26.06 USD
   Expenses:Food:Restaurant                          26.06 USD
 
-2015-02-08 * "Uncle Boons" | "Eating out with Joe"
+2015-02-08 * "Uncle Boons" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -12.59 USD
   Expenses:Food:Restaurant                          12.59 USD
 
-2015-02-11 * "Chase:Slate" | "Paying off credit card"
+2015-02-11 * "Chase:Slate" "Paying off credit card"
   Liabilities:US:Chase:Slate                       675.20 USD
   Assets:US:BofA:Checking                         -675.20 USD
 
-2015-02-13 * "Jewel of Morroco" | "Eating out "
+2015-02-13 * "Jewel of Morroco" "Eating out "
   Liabilities:US:Chase:Slate                       -54.79 USD
   Expenses:Food:Restaurant                          54.79 USD
 
-2015-02-16 * "Corner Deli" | "Buying groceries"
+2015-02-16 * "Corner Deli" "Buying groceries"
   Liabilities:US:Chase:Slate                       -66.71 USD
   Expenses:Food:Groceries                           66.71 USD
 
-2015-02-17 * "Chichipotle" | "Eating out "
+2015-02-17 * "Chichipotle" "Eating out "
   Liabilities:US:Chase:Slate                       -22.38 USD
   Expenses:Food:Restaurant                          22.38 USD
 
-2015-02-19 * "Chichipotle" | "Eating out with Natasha"
+2015-02-19 * "Chichipotle" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -41.61 USD
   Expenses:Food:Restaurant                          41.61 USD
 
 2015-02-20 balance Liabilities:US:Chase:Slate     -433.94 USD
 
-2015-02-23 * "Rose Flower" | "Eating out with Natasha"
+2015-02-23 * "Rose Flower" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -14.59 USD
   Expenses:Food:Restaurant                          14.59 USD
 
-2015-02-26 * "Jewel of Morroco" | "Eating out "
+2015-02-26 * "Jewel of Morroco" "Eating out "
   Liabilities:US:Chase:Slate                       -29.79 USD
   Expenses:Food:Restaurant                          29.79 USD
 
-2015-02-26 * "Corner Deli" | "Buying groceries"
+2015-02-26 * "Corner Deli" "Buying groceries"
   Liabilities:US:Chase:Slate                       -98.18 USD
   Expenses:Food:Groceries                           98.18 USD
 
-2015-02-28 * "Jewel of Morroco" | "Eating out with work buddies"
+2015-02-28 * "Jewel of Morroco" "Eating out with work buddies"
   Liabilities:US:Chase:Slate                       -37.19 USD
   Expenses:Food:Restaurant                          37.19 USD
 
-2015-03-01 * "Metro Transport Authority" | "Tram tickets"
+2015-03-01 * "Metro Transport Authority" "Tram tickets"
   Liabilities:US:Chase:Slate                      -120.00 USD
   Expenses:Transport:Tram                          120.00 USD
 
-2015-03-05 * "Goba Goba" | "Eating out after work"
+2015-03-05 * "Goba Goba" "Eating out after work"
   Liabilities:US:Chase:Slate                       -31.75 USD
   Expenses:Food:Restaurant                          31.75 USD
 
-2015-03-05 * "Onion Market" | "Buying groceries"
+2015-03-05 * "Onion Market" "Buying groceries"
   Liabilities:US:Chase:Slate                      -106.09 USD
   Expenses:Food:Groceries                          106.09 USD
 
-2015-03-06 * "Kin Soy" | "Eating out with Julie"
+2015-03-06 * "Kin Soy" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -39.02 USD
   Expenses:Food:Restaurant                          39.02 USD
 
-2015-03-07 * "Cafe Modagor" | "Eating out alone"
+2015-03-07 * "Cafe Modagor" "Eating out alone"
   Liabilities:US:Chase:Slate                       -30.35 USD
   Expenses:Food:Restaurant                          30.35 USD
 
-2015-03-08 * "Kin Soy" | "Eating out with Julie"
+2015-03-08 * "Kin Soy" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -36.59 USD
   Expenses:Food:Restaurant                          36.59 USD
 
-2015-03-08 * "Chase:Slate" | "Paying off credit card"
+2015-03-08 * "Chase:Slate" "Paying off credit card"
   Liabilities:US:Chase:Slate                       674.25 USD
   Assets:US:BofA:Checking                         -674.25 USD
 
-2015-03-09 * "Goba Goba" | "Eating out alone"
+2015-03-09 * "Goba Goba" "Eating out alone"
   Liabilities:US:Chase:Slate                       -26.10 USD
   Expenses:Food:Restaurant                          26.10 USD
 
-2015-03-10 * "Good Moods Market" | "Buying groceries"
+2015-03-10 * "Good Moods Market" "Buying groceries"
   Liabilities:US:Chase:Slate                       -71.76 USD
   Expenses:Food:Groceries                           71.76 USD
 
-2015-03-11 * "Rose Flower" | "Eating out with Julie"
+2015-03-11 * "Rose Flower" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -17.69 USD
   Expenses:Food:Restaurant                          17.69 USD
 
 2015-03-12 balance Liabilities:US:Chase:Slate     -418.79 USD
 
-2015-03-15 * "Cafe Modagor" | "Eating out after work"
+2015-03-15 * "Cafe Modagor" "Eating out after work"
   Liabilities:US:Chase:Slate                       -82.20 USD
   Expenses:Food:Restaurant                          82.20 USD
 
-2015-03-20 * "Rose Flower" | "Eating out with Natasha"
+2015-03-20 * "Rose Flower" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -59.78 USD
   Expenses:Food:Restaurant                          59.78 USD
 
-2015-03-24 * "Chichipotle" | "Eating out with Natasha"
+2015-03-24 * "Chichipotle" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -21.77 USD
   Expenses:Food:Restaurant                          21.77 USD
 
-2015-03-25 * "Farmer Fresh" | "Buying groceries"
+2015-03-25 * "Farmer Fresh" "Buying groceries"
   Liabilities:US:Chase:Slate                      -113.15 USD
   Expenses:Food:Groceries                          113.15 USD
 
-2015-03-26 * "Cafe Modagor" | "Eating out with Joe"
+2015-03-26 * "Cafe Modagor" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -21.68 USD
   Expenses:Food:Restaurant                          21.68 USD
 
-2015-03-27 * "Kin Soy" | "Eating out with Julie"
+2015-03-27 * "Kin Soy" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -40.25 USD
   Expenses:Food:Restaurant                          40.25 USD
 
-2015-03-31 * "Chichipotle" | "Eating out with work buddies"
+2015-03-31 * "Chichipotle" "Eating out with work buddies"
   Liabilities:US:Chase:Slate                       -44.04 USD
   Expenses:Food:Restaurant                          44.04 USD
 
 2015-04-02 balance Liabilities:US:Chase:Slate     -801.66 USD
 
-2015-04-03 * "Chichipotle" | "Eating out with Joe"
+2015-04-03 * "Chichipotle" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -46.73 USD
   Expenses:Food:Restaurant                          46.73 USD
 
-2015-04-03 * "Metro Transport Authority" | "Tram tickets"
+2015-04-03 * "Metro Transport Authority" "Tram tickets"
   Liabilities:US:Chase:Slate                      -120.00 USD
   Expenses:Transport:Tram                          120.00 USD
 
-2015-04-04 * "Chichipotle" | "Eating out with work buddies"
+2015-04-04 * "Chichipotle" "Eating out with work buddies"
   Liabilities:US:Chase:Slate                       -20.04 USD
   Expenses:Food:Restaurant                          20.04 USD
 
-2015-04-06 * "Kin Soy" | "Eating out with Joe"
+2015-04-06 * "Kin Soy" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -21.17 USD
   Expenses:Food:Restaurant                          21.17 USD
 
-2015-04-08 * "Jewel of Morroco" | "Eating out after work"
+2015-04-08 * "Jewel of Morroco" "Eating out after work"
   Liabilities:US:Chase:Slate                       -28.66 USD
   Expenses:Food:Restaurant                          28.66 USD
 
-2015-04-08 * "Chase:Slate" | "Paying off credit card"
+2015-04-08 * "Chase:Slate" "Paying off credit card"
   Liabilities:US:Chase:Slate                       735.02 USD
   Assets:US:BofA:Checking                         -735.02 USD
 
-2015-04-13 * "Uncle Boons" | "Eating out "
+2015-04-13 * "Uncle Boons" "Eating out "
   Liabilities:US:Chase:Slate                       -20.16 USD
   Expenses:Food:Restaurant                          20.16 USD
 
-2015-04-13 * "Onion Market" | "Buying groceries"
+2015-04-13 * "Onion Market" "Buying groceries"
   Liabilities:US:Chase:Slate                       -85.42 USD
   Expenses:Food:Groceries                           85.42 USD
 
-2015-04-17 * "Cafe Modagor" | "Eating out with work buddies"
+2015-04-17 * "Cafe Modagor" "Eating out with work buddies"
   Liabilities:US:Chase:Slate                       -20.80 USD
   Expenses:Food:Restaurant                          20.80 USD
 
-2015-04-22 * "Rose Flower" | "Eating out with work buddies"
+2015-04-22 * "Rose Flower" "Eating out with work buddies"
   Liabilities:US:Chase:Slate                       -46.67 USD
   Expenses:Food:Restaurant                          46.67 USD
 
 2015-04-23 balance Liabilities:US:Chase:Slate     -476.29 USD
 
-2015-04-24 * "Chichipotle" | "Eating out with Joe"
+2015-04-24 * "Chichipotle" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -54.35 USD
   Expenses:Food:Restaurant                          54.35 USD
 
-2015-04-25 * "Kin Soy" | "Eating out alone"
+2015-04-25 * "Kin Soy" "Eating out alone"
   Liabilities:US:Chase:Slate                       -42.88 USD
   Expenses:Food:Restaurant                          42.88 USD
 
-2015-04-27 * "Chichipotle" | "Eating out with Bill"
+2015-04-27 * "Chichipotle" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -37.48 USD
   Expenses:Food:Restaurant                          37.48 USD
 
-2015-04-27 * "Onion Market" | "Buying groceries"
+2015-04-27 * "Onion Market" "Buying groceries"
   Liabilities:US:Chase:Slate                       -72.02 USD
   Expenses:Food:Groceries                           72.02 USD
 
-2015-05-01 * "Metro Transport Authority" | "Tram tickets"
+2015-05-01 * "Metro Transport Authority" "Tram tickets"
   Liabilities:US:Chase:Slate                      -120.00 USD
   Expenses:Transport:Tram                          120.00 USD
 
-2015-05-02 * "Kin Soy" | "Eating out after work"
+2015-05-02 * "Kin Soy" "Eating out after work"
   Liabilities:US:Chase:Slate                       -47.40 USD
   Expenses:Food:Restaurant                          47.40 USD
 
-2015-05-03 * "Onion Market" | "Buying groceries"
+2015-05-03 * "Onion Market" "Buying groceries"
   Liabilities:US:Chase:Slate                       -84.28 USD
   Expenses:Food:Groceries                           84.28 USD
 
-2015-05-07 * "Kin Soy" | "Eating out with Bill"
+2015-05-07 * "Kin Soy" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -23.41 USD
   Expenses:Food:Restaurant                          23.41 USD
 
-2015-05-11 * "Chase:Slate" | "Paying off credit card"
+2015-05-11 * "Chase:Slate" "Paying off credit card"
   Liabilities:US:Chase:Slate                       675.37 USD
   Assets:US:BofA:Checking                         -675.37 USD
 
-2015-05-12 * "China Garden" | "Eating out with Natasha"
+2015-05-12 * "China Garden" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -20.50 USD
   Expenses:Food:Restaurant                          20.50 USD
 
-2015-05-16 * "Jewel of Morroco" | "Eating out with Bill"
+2015-05-16 * "Jewel of Morroco" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -31.13 USD
   Expenses:Food:Restaurant                          31.13 USD
 
-2015-05-17 * "Onion Market" | "Buying groceries"
+2015-05-17 * "Onion Market" "Buying groceries"
   Liabilities:US:Chase:Slate                      -105.21 USD
   Expenses:Food:Groceries                          105.21 USD
 
 2015-05-19 balance Liabilities:US:Chase:Slate     -439.58 USD
 
-2015-05-20 * "Kin Soy" | "Eating out with Bill"
+2015-05-20 * "Kin Soy" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -17.26 USD
   Expenses:Food:Restaurant                          17.26 USD
 
 2015-05-22 event "location" "Chicago"
 
-2015-05-23 * "25 Degrees Burger Bar" | "" #trip-chicago-2015
+2015-05-23 * "25 Degrees Burger Bar" "" #trip-chicago-2015
   Liabilities:US:Chase:Slate                       -22.42 USD
   Expenses:Food:Restaurant                          22.42 USD
 
-2015-05-24 * "Star of Siam" | "" #trip-chicago-2015
+2015-05-24 * "Star of Siam" "" #trip-chicago-2015
   Liabilities:US:Chase:Slate                       -20.96 USD
   Expenses:Food:Restaurant                          20.96 USD
 
-2015-05-24 * "25 Degrees Burger Bar" | "" #trip-chicago-2015
+2015-05-24 * "25 Degrees Burger Bar" "" #trip-chicago-2015
   Liabilities:US:Chase:Slate                       -25.30 USD
   Expenses:Food:Restaurant                          25.30 USD
 
-2015-05-25 * "Mercadito" | "" #trip-chicago-2015
+2015-05-25 * "Mercadito" "" #trip-chicago-2015
   Liabilities:US:Chase:Slate                       -43.49 USD
   Expenses:Food:Restaurant                          43.49 USD
 
-2015-05-25 * "25 Degrees Burger Bar" | "" #trip-chicago-2015
+2015-05-25 * "25 Degrees Burger Bar" "" #trip-chicago-2015
   Liabilities:US:Chase:Slate                       -22.73 USD
   Expenses:Food:Restaurant                          22.73 USD
 
-2015-05-26 * "Star of Siam" | "" #trip-chicago-2015
+2015-05-26 * "Star of Siam" "" #trip-chicago-2015
   Liabilities:US:Chase:Slate                       -25.10 USD
   Expenses:Food:Restaurant                          25.10 USD
 
-2015-05-26 * "25 Degrees Burger Bar" | "" #trip-chicago-2015
+2015-05-26 * "25 Degrees Burger Bar" "" #trip-chicago-2015
   Liabilities:US:Chase:Slate                       -21.04 USD
   Expenses:Food:Restaurant                          21.04 USD
 
-2015-05-26 * "Argo Tea" | "" #trip-chicago-2015
+2015-05-26 * "Argo Tea" "" #trip-chicago-2015
   Liabilities:US:Chase:Slate                        -6.12 USD
   Expenses:Food:Coffee                               6.12 USD
 
-2015-05-27 * "Mercadito" | "" #trip-chicago-2015
+2015-05-27 * "Mercadito" "" #trip-chicago-2015
   Liabilities:US:Chase:Slate                       -35.83 USD
   Expenses:Food:Restaurant                          35.83 USD
 
-2015-05-27 * "25 Degrees Burger Bar" | "" #trip-chicago-2015
+2015-05-27 * "25 Degrees Burger Bar" "" #trip-chicago-2015
   Liabilities:US:Chase:Slate                       -17.54 USD
   Expenses:Food:Restaurant                          17.54 USD
 
-2015-05-27 * "Another Sports Pub" | "" #trip-chicago-2015
+2015-05-27 * "Another Sports Pub" "" #trip-chicago-2015
   Liabilities:US:Chase:Slate                       -13.72 USD
   Expenses:Food:Alcohol                             13.72 USD
 
-2015-05-27 * "Argo Tea" | "" #trip-chicago-2015
+2015-05-27 * "Argo Tea" "" #trip-chicago-2015
   Liabilities:US:Chase:Slate                        -6.23 USD
   Expenses:Food:Coffee                               6.23 USD
 
-2015-05-28 * "Argo Tea" | "" #trip-chicago-2015
+2015-05-28 * "Argo Tea" "" #trip-chicago-2015
   Liabilities:US:Chase:Slate                        -6.22 USD
   Expenses:Food:Coffee                               6.22 USD
 
-2015-05-29 * "Mercadito" | "" #trip-chicago-2015
+2015-05-29 * "Mercadito" "" #trip-chicago-2015
   Liabilities:US:Chase:Slate                       -52.43 USD
   Expenses:Food:Restaurant                          52.43 USD
 
-2015-05-29 * "Eataly Chicago" | "" #trip-chicago-2015
+2015-05-29 * "Eataly Chicago" "" #trip-chicago-2015
   Liabilities:US:Chase:Slate                       -35.27 USD
   Expenses:Food:Restaurant                          35.27 USD
 
-2015-05-29 * "Argo Tea" | "" #trip-chicago-2015
+2015-05-29 * "Argo Tea" "" #trip-chicago-2015
   Liabilities:US:Chase:Slate                        -7.12 USD
   Expenses:Food:Coffee                               7.12 USD
 
-2015-05-30 * "Star of Siam" | "" #trip-chicago-2015
+2015-05-30 * "Star of Siam" "" #trip-chicago-2015
   Liabilities:US:Chase:Slate                       -26.39 USD
   Expenses:Food:Restaurant                          26.39 USD
 
-2015-05-30 * "Eataly Chicago" | "" #trip-chicago-2015
+2015-05-30 * "Eataly Chicago" "" #trip-chicago-2015
   Liabilities:US:Chase:Slate                       -28.63 USD
   Expenses:Food:Restaurant                          28.63 USD
 
-2015-05-31 * "Metro Transport Authority" | "Tram tickets"
+2015-05-31 * "Metro Transport Authority" "Tram tickets"
   Liabilities:US:Chase:Slate                      -120.00 USD
   Expenses:Transport:Tram                          120.00 USD
 
-2015-05-31 * "Star of Siam" | "" #trip-chicago-2015
+2015-05-31 * "Star of Siam" "" #trip-chicago-2015
   Liabilities:US:Chase:Slate                       -23.96 USD
   Expenses:Food:Restaurant                          23.96 USD
 
-2015-05-31 * "Mercadito" | "" #trip-chicago-2015
+2015-05-31 * "Mercadito" "" #trip-chicago-2015
   Liabilities:US:Chase:Slate                       -40.12 USD
   Expenses:Food:Restaurant                          40.12 USD
 
-2015-05-31 * "Another Sports Pub" | "" #trip-chicago-2015
+2015-05-31 * "Another Sports Pub" "" #trip-chicago-2015
   Liabilities:US:Chase:Slate                        -8.64 USD
   Expenses:Food:Alcohol                              8.64 USD
 
@@ -1912,635 +1912,635 @@ option "operating_currency" "USD"
 
 2015-05-31 event "location" "New Metropolis"
 
-2015-06-02 * "Kin Soy" | "Eating out "
+2015-06-02 * "Kin Soy" "Eating out "
   Liabilities:US:Chase:Slate                       -26.52 USD
   Expenses:Food:Restaurant                          26.52 USD
 
-2015-06-03 * "Jewel of Morroco" | "Eating out alone"
+2015-06-03 * "Jewel of Morroco" "Eating out alone"
   Liabilities:US:Chase:Slate                       -42.34 USD
   Expenses:Food:Restaurant                          42.34 USD
 
-2015-06-05 * "Kin Soy" | "Eating out after work"
+2015-06-05 * "Kin Soy" "Eating out after work"
   Liabilities:US:Chase:Slate                       -46.99 USD
   Expenses:Food:Restaurant                          46.99 USD
 
-2015-06-09 * "Jewel of Morroco" | "Eating out with Julie"
+2015-06-09 * "Jewel of Morroco" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -30.96 USD
   Expenses:Food:Restaurant                          30.96 USD
 
-2015-06-11 * "Chase:Slate" | "Paying off credit card"
+2015-06-11 * "Chase:Slate" "Paying off credit card"
   Liabilities:US:Chase:Slate                       466.03 USD
   Assets:US:BofA:Checking                         -466.03 USD
 
 2015-06-12 balance Liabilities:US:Chase:Slate     -746.88 USD
 
-2015-06-14 * "Jewel of Morroco" | "Eating out with work buddies"
+2015-06-14 * "Jewel of Morroco" "Eating out with work buddies"
   Liabilities:US:Chase:Slate                       -45.62 USD
   Expenses:Food:Restaurant                          45.62 USD
 
-2015-06-14 * "Farmer Fresh" | "Buying groceries"
+2015-06-14 * "Farmer Fresh" "Buying groceries"
   Liabilities:US:Chase:Slate                       -47.12 USD
   Expenses:Food:Groceries                           47.12 USD
 
-2015-06-17 * "Goba Goba" | "Eating out with Natasha"
+2015-06-17 * "Goba Goba" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -44.73 USD
   Expenses:Food:Restaurant                          44.73 USD
 
-2015-06-22 * "Rose Flower" | "Eating out after work"
+2015-06-22 * "Rose Flower" "Eating out after work"
   Liabilities:US:Chase:Slate                       -23.98 USD
   Expenses:Food:Restaurant                          23.98 USD
 
-2015-06-25 * "Uncle Boons" | "Eating out with Bill"
+2015-06-25 * "Uncle Boons" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -63.53 USD
   Expenses:Food:Restaurant                          63.53 USD
 
-2015-06-26 * "China Garden" | "Eating out after work"
+2015-06-26 * "China Garden" "Eating out after work"
   Liabilities:US:Chase:Slate                       -16.82 USD
   Expenses:Food:Restaurant                          16.82 USD
 
-2015-06-28 * "Good Moods Market" | "Buying groceries"
+2015-06-28 * "Good Moods Market" "Buying groceries"
   Liabilities:US:Chase:Slate                       -61.51 USD
   Expenses:Food:Groceries                           61.51 USD
 
-2015-06-30 * "Uncle Boons" | "Eating out with Natasha"
+2015-06-30 * "Uncle Boons" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -24.16 USD
   Expenses:Food:Restaurant                          24.16 USD
 
-2015-07-02 * "Rose Flower" | "Eating out with Julie"
+2015-07-02 * "Rose Flower" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -31.27 USD
   Expenses:Food:Restaurant                          31.27 USD
 
-2015-07-02 * "Metro Transport Authority" | "Tram tickets"
+2015-07-02 * "Metro Transport Authority" "Tram tickets"
   Liabilities:US:Chase:Slate                      -120.00 USD
   Expenses:Transport:Tram                          120.00 USD
 
 2015-07-04 balance Liabilities:US:Chase:Slate    -1225.62 USD
 
-2015-07-07 * "Cafe Modagor" | "Eating out with work buddies"
+2015-07-07 * "Cafe Modagor" "Eating out with work buddies"
   Liabilities:US:Chase:Slate                       -38.97 USD
   Expenses:Food:Restaurant                          38.97 USD
 
-2015-07-10 * "Chase:Slate" | "Paying off credit card"
+2015-07-10 * "Chase:Slate" "Paying off credit card"
   Liabilities:US:Chase:Slate                       509.17 USD
   Assets:US:BofA:Checking                         -509.17 USD
 
-2015-07-12 * "Kin Soy" | "Eating out "
+2015-07-12 * "Kin Soy" "Eating out "
   Liabilities:US:Chase:Slate                       -37.08 USD
   Expenses:Food:Restaurant                          37.08 USD
 
-2015-07-15 * "Goba Goba" | "Eating out with Julie"
+2015-07-15 * "Goba Goba" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -27.83 USD
   Expenses:Food:Restaurant                          27.83 USD
 
-2015-07-16 * "Farmer Fresh" | "Buying groceries"
+2015-07-16 * "Farmer Fresh" "Buying groceries"
   Liabilities:US:Chase:Slate                      -110.74 USD
   Expenses:Food:Groceries                          110.74 USD
 
-2015-07-18 * "Chichipotle" | "Eating out with Joe"
+2015-07-18 * "Chichipotle" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -34.41 USD
   Expenses:Food:Restaurant                          34.41 USD
 
-2015-07-19 * "Chichipotle" | "Eating out with Joe"
+2015-07-19 * "Chichipotle" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -31.07 USD
   Expenses:Food:Restaurant                          31.07 USD
 
-2015-07-22 * "China Garden" | "Eating out alone"
+2015-07-22 * "China Garden" "Eating out alone"
   Liabilities:US:Chase:Slate                       -22.35 USD
   Expenses:Food:Restaurant                          22.35 USD
 
-2015-07-25 * "Cafe Modagor" | "Eating out after work"
+2015-07-25 * "Cafe Modagor" "Eating out after work"
   Liabilities:US:Chase:Slate                       -41.73 USD
   Expenses:Food:Restaurant                          41.73 USD
 
-2015-07-26 * "Farmer Fresh" | "Buying groceries"
+2015-07-26 * "Farmer Fresh" "Buying groceries"
   Liabilities:US:Chase:Slate                       -47.47 USD
   Expenses:Food:Groceries                           47.47 USD
 
 2015-07-27 balance Liabilities:US:Chase:Slate    -1108.10 USD
 
-2015-07-27 * "Goba Goba" | "Eating out with Natasha"
+2015-07-27 * "Goba Goba" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -14.67 USD
   Expenses:Food:Restaurant                          14.67 USD
 
-2015-07-30 * "Kin Soy" | "Eating out with Natasha"
+2015-07-30 * "Kin Soy" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -32.79 USD
   Expenses:Food:Restaurant                          32.79 USD
 
-2015-08-01 * "Uncle Boons" | "Eating out with Joe"
+2015-08-01 * "Uncle Boons" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -24.46 USD
   Expenses:Food:Restaurant                          24.46 USD
 
-2015-08-01 * "Good Moods Market" | "Buying groceries"
+2015-08-01 * "Good Moods Market" "Buying groceries"
   Liabilities:US:Chase:Slate                       -59.41 USD
   Expenses:Food:Groceries                           59.41 USD
 
-2015-08-03 * "Metro Transport Authority" | "Tram tickets"
+2015-08-03 * "Metro Transport Authority" "Tram tickets"
   Liabilities:US:Chase:Slate                      -120.00 USD
   Expenses:Transport:Tram                          120.00 USD
 
-2015-08-06 * "Cafe Modagor" | "Eating out "
+2015-08-06 * "Cafe Modagor" "Eating out "
   Liabilities:US:Chase:Slate                       -38.74 USD
   Expenses:Food:Restaurant                          38.74 USD
 
-2015-08-09 * "Chase:Slate" | "Paying off credit card"
+2015-08-09 * "Chase:Slate" "Paying off credit card"
   Liabilities:US:Chase:Slate                       629.49 USD
   Assets:US:BofA:Checking                         -629.49 USD
 
-2015-08-10 * "Jewel of Morroco" | "Eating out with work buddies"
+2015-08-10 * "Jewel of Morroco" "Eating out with work buddies"
   Liabilities:US:Chase:Slate                       -23.82 USD
   Expenses:Food:Restaurant                          23.82 USD
 
-2015-08-15 * "Rose Flower" | "Eating out alone"
+2015-08-15 * "Rose Flower" "Eating out alone"
   Liabilities:US:Chase:Slate                       -30.43 USD
   Expenses:Food:Restaurant                          30.43 USD
 
-2015-08-16 * "Farmer Fresh" | "Buying groceries"
+2015-08-16 * "Farmer Fresh" "Buying groceries"
   Liabilities:US:Chase:Slate                      -106.36 USD
   Expenses:Food:Groceries                          106.36 USD
 
-2015-08-20 * "Rose Flower" | "Eating out with Julie"
+2015-08-20 * "Rose Flower" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -35.32 USD
   Expenses:Food:Restaurant                          35.32 USD
 
-2015-08-21 * "Onion Market" | "Buying groceries"
+2015-08-21 * "Onion Market" "Buying groceries"
   Liabilities:US:Chase:Slate                       -83.34 USD
   Expenses:Food:Groceries                           83.34 USD
 
-2015-08-23 * "Jewel of Morroco" | "Eating out with Julie"
+2015-08-23 * "Jewel of Morroco" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -15.86 USD
   Expenses:Food:Restaurant                          15.86 USD
 
 2015-08-24 balance Liabilities:US:Chase:Slate    -1063.81 USD
 
-2015-08-28 * "Goba Goba" | "Eating out with Joe"
+2015-08-28 * "Goba Goba" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -13.28 USD
   Expenses:Food:Restaurant                          13.28 USD
 
-2015-08-31 * "Kin Soy" | "Eating out with work buddies"
+2015-08-31 * "Kin Soy" "Eating out with work buddies"
   Liabilities:US:Chase:Slate                       -27.93 USD
   Expenses:Food:Restaurant                          27.93 USD
 
-2015-09-01 * "Metro Transport Authority" | "Tram tickets"
+2015-09-01 * "Metro Transport Authority" "Tram tickets"
   Liabilities:US:Chase:Slate                      -120.00 USD
   Expenses:Transport:Tram                          120.00 USD
 
-2015-09-02 * "Good Moods Market" | "Buying groceries"
+2015-09-02 * "Good Moods Market" "Buying groceries"
   Liabilities:US:Chase:Slate                      -102.81 USD
   Expenses:Food:Groceries                          102.81 USD
 
-2015-09-04 * "China Garden" | "Eating out "
+2015-09-04 * "China Garden" "Eating out "
   Liabilities:US:Chase:Slate                       -22.00 USD
   Expenses:Food:Restaurant                          22.00 USD
 
-2015-09-08 * "Chichipotle" | "Eating out after work"
+2015-09-08 * "Chichipotle" "Eating out after work"
   Liabilities:US:Chase:Slate                       -43.60 USD
   Expenses:Food:Restaurant                          43.60 USD
 
-2015-09-10 * "Chase:Slate" | "Paying off credit card"
+2015-09-10 * "Chase:Slate" "Paying off credit card"
   Liabilities:US:Chase:Slate                       638.35 USD
   Assets:US:BofA:Checking                         -638.35 USD
 
-2015-09-13 * "Goba Goba" | "Eating out with Natasha"
+2015-09-13 * "Goba Goba" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -37.42 USD
   Expenses:Food:Restaurant                          37.42 USD
 
-2015-09-14 * "Chichipotle" | "Eating out with Natasha"
+2015-09-14 * "Chichipotle" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -14.18 USD
   Expenses:Food:Restaurant                          14.18 USD
 
-2015-09-15 * "Good Moods Market" | "Buying groceries"
+2015-09-15 * "Good Moods Market" "Buying groceries"
   Liabilities:US:Chase:Slate                      -109.90 USD
   Expenses:Food:Groceries                          109.90 USD
 
-2015-09-17 * "Cafe Modagor" | "Eating out with Julie"
+2015-09-17 * "Cafe Modagor" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -24.93 USD
   Expenses:Food:Restaurant                          24.93 USD
 
 2015-09-21 balance Liabilities:US:Chase:Slate     -941.51 USD
 
-2015-09-21 * "China Garden" | "Eating out with work buddies"
+2015-09-21 * "China Garden" "Eating out with work buddies"
   Liabilities:US:Chase:Slate                       -24.37 USD
   Expenses:Food:Restaurant                          24.37 USD
 
-2015-09-23 * "China Garden" | "Eating out "
+2015-09-23 * "China Garden" "Eating out "
   Liabilities:US:Chase:Slate                       -22.84 USD
   Expenses:Food:Restaurant                          22.84 USD
 
-2015-09-25 * "Farmer Fresh" | "Buying groceries"
+2015-09-25 * "Farmer Fresh" "Buying groceries"
   Liabilities:US:Chase:Slate                      -124.26 USD
   Expenses:Food:Groceries                          124.26 USD
 
-2015-09-27 * "Chichipotle" | "Eating out after work"
+2015-09-27 * "Chichipotle" "Eating out after work"
   Liabilities:US:Chase:Slate                       -28.69 USD
   Expenses:Food:Restaurant                          28.69 USD
 
-2015-10-02 * "Goba Goba" | "Eating out with work buddies"
+2015-10-02 * "Goba Goba" "Eating out with work buddies"
   Liabilities:US:Chase:Slate                       -28.82 USD
   Expenses:Food:Restaurant                          28.82 USD
 
-2015-10-03 * "Jewel of Morroco" | "Eating out with Bill"
+2015-10-03 * "Jewel of Morroco" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -14.34 USD
   Expenses:Food:Restaurant                          14.34 USD
 
-2015-10-04 * "Metro Transport Authority" | "Tram tickets"
+2015-10-04 * "Metro Transport Authority" "Tram tickets"
   Liabilities:US:Chase:Slate                      -120.00 USD
   Expenses:Transport:Tram                          120.00 USD
 
-2015-10-08 * "Jewel of Morroco" | "Eating out with Joe"
+2015-10-08 * "Jewel of Morroco" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -11.34 USD
   Expenses:Food:Restaurant                          11.34 USD
 
-2015-10-08 * "Chase:Slate" | "Paying off credit card"
+2015-10-08 * "Chase:Slate" "Paying off credit card"
   Liabilities:US:Chase:Slate                       523.67 USD
   Assets:US:BofA:Checking                         -523.67 USD
 
-2015-10-13 * "Chichipotle" | "Eating out with Bill"
+2015-10-13 * "Chichipotle" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -29.03 USD
   Expenses:Food:Restaurant                          29.03 USD
 
 2015-10-14 balance Liabilities:US:Chase:Slate     -821.53 USD
 
-2015-10-15 * "Onion Market" | "Buying groceries"
+2015-10-15 * "Onion Market" "Buying groceries"
   Liabilities:US:Chase:Slate                       -75.75 USD
   Expenses:Food:Groceries                           75.75 USD
 
-2015-10-17 * "Jewel of Morroco" | "Eating out with Julie"
+2015-10-17 * "Jewel of Morroco" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -33.89 USD
   Expenses:Food:Restaurant                          33.89 USD
 
-2015-10-20 * "Rose Flower" | "Eating out alone"
+2015-10-20 * "Rose Flower" "Eating out alone"
   Liabilities:US:Chase:Slate                       -34.46 USD
   Expenses:Food:Restaurant                          34.46 USD
 
-2015-10-21 * "Jewel of Morroco" | "Eating out with work buddies"
+2015-10-21 * "Jewel of Morroco" "Eating out with work buddies"
   Liabilities:US:Chase:Slate                       -33.66 USD
   Expenses:Food:Restaurant                          33.66 USD
 
-2015-10-25 * "Uncle Boons" | "Eating out with Joe"
+2015-10-25 * "Uncle Boons" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -47.92 USD
   Expenses:Food:Restaurant                          47.92 USD
 
-2015-10-27 * "Jewel of Morroco" | "Eating out "
+2015-10-27 * "Jewel of Morroco" "Eating out "
   Liabilities:US:Chase:Slate                       -21.58 USD
   Expenses:Food:Restaurant                          21.58 USD
 
-2015-11-01 * "Uncle Boons" | "Eating out with Joe"
+2015-11-01 * "Uncle Boons" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -23.63 USD
   Expenses:Food:Restaurant                          23.63 USD
 
-2015-11-02 * "Rose Flower" | "Eating out alone"
+2015-11-02 * "Rose Flower" "Eating out alone"
   Liabilities:US:Chase:Slate                       -26.21 USD
   Expenses:Food:Restaurant                          26.21 USD
 
 2015-11-03 balance Liabilities:US:Chase:Slate    -1118.63 USD
 
-2015-11-03 * "Good Moods Market" | "Buying groceries"
+2015-11-03 * "Good Moods Market" "Buying groceries"
   Liabilities:US:Chase:Slate                       -94.83 USD
   Expenses:Food:Groceries                           94.83 USD
 
-2015-11-05 * "Metro Transport Authority" | "Tram tickets"
+2015-11-05 * "Metro Transport Authority" "Tram tickets"
   Liabilities:US:Chase:Slate                      -120.00 USD
   Expenses:Transport:Tram                          120.00 USD
 
-2015-11-07 * "Rose Flower" | "Eating out alone"
+2015-11-07 * "Rose Flower" "Eating out alone"
   Liabilities:US:Chase:Slate                       -19.25 USD
   Expenses:Food:Restaurant                          19.25 USD
 
-2015-11-08 * "Chase:Slate" | "Paying off credit card"
+2015-11-08 * "Chase:Slate" "Paying off credit card"
   Liabilities:US:Chase:Slate                       609.48 USD
   Assets:US:BofA:Checking                         -609.48 USD
 
-2015-11-10 * "China Garden" | "Eating out alone"
+2015-11-10 * "China Garden" "Eating out alone"
   Liabilities:US:Chase:Slate                       -49.27 USD
   Expenses:Food:Restaurant                          49.27 USD
 
-2015-11-15 * "Uncle Boons" | "Eating out with Bill"
+2015-11-15 * "Uncle Boons" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -68.58 USD
   Expenses:Food:Restaurant                          68.58 USD
 
-2015-11-20 * "Chichipotle" | "Eating out "
+2015-11-20 * "Chichipotle" "Eating out "
   Liabilities:US:Chase:Slate                       -55.88 USD
   Expenses:Food:Restaurant                          55.88 USD
 
-2015-11-22 * "Uncle Boons" | "Eating out with Natasha"
+2015-11-22 * "Uncle Boons" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -44.34 USD
   Expenses:Food:Restaurant                          44.34 USD
 
-2015-11-23 * "Farmer Fresh" | "Buying groceries"
+2015-11-23 * "Farmer Fresh" "Buying groceries"
   Liabilities:US:Chase:Slate                       -97.64 USD
   Expenses:Food:Groceries                           97.64 USD
 
-2015-11-27 * "Uncle Boons" | "Eating out with Bill"
+2015-11-27 * "Uncle Boons" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -40.93 USD
   Expenses:Food:Restaurant                          40.93 USD
 
 2015-12-02 balance Liabilities:US:Chase:Slate    -1099.87 USD
 
-2015-12-02 * "Kin Soy" | "Eating out after work"
+2015-12-02 * "Kin Soy" "Eating out after work"
   Liabilities:US:Chase:Slate                       -16.39 USD
   Expenses:Food:Restaurant                          16.39 USD
 
-2015-12-03 * "Metro Transport Authority" | "Tram tickets"
+2015-12-03 * "Metro Transport Authority" "Tram tickets"
   Liabilities:US:Chase:Slate                      -120.00 USD
   Expenses:Transport:Tram                          120.00 USD
 
-2015-12-04 * "Onion Market" | "Buying groceries"
+2015-12-04 * "Onion Market" "Buying groceries"
   Liabilities:US:Chase:Slate                       -78.05 USD
   Expenses:Food:Groceries                           78.05 USD
 
-2015-12-06 * "Chichipotle" | "Eating out with work buddies"
+2015-12-06 * "Chichipotle" "Eating out with work buddies"
   Liabilities:US:Chase:Slate                       -53.93 USD
   Expenses:Food:Restaurant                          53.93 USD
 
-2015-12-07 * "Chase:Slate" | "Paying off credit card"
+2015-12-07 * "Chase:Slate" "Paying off credit card"
   Liabilities:US:Chase:Slate                       612.32 USD
   Assets:US:BofA:Checking                         -612.32 USD
 
-2015-12-11 * "Uncle Boons" | "Eating out with Natasha"
+2015-12-11 * "Uncle Boons" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -36.58 USD
   Expenses:Food:Restaurant                          36.58 USD
 
-2015-12-12 * "Rose Flower" | "Eating out with Natasha"
+2015-12-12 * "Rose Flower" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -22.09 USD
   Expenses:Food:Restaurant                          22.09 USD
 
-2015-12-16 * "Uncle Boons" | "Eating out alone"
+2015-12-16 * "Uncle Boons" "Eating out alone"
   Liabilities:US:Chase:Slate                       -29.35 USD
   Expenses:Food:Restaurant                          29.35 USD
 
-2015-12-17 * "Cafe Modagor" | "Eating out with work buddies"
+2015-12-17 * "Cafe Modagor" "Eating out with work buddies"
   Liabilities:US:Chase:Slate                       -35.44 USD
   Expenses:Food:Restaurant                          35.44 USD
 
-2015-12-20 * "Jewel of Morroco" | "Eating out with Joe"
+2015-12-20 * "Jewel of Morroco" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -34.45 USD
   Expenses:Food:Restaurant                          34.45 USD
 
-2015-12-22 * "Corner Deli" | "Buying groceries"
+2015-12-22 * "Corner Deli" "Buying groceries"
   Liabilities:US:Chase:Slate                       -56.28 USD
   Expenses:Food:Groceries                           56.28 USD
 
-2015-12-23 * "Rose Flower" | "Eating out "
+2015-12-23 * "Rose Flower" "Eating out "
   Liabilities:US:Chase:Slate                       -31.79 USD
   Expenses:Food:Restaurant                          31.79 USD
 
 2015-12-25 balance Liabilities:US:Chase:Slate    -1001.90 USD
 
-2015-12-26 * "China Garden" | "Eating out with work buddies"
+2015-12-26 * "China Garden" "Eating out with work buddies"
   Liabilities:US:Chase:Slate                       -33.22 USD
   Expenses:Food:Restaurant                          33.22 USD
 
-2015-12-30 * "Rose Flower" | "Eating out alone"
+2015-12-30 * "Rose Flower" "Eating out alone"
   Liabilities:US:Chase:Slate                       -36.33 USD
   Expenses:Food:Restaurant                          36.33 USD
 
-2015-12-31 * "Cafe Modagor" | "Eating out with Natasha"
+2015-12-31 * "Cafe Modagor" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -60.27 USD
   Expenses:Food:Restaurant                          60.27 USD
 
-2015-12-31 * "Onion Market" | "Buying groceries"
+2015-12-31 * "Onion Market" "Buying groceries"
   Liabilities:US:Chase:Slate                      -103.42 USD
   Expenses:Food:Groceries                          103.42 USD
 
-2016-01-03 * "Metro Transport Authority" | "Tram tickets"
+2016-01-03 * "Metro Transport Authority" "Tram tickets"
   Liabilities:US:Chase:Slate                      -120.00 USD
   Expenses:Transport:Tram                          120.00 USD
 
-2016-01-04 * "Uncle Boons" | "Eating out with work buddies"
+2016-01-04 * "Uncle Boons" "Eating out with work buddies"
   Liabilities:US:Chase:Slate                       -22.01 USD
   Expenses:Food:Restaurant                          22.01 USD
 
-2016-01-07 * "Jewel of Morroco" | "Eating out with Julie"
+2016-01-07 * "Jewel of Morroco" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -35.10 USD
   Expenses:Food:Restaurant                          35.10 USD
 
-2016-01-09 * "Cafe Modagor" | "Eating out with Julie"
+2016-01-09 * "Cafe Modagor" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -29.46 USD
   Expenses:Food:Restaurant                          29.46 USD
 
-2016-01-09 * "Chase:Slate" | "Paying off credit card"
+2016-01-09 * "Chase:Slate" "Paying off credit card"
   Liabilities:US:Chase:Slate                       649.21 USD
   Assets:US:BofA:Checking                         -649.21 USD
 
-2016-01-13 * "Cafe Modagor" | "Eating out alone"
+2016-01-13 * "Cafe Modagor" "Eating out alone"
   Liabilities:US:Chase:Slate                       -23.41 USD
   Expenses:Food:Restaurant                          23.41 USD
 
 2016-01-14 balance Liabilities:US:Chase:Slate     -815.91 USD
 
-2016-01-17 * "Jewel of Morroco" | "Eating out with Bill"
+2016-01-17 * "Jewel of Morroco" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -12.63 USD
   Expenses:Food:Restaurant                          12.63 USD
 
-2016-01-18 * "China Garden" | "Eating out after work"
+2016-01-18 * "China Garden" "Eating out after work"
   Liabilities:US:Chase:Slate                       -33.77 USD
   Expenses:Food:Restaurant                          33.77 USD
 
-2016-01-20 * "Farmer Fresh" | "Buying groceries"
+2016-01-20 * "Farmer Fresh" "Buying groceries"
   Liabilities:US:Chase:Slate                      -106.39 USD
   Expenses:Food:Groceries                          106.39 USD
 
-2016-01-21 * "Chichipotle" | "Eating out with work buddies"
+2016-01-21 * "Chichipotle" "Eating out with work buddies"
   Liabilities:US:Chase:Slate                       -14.65 USD
   Expenses:Food:Restaurant                          14.65 USD
 
-2016-01-25 * "Rose Flower" | "Eating out with Bill"
+2016-01-25 * "Rose Flower" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -35.59 USD
   Expenses:Food:Restaurant                          35.59 USD
 
-2016-01-30 * "Cafe Modagor" | "Eating out alone"
+2016-01-30 * "Cafe Modagor" "Eating out alone"
   Liabilities:US:Chase:Slate                       -30.17 USD
   Expenses:Food:Restaurant                          30.17 USD
 
-2016-02-01 * "Rose Flower" | "Eating out with Joe"
+2016-02-01 * "Rose Flower" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -41.10 USD
   Expenses:Food:Restaurant                          41.10 USD
 
-2016-02-03 * "Kin Soy" | "Eating out alone"
+2016-02-03 * "Kin Soy" "Eating out alone"
   Liabilities:US:Chase:Slate                       -43.59 USD
   Expenses:Food:Restaurant                          43.59 USD
 
-2016-02-04 * "Metro Transport Authority" | "Tram tickets"
+2016-02-04 * "Metro Transport Authority" "Tram tickets"
   Liabilities:US:Chase:Slate                      -120.00 USD
   Expenses:Transport:Tram                          120.00 USD
 
 2016-02-05 balance Liabilities:US:Chase:Slate    -1253.80 USD
 
-2016-02-06 * "Chichipotle" | "Eating out "
+2016-02-06 * "Chichipotle" "Eating out "
   Liabilities:US:Chase:Slate                        -8.57 USD
   Expenses:Food:Restaurant                           8.57 USD
 
-2016-02-07 * "Corner Deli" | "Buying groceries"
+2016-02-07 * "Corner Deli" "Buying groceries"
   Liabilities:US:Chase:Slate                       -49.04 USD
   Expenses:Food:Groceries                           49.04 USD
 
-2016-02-07 * "Chase:Slate" | "Paying off credit card"
+2016-02-07 * "Chase:Slate" "Paying off credit card"
   Liabilities:US:Chase:Slate                       518.91 USD
   Assets:US:BofA:Checking                         -518.91 USD
 
-2016-02-10 * "Jewel of Morroco" | "Eating out after work"
+2016-02-10 * "Jewel of Morroco" "Eating out after work"
   Liabilities:US:Chase:Slate                       -25.90 USD
   Expenses:Food:Restaurant                          25.90 USD
 
-2016-02-12 * "Goba Goba" | "Eating out with work buddies"
+2016-02-12 * "Goba Goba" "Eating out with work buddies"
   Liabilities:US:Chase:Slate                       -39.82 USD
   Expenses:Food:Restaurant                          39.82 USD
 
-2016-02-15 * "China Garden" | "Eating out with Bill"
+2016-02-15 * "China Garden" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -20.98 USD
   Expenses:Food:Restaurant                          20.98 USD
 
-2016-02-19 * "Kin Soy" | "Eating out with work buddies"
+2016-02-19 * "Kin Soy" "Eating out with work buddies"
   Liabilities:US:Chase:Slate                       -18.07 USD
   Expenses:Food:Restaurant                          18.07 USD
 
-2016-02-22 * "Corner Deli" | "Buying groceries"
+2016-02-22 * "Corner Deli" "Buying groceries"
   Liabilities:US:Chase:Slate                       -85.51 USD
   Expenses:Food:Groceries                           85.51 USD
 
-2016-02-23 * "Kin Soy" | "Eating out with Natasha"
+2016-02-23 * "Kin Soy" "Eating out with Natasha"
   Liabilities:US:Chase:Slate                       -13.52 USD
   Expenses:Food:Restaurant                          13.52 USD
 
-2016-02-26 * "Rose Flower" | "Eating out after work"
+2016-02-26 * "Rose Flower" "Eating out after work"
   Liabilities:US:Chase:Slate                       -28.06 USD
   Expenses:Food:Restaurant                          28.06 USD
 
-2016-02-27 * "China Garden" | "Eating out with Julie"
+2016-02-27 * "China Garden" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -56.23 USD
   Expenses:Food:Restaurant                          56.23 USD
 
-2016-02-28 * "Goba Goba" | "Eating out "
+2016-02-28 * "Goba Goba" "Eating out "
   Liabilities:US:Chase:Slate                       -26.23 USD
   Expenses:Food:Restaurant                          26.23 USD
 
 2016-02-29 balance Liabilities:US:Chase:Slate    -1106.82 USD
 
-2016-03-01 * "Uncle Boons" | "Eating out with Julie"
+2016-03-01 * "Uncle Boons" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -37.29 USD
   Expenses:Food:Restaurant                          37.29 USD
 
-2016-03-04 * "Metro Transport Authority" | "Tram tickets"
+2016-03-04 * "Metro Transport Authority" "Tram tickets"
   Liabilities:US:Chase:Slate                      -120.00 USD
   Expenses:Transport:Tram                          120.00 USD
 
-2016-03-06 * "Rose Flower" | "Eating out "
+2016-03-06 * "Rose Flower" "Eating out "
   Liabilities:US:Chase:Slate                       -31.38 USD
   Expenses:Food:Restaurant                          31.38 USD
 
-2016-03-06 * "Corner Deli" | "Buying groceries"
+2016-03-06 * "Corner Deli" "Buying groceries"
   Liabilities:US:Chase:Slate                       -90.13 USD
   Expenses:Food:Groceries                           90.13 USD
 
-2016-03-10 * "Chase:Slate" | "Paying off credit card"
+2016-03-10 * "Chase:Slate" "Paying off credit card"
   Liabilities:US:Chase:Slate                       613.56 USD
   Assets:US:BofA:Checking                         -613.56 USD
 
-2016-03-11 * "China Garden" | "Eating out with Bill"
+2016-03-11 * "China Garden" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -20.44 USD
   Expenses:Food:Restaurant                          20.44 USD
 
-2016-03-15 * "Chichipotle" | "Eating out alone"
+2016-03-15 * "Chichipotle" "Eating out alone"
   Liabilities:US:Chase:Slate                       -36.26 USD
   Expenses:Food:Restaurant                          36.26 USD
 
-2016-03-18 * "Corner Deli" | "Buying groceries"
+2016-03-18 * "Corner Deli" "Buying groceries"
   Liabilities:US:Chase:Slate                       -90.14 USD
   Expenses:Food:Groceries                           90.14 USD
 
-2016-03-19 * "Chichipotle" | "Eating out with Bill"
+2016-03-19 * "Chichipotle" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -36.07 USD
   Expenses:Food:Restaurant                          36.07 USD
 
-2016-03-20 * "Kin Soy" | "Eating out "
+2016-03-20 * "Kin Soy" "Eating out "
   Liabilities:US:Chase:Slate                       -14.41 USD
   Expenses:Food:Restaurant                          14.41 USD
 
-2016-03-25 * "Goba Goba" | "Eating out with Joe"
+2016-03-25 * "Goba Goba" "Eating out with Joe"
   Liabilities:US:Chase:Slate                       -31.47 USD
   Expenses:Food:Restaurant                          31.47 USD
 
-2016-03-26 * "Jewel of Morroco" | "Eating out with Bill"
+2016-03-26 * "Jewel of Morroco" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -40.82 USD
   Expenses:Food:Restaurant                          40.82 USD
 
 2016-03-30 balance Liabilities:US:Chase:Slate    -1041.67 USD
 
-2016-03-31 * "Chichipotle" | "Eating out with Bill"
+2016-03-31 * "Chichipotle" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -20.66 USD
   Expenses:Food:Restaurant                          20.66 USD
 
-2016-04-02 * "Good Moods Market" | "Buying groceries"
+2016-04-02 * "Good Moods Market" "Buying groceries"
   Liabilities:US:Chase:Slate                       -99.43 USD
   Expenses:Food:Groceries                           99.43 USD
 
-2016-04-03 * "Chichipotle" | "Eating out with Julie"
+2016-04-03 * "Chichipotle" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -43.84 USD
   Expenses:Food:Restaurant                          43.84 USD
 
-2016-04-04 * "Metro Transport Authority" | "Tram tickets"
+2016-04-04 * "Metro Transport Authority" "Tram tickets"
   Liabilities:US:Chase:Slate                      -120.00 USD
   Expenses:Transport:Tram                          120.00 USD
 
-2016-04-06 * "China Garden" | "Eating out "
+2016-04-06 * "China Garden" "Eating out "
   Liabilities:US:Chase:Slate                       -24.84 USD
   Expenses:Food:Restaurant                          24.84 USD
 
-2016-04-07 * "Chase:Slate" | "Paying off credit card"
+2016-04-07 * "Chase:Slate" "Paying off credit card"
   Liabilities:US:Chase:Slate                       593.38 USD
   Assets:US:BofA:Checking                         -593.38 USD
 
-2016-04-08 * "Goba Goba" | "Eating out alone"
+2016-04-08 * "Goba Goba" "Eating out alone"
   Liabilities:US:Chase:Slate                       -35.44 USD
   Expenses:Food:Restaurant                          35.44 USD
 
-2016-04-13 * "Uncle Boons" | "Eating out with Bill"
+2016-04-13 * "Uncle Boons" "Eating out with Bill"
   Liabilities:US:Chase:Slate                       -31.59 USD
   Expenses:Food:Restaurant                          31.59 USD
 
-2016-04-15 * "Uncle Boons" | "Eating out with Julie"
+2016-04-15 * "Uncle Boons" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -39.60 USD
   Expenses:Food:Restaurant                          39.60 USD
 
-2016-04-17 * "Goba Goba" | "Eating out with Julie"
+2016-04-17 * "Goba Goba" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -24.81 USD
   Expenses:Food:Restaurant                          24.81 USD
 
-2016-04-18 * "Onion Market" | "Buying groceries"
+2016-04-18 * "Onion Market" "Buying groceries"
   Liabilities:US:Chase:Slate                       -83.02 USD
   Expenses:Food:Groceries                           83.02 USD
 
-2016-04-21 * "China Garden" | "Eating out after work"
+2016-04-21 * "China Garden" "Eating out after work"
   Liabilities:US:Chase:Slate                       -66.27 USD
   Expenses:Food:Restaurant                          66.27 USD
 
 2016-04-24 balance Liabilities:US:Chase:Slate    -1037.79 USD
 
-2016-04-25 * "Chichipotle" | "Eating out with Julie"
+2016-04-25 * "Chichipotle" "Eating out with Julie"
   Liabilities:US:Chase:Slate                       -38.05 USD
   Expenses:Food:Restaurant                          38.05 USD
 
-2016-04-30 * "Kin Soy" | "Eating out after work"
+2016-04-30 * "Kin Soy" "Eating out after work"
   Liabilities:US:Chase:Slate                       -18.35 USD
   Expenses:Food:Restaurant                          18.35 USD
 
-;; 2016-05-03 * "Metro Transport Authority" | "Tram tickets"
+;; 2016-05-03 * "Metro Transport Authority" "Tram tickets"
 ;;   Liabilities:US:Chase:Slate                      -120.00 USD
 ;;   Expenses:Transport:Tram                          120.00 USD
 ;; 
-;; 2016-05-04 * "Corner Deli" | "Buying groceries"
+;; 2016-05-04 * "Corner Deli" "Buying groceries"
 ;;   Liabilities:US:Chase:Slate                       -71.88 USD
 ;;   Expenses:Food:Groceries                           71.88 USD
 ;; 
-;; 2016-05-05 * "Kin Soy" | "Eating out with Bill"
+;; 2016-05-05 * "Kin Soy" "Eating out with Bill"
 ;;   Liabilities:US:Chase:Slate                       -34.35 USD
 ;;   Expenses:Food:Restaurant                          34.35 USD
 ;; 
-;; 2016-05-07 * "China Garden" | "Eating out with Joe"
+;; 2016-05-07 * "China Garden" "Eating out with Joe"
 ;;   Liabilities:US:Chase:Slate                       -51.64 USD
 ;;   Expenses:Food:Restaurant                          51.64 USD
 ;; 
-;; 2016-05-09 * "Kin Soy" | "Eating out with Joe"
+;; 2016-05-09 * "Kin Soy" "Eating out with Joe"
 ;;   Liabilities:US:Chase:Slate                       -29.27 USD
 ;;   Expenses:Food:Restaurant                          29.27 USD
 
@@ -3541,7 +3541,7 @@ option "operating_currency" "USD"
 
 2014-01-01 event "employer" "Hoogle, 1600 Amphibious Parkway, River View, CA"
 
-2014-01-02 * "Hoogle" | "Payroll"
+2014-01-02 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -3561,7 +3561,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2014-01-16 * "Hoogle" | "Payroll"
+2014-01-16 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -3581,7 +3581,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2014-01-30 * "Hoogle" | "Payroll"
+2014-01-30 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -3601,7 +3601,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2014-02-13 * "Hoogle" | "Payroll"
+2014-02-13 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -3621,7 +3621,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2014-02-27 * "Hoogle" | "Payroll"
+2014-02-27 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -3641,7 +3641,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2014-03-13 * "Hoogle" | "Payroll"
+2014-03-13 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -3661,7 +3661,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2014-03-27 * "Hoogle" | "Payroll"
+2014-03-27 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -3681,7 +3681,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2014-04-10 * "Hoogle" | "Payroll"
+2014-04-10 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -3701,7 +3701,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2014-04-24 * "Hoogle" | "Payroll"
+2014-04-24 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -3721,7 +3721,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2014-05-08 * "Hoogle" | "Payroll"
+2014-05-08 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -3741,7 +3741,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2014-05-22 * "Hoogle" | "Payroll"
+2014-05-22 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -3761,7 +3761,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2014-06-05 * "Hoogle" | "Payroll"
+2014-06-05 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -3781,7 +3781,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2014-06-19 * "Hoogle" | "Payroll"
+2014-06-19 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -3801,7 +3801,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2014-07-03 * "Hoogle" | "Payroll"
+2014-07-03 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -3821,7 +3821,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2014-07-17 * "Hoogle" | "Payroll"
+2014-07-17 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1850.60 USD   
   Assets:US:Vanguard:Cash                          700.00 USD   
   Assets:US:Federal:PreTax401k                    -700.00 IRAUSD
@@ -3841,7 +3841,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2014-07-31 * "Hoogle" | "Payroll"
+2014-07-31 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         2550.60 USD   
   Assets:US:Federal:PreTax401k                       0.00 IRAUSD
   Income:US:Hoogle:Salary                        -4615.38 USD   
@@ -3859,7 +3859,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2014-08-14 * "Hoogle" | "Payroll"
+2014-08-14 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         2550.60 USD   
   Assets:US:Federal:PreTax401k                       0.00 IRAUSD
   Income:US:Hoogle:Salary                        -4615.38 USD   
@@ -3877,7 +3877,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2014-08-28 * "Hoogle" | "Payroll"
+2014-08-28 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         2550.60 USD   
   Assets:US:Federal:PreTax401k                       0.00 IRAUSD
   Income:US:Hoogle:Salary                        -4615.38 USD   
@@ -3895,7 +3895,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2014-09-11 * "Hoogle" | "Payroll"
+2014-09-11 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         2550.60 USD   
   Assets:US:Federal:PreTax401k                       0.00 IRAUSD
   Income:US:Hoogle:Salary                        -4615.38 USD   
@@ -3913,7 +3913,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2014-09-25 * "Hoogle" | "Payroll"
+2014-09-25 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         2550.60 USD   
   Assets:US:Federal:PreTax401k                       0.00 IRAUSD
   Income:US:Hoogle:Salary                        -4615.38 USD   
@@ -3931,7 +3931,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2014-10-09 * "Hoogle" | "Payroll"
+2014-10-09 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         2550.60 USD   
   Assets:US:Federal:PreTax401k                       0.00 IRAUSD
   Income:US:Hoogle:Salary                        -4615.38 USD   
@@ -3949,7 +3949,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2014-10-23 * "Hoogle" | "Payroll"
+2014-10-23 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         2550.60 USD   
   Assets:US:Federal:PreTax401k                       0.00 IRAUSD
   Income:US:Hoogle:Salary                        -4615.38 USD   
@@ -3967,7 +3967,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2014-11-06 * "Hoogle" | "Payroll"
+2014-11-06 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         2550.60 USD   
   Assets:US:Federal:PreTax401k                       0.00 IRAUSD
   Income:US:Hoogle:Salary                        -4615.38 USD   
@@ -3985,7 +3985,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2014-11-20 * "Hoogle" | "Payroll"
+2014-11-20 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         2550.60 USD   
   Assets:US:Federal:PreTax401k                       0.00 IRAUSD
   Income:US:Hoogle:Salary                        -4615.38 USD   
@@ -4003,7 +4003,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2014-12-04 * "Hoogle" | "Payroll"
+2014-12-04 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         2589.06 USD   
   Assets:US:Federal:PreTax401k                       0.00 IRAUSD
   Income:US:Hoogle:Salary                        -4615.38 USD   
@@ -4021,7 +4021,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2014-12-18 * "Hoogle" | "Payroll"
+2014-12-18 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         2832.14 USD   
   Assets:US:Federal:PreTax401k                       0.00 IRAUSD
   Income:US:Hoogle:Salary                        -4615.38 USD   
@@ -4039,7 +4039,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2015-01-01 * "Hoogle" | "Payroll"
+2015-01-01 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -4059,7 +4059,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2015-01-15 * "Hoogle" | "Payroll"
+2015-01-15 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -4079,7 +4079,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2015-01-29 * "Hoogle" | "Payroll"
+2015-01-29 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -4099,7 +4099,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2015-02-12 * "Hoogle" | "Payroll"
+2015-02-12 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -4119,7 +4119,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2015-02-26 * "Hoogle" | "Payroll"
+2015-02-26 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -4139,7 +4139,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2015-03-12 * "Hoogle" | "Payroll"
+2015-03-12 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -4159,7 +4159,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2015-03-26 * "Hoogle" | "Payroll"
+2015-03-26 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -4179,7 +4179,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2015-04-09 * "Hoogle" | "Payroll"
+2015-04-09 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -4199,7 +4199,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2015-04-23 * "Hoogle" | "Payroll"
+2015-04-23 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -4219,7 +4219,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2015-05-07 * "Hoogle" | "Payroll"
+2015-05-07 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -4239,7 +4239,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2015-05-21 * "Hoogle" | "Payroll"
+2015-05-21 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -4259,7 +4259,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2015-06-04 * "Hoogle" | "Payroll"
+2015-06-04 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -4279,7 +4279,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2015-06-18 * "Hoogle" | "Payroll"
+2015-06-18 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -4299,7 +4299,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2015-07-02 * "Hoogle" | "Payroll"
+2015-07-02 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -4319,7 +4319,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2015-07-16 * "Hoogle" | "Payroll"
+2015-07-16 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -4339,7 +4339,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2015-07-30 * "Hoogle" | "Payroll"
+2015-07-30 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         2550.60 USD   
   Assets:US:Federal:PreTax401k                       0.00 IRAUSD
   Income:US:Hoogle:Salary                        -4615.38 USD   
@@ -4357,7 +4357,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2015-08-13 * "Hoogle" | "Payroll"
+2015-08-13 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         2550.60 USD   
   Assets:US:Federal:PreTax401k                       0.00 IRAUSD
   Income:US:Hoogle:Salary                        -4615.38 USD   
@@ -4375,7 +4375,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2015-08-27 * "Hoogle" | "Payroll"
+2015-08-27 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         2550.60 USD   
   Assets:US:Federal:PreTax401k                       0.00 IRAUSD
   Income:US:Hoogle:Salary                        -4615.38 USD   
@@ -4393,7 +4393,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2015-09-10 * "Hoogle" | "Payroll"
+2015-09-10 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         2550.60 USD   
   Assets:US:Federal:PreTax401k                       0.00 IRAUSD
   Income:US:Hoogle:Salary                        -4615.38 USD   
@@ -4411,7 +4411,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2015-09-24 * "Hoogle" | "Payroll"
+2015-09-24 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         2550.60 USD   
   Assets:US:Federal:PreTax401k                       0.00 IRAUSD
   Income:US:Hoogle:Salary                        -4615.38 USD   
@@ -4429,7 +4429,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2015-10-08 * "Hoogle" | "Payroll"
+2015-10-08 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         2550.60 USD   
   Assets:US:Federal:PreTax401k                       0.00 IRAUSD
   Income:US:Hoogle:Salary                        -4615.38 USD   
@@ -4447,7 +4447,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2015-10-22 * "Hoogle" | "Payroll"
+2015-10-22 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         2550.60 USD   
   Assets:US:Federal:PreTax401k                       0.00 IRAUSD
   Income:US:Hoogle:Salary                        -4615.38 USD   
@@ -4465,7 +4465,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2015-11-05 * "Hoogle" | "Payroll"
+2015-11-05 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         2550.60 USD   
   Assets:US:Federal:PreTax401k                       0.00 IRAUSD
   Income:US:Hoogle:Salary                        -4615.38 USD   
@@ -4483,7 +4483,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2015-11-19 * "Hoogle" | "Payroll"
+2015-11-19 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         2550.60 USD   
   Assets:US:Federal:PreTax401k                       0.00 IRAUSD
   Income:US:Hoogle:Salary                        -4615.38 USD   
@@ -4501,7 +4501,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2015-12-03 * "Hoogle" | "Payroll"
+2015-12-03 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         2589.06 USD   
   Assets:US:Federal:PreTax401k                       0.00 IRAUSD
   Income:US:Hoogle:Salary                        -4615.38 USD   
@@ -4519,7 +4519,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2015-12-17 * "Hoogle" | "Payroll"
+2015-12-17 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         2832.14 USD   
   Assets:US:Federal:PreTax401k                       0.00 IRAUSD
   Income:US:Hoogle:Salary                        -4615.38 USD   
@@ -4537,7 +4537,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2015-12-31 * "Hoogle" | "Payroll"
+2015-12-31 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         2832.14 USD   
   Assets:US:Federal:PreTax401k                       0.00 IRAUSD
   Income:US:Hoogle:Salary                        -4615.38 USD   
@@ -4555,7 +4555,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2016-01-14 * "Hoogle" | "Payroll"
+2016-01-14 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -4575,7 +4575,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2016-01-28 * "Hoogle" | "Payroll"
+2016-01-28 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -4595,7 +4595,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2016-02-11 * "Hoogle" | "Payroll"
+2016-02-11 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -4615,7 +4615,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2016-02-25 * "Hoogle" | "Payroll"
+2016-02-25 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -4635,7 +4635,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2016-03-10 * "Hoogle" | "Payroll"
+2016-03-10 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -4655,7 +4655,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2016-03-24 * "Hoogle" | "Payroll"
+2016-03-24 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -4675,7 +4675,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2016-04-07 * "Hoogle" | "Payroll"
+2016-04-07 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -4695,7 +4695,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-2016-04-21 * "Hoogle" | "Payroll"
+2016-04-21 * "Hoogle" "Payroll"
   Assets:US:BofA:Checking                         1350.60 USD   
   Assets:US:Vanguard:Cash                         1200.00 USD   
   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD
@@ -4715,7 +4715,7 @@ option "operating_currency" "USD"
   Assets:US:Hoogle:Vacation                             5 VACHR 
   Income:US:Hoogle:Vacation                            -5 VACHR 
 
-;; 2016-05-05 * "Hoogle" | "Payroll"
+;; 2016-05-05 * "Hoogle" "Payroll"
 ;;   Assets:US:BofA:Checking                         1350.60 USD   
 ;;   Assets:US:Vanguard:Cash                         1200.00 USD   
 ;;   Assets:US:Federal:PreTax401k                   -1200.00 IRAUSD

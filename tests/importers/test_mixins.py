@@ -22,19 +22,19 @@ class TestFilterChainMixin(cmptest.TestCase):
         """
         2014-01-01 open Assets:US:BofA:Checking                   USD
 
-        2014-05-19 * "Verizon Wireless" | ""
+        2014-05-19 * "Verizon Wireless" ""
           Assets:US:BofA:Checking                          -44.34 USD
         
-        2014-05-23 * "Wine-Tarner Cable" | ""
+        2014-05-23 * "Wine-Tarner Cable" ""
           Assets:US:BofA:Checking                          -80.17 USD
         
-        2014-06-04 * "BANK FEES" | "Monthly bank fee"
+        2014-06-04 * "BANK FEES" "Monthly bank fee"
           Assets:US:BofA:Checking                           -4.00 USD
         
-        2014-06-04 * "RiverBank Properties" | "Paying the rent"
+        2014-06-04 * "RiverBank Properties" "Paying the rent"
           Assets:US:BofA:Checking                        -2400.00 USD
         
-        2014-06-08 * "EDISON POWER" | ""
+        2014-06-08 * "EDISON POWER" ""
           Assets:US:BofA:Checking                          -65.00 USD
         """
         def filter_last_two(entries):

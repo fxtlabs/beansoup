@@ -91,15 +91,15 @@ class TestClearTransactions(cmptest.TestCase):
           Assets:Checking            500.00 USD
           Assets:Clearing:Checking  -500.00 USD
         
-        2000-02-07 * "Visa" | "This transaction should be linked to the next" #CLEARED ^cleared-2
+        2000-02-07 * "Visa" "This transaction should be linked to the next" #CLEARED ^cleared-2
           Assets:Checking            -100.00 USD
           Liabilities:Clearing:Visa   100.00 USD
         
-        2000-02-08 * "Visa" | "This transaction should be linked to the next" #CLEARED ^cleared-3
+        2000-02-08 * "Visa" "This transaction should be linked to the next" #CLEARED ^cleared-3
           Assets:Checking            -100.00 USD
           Liabilities:Clearing:Visa   100.00 USD
         
-        2000-02-09 * "Visa" | "This transaction should be linked to the next" #CLEARED ^cleared-4
+        2000-02-09 * "Visa" "This transaction should be linked to the next" #CLEARED ^cleared-4
           Assets:Checking            -120.00 USD
           Liabilities:Clearing:Visa   120.00 USD
         
@@ -123,7 +123,7 @@ class TestClearTransactions(cmptest.TestCase):
           Assets:Checking            400.00 USD
           Assets:Clearing:Checking  -400.00 USD
         
-        2000-03-07 ! "Visa" | "This transaction should not be linked to the next" #PENDING
+        2000-03-07 ! "Visa" "This transaction should not be linked to the next" #PENDING
           Assets:Checking            -100.00 USD
           Liabilities:Clearing:Visa   100.00 USD
         
@@ -182,7 +182,7 @@ class TestClearTransactions(cmptest.TestCase):
           Assets:Checking            500.00 USD
           Assets:Clearing:Checking  -500.00 USD
         
-        2000-03-07 ! "Visa" | "This transaction should not be linked to the next" #PENDING
+        2000-03-07 ! "Visa" "This transaction should not be linked to the next" #PENDING
           Assets:Checking            -100.00 USD
           Liabilities:Clearing:Visa   100.00 USD
         

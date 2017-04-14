@@ -126,8 +126,8 @@ class Importer(importer.ImporterProtocol):
                 self.FLAG,
                 payee,
                 narration,
-                None,
-                None,
+                data.EMPTY_SET,
+                data.EMPTY_SET,
                 [posting])
             new_entries.append(entry)
 

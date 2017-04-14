@@ -72,16 +72,16 @@ class TestDepositInTransit(cmptest.TestCase):
         2000-02-01 open Assets:DIT:Savings
         
         2000-02-01 * "This transaction should be merged with the next / This transaction should be merged with the previous" #DEPOSITED
-          Assets:Savings   -500.00 USD
-          Assets:Checking   500.00 USD
+          Assets:Savings        -500.00 USD
+          Assets:Checking        500.00 USD
         
         2000-02-07 open Liabilities:DIT:Visa
         
-        2000-02-07 * "Visa" | "This transaction should be linked to the next" #DEPOSITED ^deposited-1
+        2000-02-07 * "Visa" "This transaction should be linked to the next" #DEPOSITED ^deposited-1
           Assets:Checking       -100.00 USD
           Liabilities:DIT:Visa   100.00 USD
         
-        2000-02-09 * "Visa" | "This transaction should be linked to the next / This transaction should be linked to the previous" #DEPOSITED ^deposited-1
+        2000-02-09 * "Visa" "This transaction should be linked to the next / This transaction should be linked to the previous" #DEPOSITED ^deposited-1
           Liabilities:DIT:Visa  -100.00 USD
           Assets:DIT:Checking    100.00 USD
         
@@ -89,15 +89,15 @@ class TestDepositInTransit(cmptest.TestCase):
           Liabilities:Visa      100.00 USD
           Assets:DIT:Checking  -100.00 USD
         
-        2000-03-01 ! "The Bank" | "Cannot merge because of different flags" #DEPOSITED ^deposited-2
+        2000-03-01 ! "The Bank" "Cannot merge because of different flags" #DEPOSITED ^deposited-2
           Assets:Savings       -300.00 USD
           Assets:DIT:Checking   300.00 USD
         
-        2000-03-01 * "The Bank" | "Cannot merge because of different flags" #DEPOSITED ^deposited-2
+        2000-03-01 * "The Bank" "Cannot merge because of different flags" #DEPOSITED ^deposited-2
           Assets:DIT:Checking  -300.00 USD
           Assets:DIT:Savings    300.00 USD
         
-        2000-03-01 * "The Bank" | "Cannot merge because of different flags" #DEPOSITED ^deposited-2
+        2000-03-01 * "The Bank" "Cannot merge because of different flags" #DEPOSITED ^deposited-2
           Assets:Checking      300.00 USD
           Assets:DIT:Savings  -300.00 USD
         
@@ -105,21 +105,21 @@ class TestDepositInTransit(cmptest.TestCase):
           Assets:Checking       -150.00 USD
           Liabilities:DIT:Visa   150.00 USD
         
-        2000-04-01 * "Checking" | "Cannot merge because of price conversion" #DEPOSITED ^deposited-3
+        2000-04-01 * "Checking" "Cannot merge because of price conversion" #DEPOSITED ^deposited-3
           Assets:Savings       -440.00 USD             
           Assets:DIT:Checking   400.00 CAD @ 1.1000 USD
         
-        2000-04-01 * "Checking / Savings" | "Cannot merge because of price conversion" #DEPOSITED ^deposited-3
+        2000-04-01 * "Checking / Savings" "Cannot merge because of price conversion" #DEPOSITED ^deposited-3
           Assets:DIT:Checking  -400.00 CAD
           Assets:DIT:Savings    400.00 CAD
         
-        2000-04-01 * "Savings" | "Cannot merge because of price conversion" #DEPOSITED ^deposited-3
+        2000-04-01 * "Savings" "Cannot merge because of price conversion" #DEPOSITED ^deposited-3
           Assets:Checking      400.00 CAD
           Assets:DIT:Savings  -400.00 CAD
         
         2000-05-01 * "This narration should appear before the previous / This narration should appear after the next" #DEPOSITED
-          Assets:Savings   -123.00 USD
-          Assets:Checking   123.00 USD
+          Assets:Savings      -123.00 USD
+          Assets:Checking      123.00 USD
         """, entries)
 
     @loader.load_doc(expect_errors=True)
@@ -204,7 +204,7 @@ class TestDepositInTransit(cmptest.TestCase):
         self.assertEqual(len(errors), 1)
         self.assertEqual(type(errors[0]), deposit_in_transit.DITError)
         self.assertEqualEntries("""
-        2000-02-07 * "Visa" | "This transaction should be linked to the next"
+        2000-02-07 * "Visa" "This transaction should be linked to the next"
           Assets:Checking       -200.00 USD
           Liabilities:DIT:Visa   100.00 USD
           Assets:DIT:Savings     100.00 USD
@@ -216,14 +216,14 @@ class TestDepositInTransit(cmptest.TestCase):
         2000-02-07 open Assets:DIT:Savings
         2000-02-07 open Liabilities:DIT:Visa
         
-        2000-02-07 * "Visa" | "This transaction should be linked to the next" #DEPOSITED ^deposited-1
+        2000-02-07 * "Visa" "This transaction should be linked to the next" #DEPOSITED ^deposited-1
           Assets:Checking       -200.00 USD
           Liabilities:DIT:Visa   100.00 USD
           Assets:DIT:Savings     100.00 USD
         
         2000-02-09 open Assets:DIT:Checking
         
-        2000-02-09 * "Visa" | "This transaction should be linked to the next / This transaction should be linked to the previous" #DEPOSITED ^deposited-1
+        2000-02-09 * "Visa" "This transaction should be linked to the next / This transaction should be linked to the previous" #DEPOSITED ^deposited-1
           Liabilities:DIT:Visa  -100.00 USD
           Assets:DIT:Checking    100.00 USD
         
