@@ -61,8 +61,6 @@ class TestTransactionCompleter(cmptest.TestCase):
               Assets:US:BofA:Checking                          -79.90 USD
               Expenses:Home:Internet                            79.90 USD
             
-            2016-04-26 balance Assets:US:BofA:Checking        3200.59 USD
-            
             2016-05-04 * "BANK FEES" "Monthly bank fee"
               Assets:US:BofA:Checking                           -4.00 USD
               Expenses:Financial:Fees                            4.00 USD
@@ -116,4 +114,4 @@ class TestTransactionCompleter(cmptest.TestCase):
         completer = transactions.TransactionCompleter(
             self.existing_entries, account, interpolated=True)
         completed_entries = completer(entries)
-        self.assertEqualEntries(completed_entries, expected_entries)
+        self.assertEqualEntries(expected_entries, completed_entries)
